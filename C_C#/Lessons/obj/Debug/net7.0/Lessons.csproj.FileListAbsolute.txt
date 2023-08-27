@@ -1,0 +1,14 @@
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\bin\Debug\net7.0\Lessons.exe
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\bin\Debug\net7.0\Lessons.deps.json
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\bin\Debug\net7.0\Lessons.runtimeconfig.json
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\bin\Debug\net7.0\Lessons.dll
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\bin\Debug\net7.0\Lessons.pdb
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\obj\Debug\net7.0\Lessons.GeneratedMSBuildEditorConfig.editorconfig
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\obj\Debug\net7.0\Lessons.AssemblyInfoInputs.cache
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\obj\Debug\net7.0\Lessons.AssemblyInfo.cs
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\obj\Debug\net7.0\Lessons.csproj.CoreCompileInputs.cache
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\obj\Debug\net7.0\Lessons.dll
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\obj\Debug\net7.0\refint\Lessons.dll
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\obj\Debug\net7.0\Lessons.pdb
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\obj\Debug\net7.0\Lessons.genruntimeconfig.cache
+E:\Escritorio\Programacion\RunningLanguages\3-C#\Lessons\obj\Debug\net7.0\ref\Lessons.dll
