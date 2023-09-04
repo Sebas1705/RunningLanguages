@@ -1,0 +1,21 @@
+{
+  "name": "api_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev_example": "nodemon http_example.js",
+    "dev_Node": "nodemon mini_api_soloNode.js",
+    "dev_Express": "node --watch mini_api_express.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "4.18.2"
+  }
+}

@@ -1,0 +1,302 @@
+
+/* 
+------------------------------------------------------------------------------------------------------------------
+                BASIC SYNTAX
+        
+         selector    declarations    comments
+      Ex:   h1        {color:red;}    /*hello*/  /*
+                        ^    ^
+                   attribute value
+------------------------------------------------------------------------------------------------------------------
+                BASIC SELECTORS
+    
+    Selector	                Description
+       *	            Selects all elements in the DOM.
+      tag	            Selects all specified tags.
+     .class	            Selects elements with the class .class.
+      #id	            Selects the element with the id #id.
+    sel1 sel2	        Selects sel2 selectors that are within sel1 selectors.
+  .class1.class2	    Selects elements with both classes: class1 and class2.
+    sel1.class1	        Selects all sel1 selectors with class class1.
+    sel1, sel2	        Selects all selectors separated by commas.
+    sel1 > sel2	        Selects sel2 selectors when they are children of sel1.
+    sel1 + sel2	        Selects sel2 selector when it is a sibling of sel1 (their parent element is the same).
+------------------------------------------------------------------------------------------------------------------
+                METRICS UNITS
+
+        Relative Lengths:
+
+        px - Pixels (relative to the device).
+        em - Relative to the font size of the element (e.g., 2em means 2 times the current font size).
+        % - Percentage (relative to the parent element).
+        vh and vw - Relative measurements according to the viewport.
+        1vh = 1% of the viewport height.
+        100vh = viewport height.
+        
+        Absolute Lengths:
+
+        in - Inches (1 inch = 2.54 cm).
+        cm - Centimeters.
+        mm - Millimeters.
+        pt - Points (1 point = 1/72 inches).
+        pc - Picas (1 pica = 12 points).
+------------------------------------------------------------------------------------------------------------------
+            COLOR AND BACKGROUND
+
+        Property	            Description	                                Values
+    color	                Text color	                        RGB | HSL | HEX | color name | RGBA | HSLA
+    background-color	    Background color	                RGB | HSL | HEX | color name | RGBA | HSLA
+    background-image	    Background image	                url("...") | None
+    background-repeat	    Background image repetition	        repeat | repeat-x | repeat-y | no-repeat
+    background-attachment	Background image scroll behavior	scroll | fixed
+    background-position	    Background image position	        percentage | length | left | center | right
+    background-size	        Background image size	            value
+    opacity	Element         transparency	                    [0 – 1] (0 → fully transparent)
+------------------------------------------------------------------------------------------------------------------
+            TEXT
+        Property	            Description	                                Values
+    text-indent	            Text first-line indentation	                length | percentage
+    text-align	            Text alignment	                            left | right | center | justify
+    text-decoration	        Underline and strikethrough effects	        none | underline | overline | line-through
+    letter-spacing	        Spacing between characters	                normal | length
+    word-spacing	        Spacing between words	                    normal | length
+    text-transform	        Text transformation to uppercase/lowercase	capitalize | uppercase | lowercase | none
+    line-height	            Line height	                                length | percentage
+    vertical-align	        Vertical alignment	                        top | middle | bottom baseline | sub | super | value
+------------------------------------------------------------------------------------------------------------------
+            FONTS
+
+        Property	            Description	                                Values
+    font-family	                Font families	                        font-name | font-name-generic | *
+    font-style	                Font style	                            normal | italic | oblique
+    font-variant	            Converts to uppercase main smaller	    normal | small-caps
+    font-weight	                Character width. Normal=400,Bold=700	normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+    font-size	                Font size	                            xx-small | x-small | small | medium | large | x-large | xx-large | larger | smaller | length | percentage
+------------------------------------------------------------------------------------------------------------------
+            LISTS
+
+        Property	            Description	                                            Values
+    list-style-type	            Style applied to visual markers of lists	            disc | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | lower-alpha | upper-alpha | none
+    list-style-image	        Image applied to list items	                            url(«…») | none
+    list-style-position	        Position of list item markers within the list	        inside | outside
+    list-style	                Allows setting the list style, image, and/or position	list-style-type | list-style-position | list-style-image
+------------------------------------------------------------------------------------------------------------------
+            TABLES
+
+        Property	            Description	                                            Values
+    caption-side	            Position of the caption relative to the table	        top | bottom
+    table-layout	            Format of cells, rows, and columns	                    auto | fixed
+    border-collapse	            Selection of the border model	                        collapse | separate
+    border-spacing	            Spacing between borders of adjacent cells	            length
+    empty-cells	                Visibility of borders of empty cells	                show | hide
+------------------------------------------------------------------------------------------------------------------
+            Pseudo-classes for Selecting Children or Siblings
+
+        Pseudo-class	        Description
+        :first-child	        Selects the first child element.
+        :last-child	            Selects the last child element.
+        :first-of-type	        Selects the first sibling of its type.
+        :last-of-type	        Selects the last sibling of its type.
+        :only-child	            Selects elements that are the only child of their parent.
+        :only-of-type	        Selects elements that are the only siblings of their type.
+        :empty	                Selects elements that have no children.
+        :nth-child(n)	        Selects the nth child element.
+        :nth-last-child(n)	    Selects the nth child element counting from the last.
+        :nth-of-type(n)	        Selects the nth sibling of its type.
+        :nth-last-of-type(n)	Selects the nth sibling of its type counting from the last.
+------------------------------------------------------------------------------------------------------------------
+            Pseudo-classes for Element States
+
+        Pseudo-class	        Description
+        :link	                Represents an element that is unvisited by the user.
+        :visited	            Represents an element that has been visited by the user.
+        :hover	                Represents an element that is being hovered over by a pointing device.
+        :active	                Represents an element that is being activated or clicked by the user.
+        :focus	                Represents an element that is currently focused or selected by the user.
+------------------------------------------------------------------------------------------------------------------
+            Pseudo-elements
+
+        Pseudo-element	        Description
+        ::first-line	        Represents the first line of text within an element.
+        ::first-letter	        Represents the first letter of the first line of text within an element.
+        ::before	            Inserts content before the content of an element.
+        ::after	                Inserts content after the content of an element.
+------------------------------------------------------------------------------------------------------------------
+            BROWSER PREFIXES
+        -moz-       - Mozilla Firefox
+        -webkit-    - Safari and Google Chrome
+        -o-         - Opera
+        -khtml-     - Konqueror
+        -ms-        - Internet Explorer
+        -chrome-    - Google Chrome
+-----------------------------------------------------------------------------------------------------------------
+            CSS Box Model Properties for Containers
+
+        Property	                                                                    Description	                                                            Values
+        padding-top, padding-right, padding-bottom, padding-left	                    Size of padding for top, right, bottom, and left sides	                length | percentage
+        padding	                                                                        Size of padding for all sides	                                        length | percentage {1,4}  
+        margin-top, margin-right, margin-bottom, margin-left	                        Size of margin for top, right, bottom, and left sides	                length | percentage | auto
+        margin	                                                                        Width of margins for all sides	                                        length | percentage {1,4}  
+        border-top-width, border-right-width, border-bottom-width, border-left-width	Width of the top, right, bottom, or left border	                        thin | medium | thick | length
+        border-width	                                                                Width of borders for all sides	                                        thin | medium | thick | length {1,4}
+        border-top-color, border-right-color, border-bottom-color, border-left-color	Color of the top, right, bottom, or left border	                        color | transparent
+        border-color	                                                                Color of borders for all sides	                                        color | transparent {1,4}
+        border-top-style, border-right-style, border-bottom-style, border-left-style	Style of the top, right, bottom, or left border	                        none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset
+        border-style	                                                                Style of borders for all sides	                                        none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset {1,4}
+        border-top, border-right, border-bottom, border-left	                        Width, style, and color for the top, right, bottom, or left border	    border-top-width | border-top-style | border-top-color
+        border	                                                                        Width, style, and color for all borders	                                border-width | border-style | border-color
+        border-radius	                                                                Border curvature	                                                    length | percentage {1,4}
+-----------------------------------------------------------------------------------------------------------------
+            CSS Container Behavior Properties
+
+        Property	                Description	                                                    Values
+        display	                    Container behavior	                                            inline | block | inline-block | none
+        position	                Positioning scheme	                                            static | relative | absolute | fixed
+        top, right, bottom, left	Offset of the box from the top, right, bottom, or left edges	length | percentage | auto
+        float	                    Floating positioning	                                        left | right | none
+        clear	                    Control of adjacent boxes to floated elements	                none | left | right | both
+        z-index	                    Layer level	                                                    auto | integer
+        box-sizing	                Control of borders and padding in container behavior	        content-box | border-box
+        visibility	                Display or hide an element while still occupying space	        visible | hidden
+        overflow	                Visibility of block-level elements	                            visible | hidden | scroll | auto
+-----------------------------------------------------------------------------------------------------------------
+            CSS Size Properties
+
+        Property	Description	                                        Values
+        width	    Sets the width of the content area of an element	Length unit (px, em, %, etc.), auto, initial, inherit
+        height	    Sets the height of the content area of an element	Length unit (px, em, %, etc.), auto, initial, inherit
+        max-width	Sets the maximum width an element can have	        Length unit (px, em, %, etc.), none, initial, inherit
+        min-width	Sets the minimum width an element must have	        Length unit (px, em, %, etc.), 0, initial, inherit
+-----------------------------------------------------------------------------------------------------------------
+            CUSTOM PROPERTIES
+    :root {
+        --principal-color: black;  Custom value for the principal color 
+        --font: "Arial";  Custom value for the font family 
+    }
+
+    .class {
+        background-color: var(--principal-color);  Using the custom principal color 
+        font-family: var(--font);  Using the custom font family 
+    }
+-----------------------------------------------------------------------------------------------------------------
+            CSS Mathematical Functions
+
+    Function	    Description	                                                    Example
+    abs()	        Returns the absolute value of a number	                        abs(-10)
+    sin()	        Returns the sine of an angle	                                sin(45deg)
+    cos()	        Returns the cosine of an angle	                                cos(60deg)
+    tan()	        Returns the tangent of an angle	                                tan(30deg)
+    sqrt()	        Returns the square root of a number	                            sqrt(16)
+    pow()	        Raises a number to a power	                                    pow(2, 3)
+    min()	        Returns the minimum value between two numbers	                min(10, 5)
+    max()	        Returns the maximum value between two numbers	                max(10, 5)
+    random()	    Returns a random number between 0 and 1	                        random()
+    floor()	        Returns the largest integer less than or equal to a number	    floor(3.8)
+    ceil()	        Returns the smallest integer greater than or equal to a number	ceil(3.2)
+    round()	        Returns the value rounded to the nearest integer	            round(3.7)
+    clamp()	        Limits a value within a specified range	                        clamp(10, 5, 8)
+    calc()	        Performs mathematical calculations in CSS properties	        width: calc(100% - 20px)
+    attr()	        Gets the value of an HTML attribute and uses it in CSS	        content: attr(data-text)
+-----------------------------------------------------------------------------------------------------------------
+            Cursor Property Values
+
+    Cursor Value	        Description
+    crosshair	            A cross-shaped cursor used for precision tasks.
+    help	                An interrogation cursor, indicating help.
+    move	                Arrows pointing in all directions, indicating that an element can be moved.
+    pointer	                A hand or pointer cursor, typically used for clickable elements.
+    progress	            A progress bar or similar symbol, indicating that background work is in progress.
+    text	                A text selection cursor, allowing text selection.
+    wait	                A wait cursor, indicating that the user should wait.
+    vertical-text	        A vertical arrow cursor, used for vertical text.
+    alias	                A diagonal arrow cursor, indicating that a link or external resource can be accessed.
+    no-drop	                A circle with a diagonal line, indicating that dropping the dragged element is not allowed.
+    grab	                A closed hand cursor, indicating that an element can be grabbed.
+    grabbing	            An open hand cursor, indicating that an element is being dragged or grabbed.
+    zoom-in	                A magnifying glass symbol with a plus sign, indicating that zooming in is possible.
+    zoom-out	            A magnifying glass symbol with a minus sign, indicating that zooming out is possible.
+    not-allowed	            A circle with a diagonal line, indicating that interaction is not allowed.
+    cell	                A cross-shaped cursor, used in spreadsheets to adjust cells.
+    copy	                A pointer with a copy symbol, indicating that a copy of an element can be made.
+    ew-resize	            A bidirectional horizontal arrow, indicating that horizontal resizing is possible.
+    ns-resize	            A bidirectional vertical arrow, indicating that vertical resizing is possible.
+    nwse-resize	            A diagonal bidirectional arrow, indicating diagonal resizing in the northwest-southeast direction.
+    nesw-resize	            A diagonal bidirectional arrow, indicating diagonal resizing in the northeast-southwest direction.
+    col-resize	            A horizontal bidirectional arrow with a vertical line, indicating column resizing.
+    row-resize	            A vertical bidirectional arrow with a horizontal line, indicating row resizing.
+    context-menu	        A pointer with a menu symbol, indicating that a context menu can be opened.
+    none	                No cursor is displayed.
+    Personalized	        You can use a custom image or value as the cursor.
+-----------------------------------------------------------------------------------------------------------------
+            Font Formats
+
+    Format	    Description
+    EOT	        Embedded OpenType, used by Internet Explorer
+    TTF	        TrueType Font, used by iOS
+    WOFF	    Web Open Font Format, used by Chrome
+    WOFF2	    An improvement of WOFF
+    SVG	        Scalable Vector Graphics
+-----------------------------------------------------------------------------------------------------------------
+            CSS Shadows
+
+    Property	        Values	                                                Example
+    text-shadow	        posx posy blur color | none	                            text-shadow: 2px 2px 5px red;
+    box-shadow	        posx posy blur spread color position inset | none       box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+-----------------------------------------------------------------------------------------------------------------
+            CSS Gradients
+
+    Property	    Values	                                                                                                                            Example
+    background	    linear-gradient(direction{to top, to bottom, to left, and to right}	angle, color, color, color...);                                 background: linear-gradient(to right, red, orange);
+    background	    linear-gradient(direction{to top, to bottom, to left, and to right}	angle, color position, color position, color position...)       background: linear-gradient(to right, red 20%, orange 40%);
+    background	    linear-gradient(color, color, color...)                                                                                             background: linear-gradient(red, orange);
+    background	    radial-gradient(shape{circle and ellipse}, color, color, color...)                                                                  background: radial-gradient(circle, red, orange);
+    background	    radial-gradient(shape{circle and ellipse} position, color, color, color...)                                                         background: radial-gradient(circle closest-side, red, orange);
+    background	    radial-gradient(shape{circle and ellipse}, color position, color position, color position...)	                                    background: radial-gradient(circle at top left, red 20%, orange 40%);
+    background	    radial-gradient(color, color, color...)                                                                                             background: radial-gradient(red, orange, blue);
+-----------------------------------------------------------------------------------------------------------------
+            CSS Attribute Selectors
+
+    Selector	            Description
+    [attribute]	            Selects elements that have the attribute attribute, regardless of its value.
+    [attribute=value]	    Selects elements that have an attribute attribute with a value equal to value.
+    [attribute~=value]	    Selects elements that have an attribute attribute, and at least one of the values in the attribute is equal to value.
+    [attribute|=value]      Selects the elements that have an attribute set called attribute_name, whose value is a list of values, where one begins with value
+    [attribute$=value]	    Selects elements whose attribute ends with value.
+    [attribute^=value]	    Selects elements whose attribute starts with value.
+-----------------------------------------------------------------------------------------------------------------
+            CSS Transitions
+
+    transition:[property to modify] [Duration] [Animation type] [Delay];
+    *Property to modify: background-color
+    , border
+    , border-radius
+    , color...
+    *Animation type: linear, ease, ease-in, ease-out and ease-in-out.
+-----------------------------------------------------------------------------------------------------------------
+            CSS Transformations
+
+    Transformation	Description	                                                                                                                                                                                                                Example
+    Scale	        Changes the size of an element. Can use one or two values for scaling along x and y axes. When outside [-1, 1], the element grows or shrinks.	                                                                            transform: scale(0.5) makes the element 50% of its original size.
+    Translate	    Moves an element horizontally and/or vertically. The translate() function takes one or two values, indicating translation along the x and y axes. Values can be defined in pixels, percentages, etc.	                    transform: translate(10px) moves the element 10 pixels to the right.
+    Rotate	        Rotates an element by a specified number of degrees.	                                                                                                                                                                    transform: rotate(45deg) rotates the element by 45 degrees clockwise.
+    Skew	        Distorts an element based on the specified angle in degrees. The skew() function can have one or two values for skewing along the x and y axes.	                                                                            transform: skew(45deg) skews the element by 45 degrees.
+    Matrix	        Allows precise pixel-level manipulation of elements. Set using six numerical values: matrix(a, b, c, d, x, y), with the first four values representing linear transformations and the last two representing translation.	transform: matrix(0.5, 0.1, 0.5, 1, 10, -2) applies a custom transformation.
+-----------------------------------------------------------------------------------------------------------------
+        CSS Filters
+
+    Function	    Description
+    blur()	        Applies a Gaussian blur to the input image.
+    brightness()	Adjusts the brightness of the input image, making it appear brighter or darker.
+    contrast()	    Modifies the contrast of the input image.
+    grayscale()	    Converts the input image to grayscale, removing color.
+    hue-rotate()	Applies a hue rotation to the input image.
+    invert()	    Inverts the colors of the input image.
+    opacity()	    Adjusts the opacity of the input image.
+    saturate()	    Increases the saturation of the input image.
+    sepia()	        Converts the input image to sepia tones.
+
+*/
+
+*{
+    background-color: black;
+}

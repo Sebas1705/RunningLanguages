@@ -1,0 +1,15 @@
+# Rest Client services:
+GET http://localhost:8080/pokemon/ditto
+
+### Post:
+
+POST http://localhost:8080/pokemon
+Content-Type: application/json
+
+{
+    "name": "ditto",
+    "type": "normal",
+    "moves": [
+        "tranform"
+    ]
+}
