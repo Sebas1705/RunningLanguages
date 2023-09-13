@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  margin: 0 10%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+form input, form textarea{
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 4px 6px;
+  margin: 0 4px;
+}
+form textarea{
+  resize: vertical;
+}
