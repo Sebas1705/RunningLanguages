@@ -10,9 +10,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        HashOpenArray<Integer> hash = new HashOpenArray<>();
-        // for(int i=0;i<10;i+=(int)(Math.random()*5+1))hash.add(i);
-        hash.add(10);
+        HashOpenArray<Integer> hash = new HashOpenArray<>(2);
+        for(int i=0;i<100;i+=(int)(Math.random()*5+1))hash.add(i);
         hash.printAsArray();
     }
 }

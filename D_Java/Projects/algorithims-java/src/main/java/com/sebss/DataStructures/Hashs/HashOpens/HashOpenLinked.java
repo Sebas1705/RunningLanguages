@@ -11,7 +11,8 @@ public class HashOpenLinked<T> extends HashOpenList<T> {
     }
     public HashOpenLinked(int maxS){
         maxSize=maxS;
-        elements=new SimpleLinked_List<SimpleLinked_List<T>>(maxS,new SimpleLinked_List<T>());
+        elements=new SimpleLinked_List<>();
+        for (int i=0;i<maxS;i++)elements.add(new SimpleLinked_List<>());
     }
     @SuppressWarnings("unchecked")
     public HashOpenLinked(CollectionS<T> c){
@@ -42,7 +43,10 @@ public class HashOpenLinked<T> extends HashOpenList<T> {
         return s;
     }
     @Override
-    public void clear(){elements=new SimpleLinked_List<SimpleLinked_List<T>>(maxSize,new SimpleLinked_List<T>());}
+    public void clear(){
+        elements=new SimpleLinked_List<>();
+        for(int i=0;i<maxSize;i++)elements.add(new SimpleLinked_List<>());
+    }
     @Override
     public void printAsArray(){
         String s = "->HashOpenLinked("+maxSize+"):\n";
