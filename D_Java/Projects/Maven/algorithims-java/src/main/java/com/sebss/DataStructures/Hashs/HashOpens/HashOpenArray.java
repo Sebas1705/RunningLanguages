@@ -11,7 +11,8 @@ public class HashOpenArray<T> extends HashOpenList<T> {
     }
     public HashOpenArray(int maxS){
         maxSize=maxS;
-        elements=new Array_List<Array_List<T>>(maxS,new Array_List<T>());
+        elements=new Array_List<>();
+        for(int i=0;i<maxS;i++)elements.add(new Array_List<>());
     }
     @SuppressWarnings("unchecked")
     public HashOpenArray(CollectionS<T> c){
@@ -42,7 +43,10 @@ public class HashOpenArray<T> extends HashOpenList<T> {
         return s;
     }
     @Override
-    public void clear(){elements=new Array_List<Array_List<T>>(maxSize,new Array_List<T>());}
+    public void clear(){
+        elements=new Array_List<>();
+        for(int i=0;i<maxSize;i++)elements.add(new Array_List<>());
+    }
     @Override
     public void printAsArray(){
         String s = "->HashOpenArray("+maxSize+"):\n";

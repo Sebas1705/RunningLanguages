@@ -7,7 +7,7 @@ import com.sebss.DataStructures.Lists.ListS;
 public abstract class HashOpenList<T> implements HashS<T> {
     
     //Atributes: 
-    protected ListS<? extends ListS<T>> elements;
+    protected ListS<ListS<T>> elements;
     protected int maxSize;
     //End of attributes.
 

@@ -1,7 +1,6 @@
 package com.sebss;
 
-import com.sebss.DivideAndConquer.SortVector;
-import com.sebss.DivideAndConquer.SumVector;
+import com.sebss.Algorithims.DivideAndConquer.SumVector;
 
 /**
  * Hello world!
