@@ -5,12 +5,12 @@ import com.sebss.DataStructures.Lists.ListS;
 
 public class Array_List<T> implements ListS<T>{
 
-    //Atributtes: 
+    //Attributes: 
     private final int CAP_GROWTH;
     private Object array[];
     private int size; 
     private int capacity;
-    //End of atributes.
+    //End of attributes.
 
     //Constructor:
     public Array_List(){
