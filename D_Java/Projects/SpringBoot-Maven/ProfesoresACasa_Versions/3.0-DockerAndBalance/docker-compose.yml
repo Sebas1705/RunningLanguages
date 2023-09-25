@@ -1,0 +1,57 @@
+version: '3'
+services:
+  db: 
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=profesoresacasa
+  
+  message_broker:
+    image: rabbitmq
+    ports:
+      - "5672:5672"
+  
+  web1:
+    build: profesores_a_casa/.
+    expose: 
+      - "8443"
+    restart: unless-stopped
+    environment:
+      - HAZEL_IP_OTHER-WEB=web2
+      - SPRING_RABBITMQ_HOST=message_broker
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db/profesoresacasa
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+
+  web2:
+    build: profesores_a_casa/.
+    expose: 
+      - "8443"
+    restart: unless-stopped
+    environment:
+      - HAZEL_IP_OTHER-WEB=web1
+      - SPRING_RABBITMQ_HOST=message_broker
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db/profesoresacasa
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=password
+
+  servicio_correo:
+    build: servicio_correo/.
+    expose:
+      - "8080"
+    environment:
+      - SPRING_RABBITMQ_HOST=message_broker
+      - SPRING_RABBITMQ_PORT=5672
+      - MAIL.ORIGIN=asistente.profesoresacasa@gmail.com
+      - MAIL.PASSWORD=omzxpsrdfltkeged
+
+  loadbalancer:
+    image: haproxy:2.7.3
+    ports:
+      - "9443:443" # Only service that is exposed to the host is the lb
+      - "8181:8181" # Haproxy Stats
+      - "9090:80" # http (should not work)
+    volumes:
+      - "./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro"
+    restart: unless-stopped
