@@ -3,12 +3,19 @@ package com.sebss.firstproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.CheckBox
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+
+    fun onCheckBox(view: View){
+        checked = ( (CheckBox) view ).isChecked()
+
     }
 
     override fun onStart(){

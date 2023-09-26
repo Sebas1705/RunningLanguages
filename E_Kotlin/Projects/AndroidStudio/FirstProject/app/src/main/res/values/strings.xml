@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">FirstProject</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="check_music">Music</string>
+    <string name="check_sport">Sport</string>
+    <string name="text_no">No selected</string>
 </resources>
