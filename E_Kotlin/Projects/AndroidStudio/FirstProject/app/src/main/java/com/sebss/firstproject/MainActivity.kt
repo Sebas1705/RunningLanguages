@@ -1,5 +1,6 @@
 package com.sebss.firstproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,9 +14,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun onCheckBox(view: View){
-        checked = ( (CheckBox) view ).isChecked()
-
+    fun change(view: View){
+        val i = Intent(this,MainActivity2::class.java)
+        startActivity(i)
     }
 
     override fun onStart(){

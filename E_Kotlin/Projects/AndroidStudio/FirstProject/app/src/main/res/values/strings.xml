@@ -4,4 +4,10 @@
     <string name="check_music">Music</string>
     <string name="check_sport">Sport</string>
     <string name="text_no">No selected</string>
+    <string name="change_activity">Siguiente</string>
+    <string name="return_activity_1">Return activity 1</string>
+    <string name="activity2">Activity2</string>
+    <string name="email_address">Email Address</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>
