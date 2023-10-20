@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj": {}
+    "E:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj": {}
   },
   "projects": {
-    "e:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj": {
+    "E:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
+        "projectUniqueName": "E:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
         "projectName": "Lessons",
-        "projectPath": "e:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
+        "projectPath": "E:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
         "packagesPath": "C:\\Users\\sebss\\.nuget\\packages\\",
-        "outputPath": "e:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\obj\\",
+        "outputPath": "E:\\Escritorio\\Programacion\\RunningLanguages\\C_C#\\Lessons\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sebss\\AppData\\Roaming\\NuGet\\NuGet.Config"
