@@ -1,3 +1,29 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "cSpell.words": [
+        "Algoritmo",
+        "avanzo",
+        "avanzó",
+        "ciclos",
+        "Devolvemos",
+        "elecciones",
+        "enteros",
+        "estado",
+        "Función",
+        "Guardamos",
+        "heuristico",
+        "Imprimimos",
+        "minuto",
+        "minutos",
+        "número",
+        "ordenadores",
+        "pasos",
+        "Precondiciones",
+        "problema",
+        "representa",
+        "seleccion",
+        "Simular",
+        "supercomputadores",
+        "tarea"
+    ]
 }
