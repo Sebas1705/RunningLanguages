@@ -1,5 +1,3 @@
-package com.sebss.Algorithms.BackTracking;
-
 public class OptimazeSupercomputerts {
     
     public static void main(String[] args) {
@@ -7,8 +5,8 @@ public class OptimazeSupercomputerts {
         int[] bs = {15,14,13,21};
         System.out.println("Backtracking-Poda: "+simularPoda(as,bs));
         System.out.println("Backtracking: "+simularBack(as,bs));
-        System.out.println("Heuristic: "+simularH1(as,bs));
-        System.out.println("Greedy: "+simularH2(as,bs));
+        System.out.println("Heuristic: "+simularHeuristic(as,bs));
+        System.out.println("Greedy: "+simularVoraz(as,bs));
     }
 
     public static int simularPoda(int[] as, int[] bs){
@@ -19,7 +17,6 @@ public class OptimazeSupercomputerts {
     }
 
     private static int buscarCaminoPoda(int[] as,int[] bs,int i,int cota,int[] solution,int value,int[] optimalSolution,int optimalValue){
-        System.out.println("Cota en "+i+": "+cota);
         if(i==as.length-1){
             solution[i]=(solution[i-1]==0||solution[i-1]==2)?2:3;
             value+=(solution[i]==2)?as[i]:bs[i];
@@ -31,11 +28,11 @@ public class OptimazeSupercomputerts {
             for(int k=0;k<4;k++){
                 if(esValido(k,i,solution)){
                     solution[i]=k;
-                    int cotaTemp=cota-((k==0||k==1)?as[i]+bs[i]:(k==2)?bs[i]:as[i]);
-                    if(cota>optimalValue){
+                    int cotaTemp=0;
+                    if(as[i]>bs[i]) cotaTemp=cota-((k==0||k==1)?as[i]:((k==2)?0:as[i]-bs[i]));
+                    else cotaTemp=cota-((k==0||k==1)?bs[i]:((k==3)?0:bs[i]-as[i]));
+                    if(cotaTemp>optimalValue){
                         optimalValue=buscarCaminoPoda(as,bs,i+1,cotaTemp,solution,value+((k==2)?as[i]:((k==3)?bs[i]:0)),optimalSolution,optimalValue);
-                    }else{
-                        System.out.println("Poda en "+i+": "+k);
                     }
                 }
             }
@@ -43,7 +40,7 @@ public class OptimazeSupercomputerts {
         return optimalValue;
     }
 
-    public static int getCota(int[] as,int[] bs){
+    private static int getCota(int[] as,int[] bs){
         int cota=0;
         for(int i=0;i<as.length;i++){
             cota+=(as[i]>bs[i])?as[i]:bs[i];
@@ -87,20 +84,6 @@ public class OptimazeSupercomputerts {
                 (solution[index-1]==3&&(option==3||option==0));    //Si era b y ahora b o salto a
     }
     
-    
-    private static int resumeSolution(int[] as,int[] bs,int[] solution){
-        int total=0;
-        for(int i=0;i<solution.length;i++){
-            System.out.print("Paso nº"+i+": ");
-            switch(solution[i]){
-                case 0: System.out.println(" Paso a A (0)");break;
-                case 1: System.out.println(" Paso a B (0)");break;
-                case 2: System.out.println(" A ("+as[i]+")");total+=as[i];break;
-                case 3: System.out.println(" B ("+bs[i]+")");total+=bs[i];break;
-            }
-        }
-        return total;
-    }
     private static boolean comprobarValoresPositivos(int[] as,int[] bs){
         //Comprobamos que todos los valores de as y bs sean mayores que 0:
         for(int i=0;i<as.length;i++){
@@ -118,7 +101,7 @@ public class OptimazeSupercomputerts {
      * @param bs array de n enteros que representa el numero de ciclos libres del supercomputador B en el minuto i
      * @return numero de pasos que avanzó la tarea durante n minutos
      */
-    public static int simularH1(int[] as, int[] bs){
+    public static int simularHeuristic(int[] as, int[] bs){
 
         //Precondiciones:
         //Tamaño de los arrays diferente de 0, arrays de mismo tamaño y que los valores de as y bs sean todos mayor que 0
@@ -167,7 +150,7 @@ public class OptimazeSupercomputerts {
      * @param bs array de n enteros que representa el numero de ciclos libres del supercomputador B en el minuto i
      * @return numero de pasos que avanzo la tarea durante n minutos
      */
-    public static int simularH2(int[] as,int[] bs){
+    public static int simularVoraz(int[] as,int[] bs){
         
         //Precondiciones:
         //Tamaño de los arrays diferente de 0, arrays de mismo tamaño y que los valores de as y bs sean todos mayor que 0
