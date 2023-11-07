@@ -1,6 +1,6 @@
 package com.sebss;
 
-import com.sebss.Algorithms.Greedies.MagneticTapSaveOptimize;
+import com.sebss.Algorithms.C_Greedies.MagneticTapSaveOptimize;
 
 /**
  * Hello world!
