@@ -1,0 +1,117 @@
+<resources>
+
+    <!--General strings:-->
+    <string name="app_name">QuizGame</string>
+    <string name="text_default">Text Default</string>
+    <string name="return_error">Volver Inicio</string>
+
+    <!--MainActivity strings:-->
+    <string name="start_main">Inciar partida</string>
+    <string name="select_main">Seleccionar Categoría</string>
+    <string name="player_main">Jugador:</string>
+    <string name="ranking_main">Ranking:%1$s</string>
+    <string name="out_main">Salir Jugador</string>
+    <string name="Category_text">Seleccionar Categoria\nActual: %1$s</string>
+
+    <!--ThirdActivity strings:-->
+    <string name="home_third">Vuelve al inicio</string>
+    <string name="play_third">Juega otra vez</string>
+    <string name="Final_Score">Final score: %1$s</string>
+
+    <!--Category popup strings:-->
+    <string name="select_catpop">Selecciona una categoría</string>
+    <string name="confirm_catpop">Confirmar</string>
+
+    <!--Comments strings:-->
+    <string name="Perfect_comment">¡Increíble!\n</string>
+    <string name="Great_comment">¡Genial!\n¡Bien hecho!</string>
+    <string name="NiceTry_comment">Buen intento…\ndale de nuevo!</string>
+    <string name="player_found">Jugador encontrado</string>
+    <string name="player_exist_delete_or_init">Jugador ya existente, borre o inicie con él</string>
+    <string name="not_null_name">Introduzca un nombre no vacío</string>
+    <string name="player_create">Jugador creado con éxito!</string>
+    <string name="player_delete">Jugador borrado con éxito</string>
+
+    <!--Fragments strings:-->
+    <string name="next_questions">Siguiente pregunta</string>
+    <string name="content1_fromImage">Imagen de la que se pregunta</string>
+
+    <!--PlayerSelectActivity strings:-->
+    <string name="title_sp">¿Como te llamas?</string>
+    <string name="hint_sp">Introduce tu nombre:</string>
+    <string name="content3_sp">Añadir usuario</string>
+    <string name="content4_sp">Borrar usuario</string>
+    <string name="content2_sp">Entrar con usuario</string>
+    <string name="content1_sp">Buscar usuario</string>
+    <string name="titleInfo_sp">Jugador no encontrado</string>
+
+    <!--Bargame strings:-->
+    <string name="points_bargame">Puntos: %1$s</string>
+    <string name="lives_bargame">Vidas:</string>
+    <string name="content1_bargame">corazon0</string>
+    <string name="content2_bargame">corazon1</string>
+    <string name="content3_bargame">corazon2</string>
+
+    <!--SplashActivity strings:-->
+    <string name="charging_splash">Cargando…</string>
+
+    <!--HelpLayout strings:-->
+    <string name="main_title_h">| Manual de Usuario |</string>
+    <string name="title1_h">1. Introducción</string>
+    <string name="text1_h">Bienvenido a nuestra aplicación. Para empezar necesitas crearte el usuario/jugador, seleccionarlo y entrar a jugar.</string>
+    <string name="title2_h">2. Pantalla inicial</string>
+    <string name="text2_h">Esta es la primera pantalla que aparece y es la utilizada para identificarse como jugador.</string>
+    <string name="text2.1_h">Ahora se explicara uno a uno los botones y su uso:</string>
+    <string name="title3_h">-> Buscar jugador</string>
+    <string name="text3_h">Tras poner el nombre correspondiente, si estás registrado te selecciona.</string>
+    <string name="text3.1_h">En caso contrario tienes que hacer antes la de añadir jugador.</string>
+    <string name="title4_h">-> Entrar</string>
+    <string name="text5_h">Podremos entrar a jugar</string>
+    <string name="title6_h">-> Añadir jugador</string>
+    <string name="text6_h">Cuando tengas el nombre solamente al hacer click se añade el jugador</string>
+    <string name="title7_h">-> Borrar jugador</string>
+    <string name="text7_h">Al darle en este icono se elimina el jugador</string>
+    <string name="title8_h">3. Menú principal</string>
+    <string name="text8_h">Tienes un ranking disponible, para aumentar tu puntuación tienes que jugar el modo supervivencia.</string>
+    <string name="text8.1_h">Cuanto más lejos llegues más puntos tendrás.</string>
+    <string name="title9_h">-> Iniciar partida</string>
+    <string name="text9_h">Empezar partida con la categoría seleccionada.Por defecto con todas las categorías.</string>
+    <string name="title10_h">-> Salir jugador</string>
+    <string name="text10_h">Volver a la pantalla de inicio.</string>
+    <string name="title11_h">-> Seleccionar categoría</string>
+    <string name="text11_h">Elige el modo al que jugar. Si quieres escalar en el ranking solo el modo Supervivencia dará puntos.</string>
+    <string name="text11.1_h">Además el modo Supervivencia es un modo con todas las preguntas y con 3 vidas.</string>
+    <string name="content1_h">Página de selección de jugadores</string>
+    <string name="content2_h">Boton de buscar</string>
+    <string name="content3_h">Boton de continuar</string>
+    <string name="content4_h">Boton de añadir</string>
+    <string name="content5_h">Boton borrar</string>
+    <string name="content6_h">Menu principal</string>
+    <string name="content7_h">Menu de elección de categorias</string>
+
+    <!--Categories strings:-->
+    <string name="Category_ALL">Todas</string>
+    <string name="Category_SCIENCE">Ciencia</string>
+    <string name="Category_HISTORY">Historia</string>
+    <string name="Category_SPORTS">Deporte</string>
+    <string name="Category_SERIES">Series</string>
+    <string name="Category_SURVIVAL">Supervivencia</string>
+    <string name="Category_HARD">Difíciles</string>
+
+    <!--Radiogroup strings:-->
+    <string name="content_option_A">Opción seleccion A</string>
+    <string name="content_option_B">Opción seleccion B</string>
+    <string name="content_option_C">Opción seleccion C</string>
+    <string name="content_option_D">Opción seleccion D</string>
+
+    <!--Imagebutton strings:-->
+    <string name="content_image_A">Imagen seleccion A</string>
+    <string name="content_image_B">Imagen seleccion B</string>
+    <string name="content_image_C">Imagen seleccion C</string>
+    <string name="content_image_D">Imagen seleccion D</string>
+
+    <!--Bar strings:-->
+    <string name="contentIcon_bar">Imagen de la aplicación\n</string>
+    <string name="help_bar">Botón de ayuda de la app\n</string>
+
+</resources>
