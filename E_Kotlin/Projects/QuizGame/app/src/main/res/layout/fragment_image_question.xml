@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".fragments.ImageFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.35"
+            android:background="@drawable/gradient_init">
+
+            <TextView
+                android:id="@+id/question_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/text_default"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:textSize="40sp" />
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:columnCount="2"
+            android:paddingVertical="20sp"
+            android:rowCount="2">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10sp"
+                android:background="@drawable/gradient_images">
+
+                <ImageButton
+                    android:id="@+id/answer_image_A"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10sp"
+                    android:background="@color/colorRadio"
+                    android:contentDescription="@string/content_image_A"
+                    android:scaleType="fitCenter" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10sp"
+                android:background="@drawable/gradient_images">
+
+                <ImageButton
+                    android:id="@+id/answer_image_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10sp"
+                    android:background="@color/colorRadio"
+                    android:contentDescription="@string/content_image_B"
+                    android:scaleType="fitCenter" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10sp"
+                android:background="@drawable/gradient_images">
+
+                <ImageButton
+                    android:id="@+id/answer_image_C"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10sp"
+                    android:background="@color/colorRadio"
+                    android:contentDescription="@string/content_image_C"
+                    android:scaleType="fitCenter" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="10sp"
+                android:background="@drawable/gradient_images">
+
+                <ImageButton
+                    android:id="@+id/answer_image_D"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10sp"
+                    android:background="@color/colorRadio"
+                    android:contentDescription="@string/content_image_D"
+                    android:scaleType="fitCenter" />
+            </FrameLayout>
+        </GridLayout>
+
+    </LinearLayout>
+</FrameLayout>
