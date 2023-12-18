@@ -28,11 +28,11 @@ public class RedudantRecursives {
     }
 
 
-    public static int f (int x){
-        return g(x,0);
+    public static int f_tab (int x){
+        return g_tab(x,0);
     }
 
-    private static int g (int x, int y){
+    private static int g_tab (int x, int y){
         int[][] table = new int[x+1][2];
         table[0][0]=0;
         if(x>0){
@@ -47,7 +47,7 @@ public class RedudantRecursives {
     }
 
     public static void main(String[] args) {
-        System.out.println(f(4));
+        System.out.println(f_tab(4));
     }
 
 }
