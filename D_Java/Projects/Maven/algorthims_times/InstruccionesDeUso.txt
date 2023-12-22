@@ -1,0 +1,19 @@
+Autores:
+
+-Álvaro Martínez Quiroga
+-Adrian Martin Martin
+-Sebastián Ramiro Entrerrios García
+
+Instrucciones de uso de PruebaAlgoritmos.jar:
+
+1-Lo descargas y colocas donde quieras.
+2-Le das click para ejecutar.
+3-Se te formara después de unos segundos un excel llamado tiempos.csv.
+4-Fin.
+
+Info: Esta aplicación ejecuta un total de 3 algortimos 
+en sus tres casos (peor, medio y mejor), y diferencia dos tipos
+de variables, las volatile y las normales. Asi que ejecuta un total de
+12 situaciones diferentes. Tras ejecutar todos los algoritmos se
+creara o reescribira un excel del mismo directorio en el que encontraras
+todos los tiempos que tardaron los algoritmos en las diferentes 1000 iteraciones.
