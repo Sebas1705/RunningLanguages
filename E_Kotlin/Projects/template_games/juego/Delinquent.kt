@@ -1,0 +1,9 @@
+package com.sebss.pass_word.juego
+
+class Delinquent(x: Int, y: Int, @JvmField var type: Int) : Entity(x, y) {
+    companion object {
+        const val THIEF = 0
+        const val HACKER = 1
+        const val GANGSTER = 2
+    }
+}
