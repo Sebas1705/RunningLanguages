@@ -1,10 +1,9 @@
-import math
+import math,os
 
 # Debug setting:
 DEBUG_MODE = True
 FISHBOWL_ACTIVATE = False
-PATH_PROJECT = "E:/Escritorio/Programacion/RunningLanguages/F_Python/Projects/Pygame/Wolfenstein3D_Demo(RayCasterExample)/"
-
+PATH_PROJECT = os.path.abspath(os.path.dirname(__file__))+"\\"
 # Screen settings:
 RES = WIDTH, HEIGHT = 1600, 900
 HALF_WIDTH = WIDTH // 2
@@ -13,7 +12,7 @@ FPS = 0
 
 
 # Player settings:
-PLAYER_POS = 1.5, 5
+PLAYER_POS = 1.5, 5.0
 PLAYER_ANGLE = 0
 PLAYER_SPEED = 0.004
 PLAYER_ROT_SPEED = 0.002
