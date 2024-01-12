@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#dbd8a2</color>
+    <color name="primaryBlonded">#ece9b3</color>
+    <color name="secondary">#d74f33</color>
+    <color name="secondaryBlonded">#e86044</color>
+    <color name="tertiary">#4b3e4d</color>
+    <color name="tertiaryBlonded">#5c4f5e</color>
+    <color name="textPrimary">#1e8c93</color>
+    <color name="textSecondary">#c4ac30</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 </resources>

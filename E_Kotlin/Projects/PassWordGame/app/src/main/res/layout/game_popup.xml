@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/primary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/secondary_grad"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jetbrains_mono_thin"
+            android:text="@string/textGameModeMainMenu"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:paddingVertical="20dp"/>
+        <ImageButton
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/quit"
+            android:scaleType="fitCenter"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/contentDescriptionCancelPopup" />
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/modeRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:maxWidth="320dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/start_option"
+            android:buttonTint="@color/secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/radio_form"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="10dp"
+            android:text="@string/mode_start"
+            android:textColor="@color/textSecondary"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/all_option"
+            android:buttonTint="@color/secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/radio_form"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="10dp"
+            android:text="@string/mode_all"
+            android:textColor="@color/textSecondary"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmTextMainMenu"
+        android:textSize="30sp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:textColor="@color/textSecondary"
+        android:background="@drawable/letters_background"/>
+    <include layout="@layout/default_bottom_bar"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

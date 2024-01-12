@@ -1,3 +1,72 @@
 <resources>
-    <string name="app_name">Pass_Word</string>
+
+    <!-- App: -->
+    <string name="app_name">Pasapalabras</string>
+    <string name="Default_text">Default</string>
+
+    <!-- ContentsDescriptions: -->
+    <string name="contentDescriptionToolBar">icono app tool bar</string>
+    <string name="contentDescriptionSplash">icon of app</string>
+    <string name="contentDescriptionLoginMainMenu">icon of login</string>
+    <string name="contentDescriptionDictionaryMainMenu">icon for dictionary</string>
+    <string name="contentDescriptionGamesMainMenu">icon of games</string>
+    <string name="contentDescriptionPlayMainMenu">icon of play</string>
+    <string name="contentDescriptionProfileMainMenu">icon of perfil</string>
+    <string name="contentDescriptionLoginPopup">icon for login</string>
+    <string name="contentDescriptionCancelPopup">icon for cancel</string>
+    <string name="contentDescriptionCreatePopup">icon of create</string>
+    <string name="contentDescriptionToolbar">icon for question</string>
+
+    <!-- Hints: -->
+    <string name="hint_game"><![CDATA[> Responde aquí <]]></string>
+
+    <!-- Texts: -->
+    <string name="letterA">A</string><string name="letterB">B</string><string name="letterC">C</string><string name="letterD">D</string><string name="letterE">E</string>
+    <string name="letterF">F</string><string name="letterG">G</string><string name="letterH">H</string><string name="letterI">I</string><string name="letterJ">J</string>
+    <string name="letterK">K</string><string name="letterL">L</string><string name="letterM">M</string><string name="letterN">N</string><string name="letterO">O</string>
+    <string name="letterP">P</string><string name="letterQ">Q</string><string name="letterR">R</string><string name="letterS">S</string><string name="letterT">T</string>
+    <string name="letterU">U</string><string name="letterV">V</string><string name="letterX">X</string><string name="letterY">Y</string><string name="letterZ">Z</string>
+    <string name="textSignInMainMenu">Iniciar</string>
+    <string name="textDictionaryMainMenu">Palabras</string>
+    <string name="textPlayMainMenu">Jugar</string>
+    <string name="textGamesMainMenu">Partidas</string>
+    <string name="textProfileMainMenu">Perfil</string>
+    <string name="namePopup">Nombre:</string>
+    <string name="textGameModeMainMenu">Modo de juego</string>
+    <string name="mode_start">Empieza por</string>
+    <string name="mode_all">Contiene</string>
+    <string name="confirmTextMainMenu">Confirmar</string>
+    <string name="textGameFragment">Hitorial de partidas</string>
+    <string name="gamesContentDescription">icon for register</string>
+    <string name="textMainMenu">Sin iniciar sesión</string>
+    <string name="ranking">Ranking</string>
+    <string name="flecha_izq">flecha izquierda</string>
+    <string name="flecha_der">flecha izquierda</string>
+    <string name="icon_for_user">icon for user</string>
+    <string name="textName">Nombre:</string>
+    <string name="historial">Historial:</string>
+    <string name="puntuaci_n">Puntuación:</string>
+    <string name="palabras_correctas">Palabras correctas:</string>
+    <string name="palabras_incorrectas">Palabras incorrectas:</string>
+    <string name="numero_de_partidas">Numero de partidas:</string>
+    <string name="buttonDeleteProfile">Borrar jugador</string>
+    <string name="a_adir_palabra">Añadir/Cambiar palabra</string>
+    <string name="actualizar_palabra">Actualizar palabra</string>
+    <string name="borrar_palabra">Borrar palabra</string>
+    <string name="buscar_palabra">Buscar Palabra</string>
+    <string name="definci_n">Definción:</string>
+    <string name="definici_n_1">Definición 1</string>
+    <string name="definici_n_2">Definición 2</string>
+    <string name="definici_5">Definición 5</string>
+    <string name="palabra">Palabra</string>
+    <string name="definici_n_3">Definición 3</string>
+    <string name="definici_n_4">Definición 4</string>
+    <string name="nombre">Nombre</string>
+    <string name="diccionario">Diccionario</string>
+    <string name="palabras">Palabras</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="left_arrow">left arrow</string>
+    <string name="right_arrow">right arrow</string>
+    <string name="iconContentDescriptionMainMenu">icon of user</string>
+
 </resources>

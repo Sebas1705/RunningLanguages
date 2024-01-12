@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    android:orientation="vertical"
+    tools:context=".ui.activities.MainMenuActivity">
+
+    <include layout="@layout/tool_bar" android:id="@+id/toolbar" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jetbrains_mono_thin"
+            android:text="@string/ranking"
+            android:layout_gravity="center"
+            android:textColor="@color/textPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/secondary_grad"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ranking"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:paddingHorizontal="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/secondary_grad"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="20dp"
+        android:baselineAligned="false">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <ImageButton
+                    android:id="@+id/words"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/transparent"
+                    android:contentDescription="@string/contentDescriptionDictionaryMainMenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dictionary" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/jetbrains_mono_thin"
+                android:text="@string/textDictionaryMainMenu"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="20dp"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <ImageButton
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/transparent"
+                    android:contentDescription="@string/contentDescriptionLoginMainMenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/login" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/jetbrains_mono_thin"
+                android:text="@string/textSignInMainMenu"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <ImageButton
+                    android:id="@+id/play"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/transparent"
+                    android:contentDescription="@string/contentDescriptionPlayMainMenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/play" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/jetbrains_mono_thin"
+                android:text="@string/textPlayMainMenu"
+                android:layout_marginBottom="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <ImageButton
+                    android:id="@+id/perfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/transparent"
+                    android:contentDescription="@string/contentDescriptionProfileMainMenu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/perfil" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/jetbrains_mono_thin"
+                android:text="@string/textProfileMainMenu"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <include layout="@layout/default_bottom_bar" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

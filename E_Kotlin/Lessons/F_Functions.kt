@@ -30,6 +30,7 @@ fun factorial(n:Int):Int = if (n==0) 1 else n * factorial(n-1)
 //Anonimated functions:
 val square = fun(x:Int):Int = x*x
 
+
 fun main() {
     hello("Sebas")
     println(sum(5,34))
@@ -41,4 +42,5 @@ fun main() {
     println(doIt(24,21){x,y->x+y})
     println(factorial(5))
     println(square(22))
+    
 }
