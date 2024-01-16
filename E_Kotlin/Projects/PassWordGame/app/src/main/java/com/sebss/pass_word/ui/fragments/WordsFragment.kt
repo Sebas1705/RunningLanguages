@@ -9,18 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.airbnb.lottie.LottieAnimationView
 import com.sebss.pass_word.R
-import com.sebss.pass_word.data.AppDatabase
 import com.sebss.pass_word.data.entities.WordEntity
-import com.sebss.pass_word.Game
-import com.sebss.pass_word.databinding.FragmentProfileFragmentsBinding
+import com.sebss.pass_word.domain.Game
 import com.sebss.pass_word.databinding.FragmentWordsFragmentsBinding
 import com.sebss.pass_word.ui.adapters.WordsAdapter
 
@@ -35,9 +30,11 @@ class WordsFragment(private val parent: AppCompatActivity) : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentWordsFragmentsBinding.inflate(inflater, container, false)
         game = Game.getInstance(null)
+
+        listDefsEdits = listOf(binding.def0,binding.def1,binding.def2,binding.def3,binding.def4)
 
         binding.wordbar.search.setOnClickListener {
             val word = game.searchWord(binding.name.text.toString())
@@ -54,7 +51,7 @@ class WordsFragment(private val parent: AppCompatActivity) : Fragment() {
         }
         binding.wordbar.edit.setOnClickListener {
             if (binding.name.text.toString() == "") {
-                binding.logText.text = "Nombre no vacío!"
+                binding.logText.text = "No vacío!"
                 game.soundPlayer.playSound(R.raw.fallo, parent)
             } else {
                 val word = WordEntity(

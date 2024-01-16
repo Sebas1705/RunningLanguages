@@ -16,16 +16,39 @@
     <string name="contentDescriptionCancelPopup">icon for cancel</string>
     <string name="contentDescriptionCreatePopup">icon of create</string>
     <string name="contentDescriptionToolbar">icon for question</string>
+    <string name="iconContentDescriptionMainMenu">icon of user</string>
+    <string name="contentDescriptionHelp">image of game screen</string>
+
 
     <!-- Hints: -->
-    <string name="hint_game"><![CDATA[> Responde aquí <]]></string>
+    <string name="hint_game">Resuesta aquí!</string>
 
     <!-- Texts: -->
-    <string name="letterA">A</string><string name="letterB">B</string><string name="letterC">C</string><string name="letterD">D</string><string name="letterE">E</string>
-    <string name="letterF">F</string><string name="letterG">G</string><string name="letterH">H</string><string name="letterI">I</string><string name="letterJ">J</string>
-    <string name="letterK">K</string><string name="letterL">L</string><string name="letterM">M</string><string name="letterN">N</string><string name="letterO">O</string>
-    <string name="letterP">P</string><string name="letterQ">Q</string><string name="letterR">R</string><string name="letterS">S</string><string name="letterT">T</string>
-    <string name="letterU">U</string><string name="letterV">V</string><string name="letterX">X</string><string name="letterY">Y</string><string name="letterZ">Z</string>
+    <string name="letterA">A</string>
+    <string name="letterB">B</string>
+    <string name="letterC">C</string>
+    <string name="letterD">D</string>
+    <string name="letterE">E</string>
+    <string name="letterF">F</string>
+    <string name="letterG">G</string>
+    <string name="letterH">H</string>
+    <string name="letterI">I</string>
+    <string name="letterJ">J</string>
+    <string name="letterK">K</string>
+    <string name="letterL">L</string>
+    <string name="letterM">M</string>
+    <string name="letterN">N</string>
+    <string name="letterO">O</string>
+    <string name="letterP">P</string>
+    <string name="letterQ">Q</string>
+    <string name="letterR">R</string>
+    <string name="letterS">S</string>
+    <string name="letterT">T</string>
+    <string name="letterU">U</string>
+    <string name="letterV">V</string>
+    <string name="letterX">X</string>
+    <string name="letterY">Y</string>
+    <string name="letterZ">Z</string>
     <string name="textSignInMainMenu">Iniciar</string>
     <string name="textDictionaryMainMenu">Palabras</string>
     <string name="textPlayMainMenu">Jugar</string>
@@ -41,7 +64,7 @@
     <string name="textMainMenu">Sin iniciar sesión</string>
     <string name="ranking">Ranking</string>
     <string name="flecha_izq">flecha izquierda</string>
-    <string name="flecha_der">flecha izquierda</string>
+    <string name="flecha_der">flecha derecha</string>
     <string name="icon_for_user">icon for user</string>
     <string name="textName">Nombre:</string>
     <string name="historial">Historial:</string>
@@ -67,6 +90,21 @@
     <string name="title_activity_help">HelpActivity</string>
     <string name="left_arrow">left arrow</string>
     <string name="right_arrow">right arrow</string>
-    <string name="iconContentDescriptionMainMenu">icon of user</string>
+    <string name="iconContentDescriptionToolBar">icon for home</string>
+    <string name="textTitleHelp">| Guia usuarios |</string>
+    <string name="textIntroHelp">Pasapalabras es un juego que consiste en asociar unas definiciones concretas con sus palabras.</string>
+    <string name="textIntro2Help">La gracia es que en una partida se haya respondido tantas como letras haya, se puede saltar y pedir otra ayuda en caso de no saberla.</string>
+    <string name="textSubtitle1Help">- Inicio de sesión:</string>
+    <string name="textLogHelp">Pasapalabra tiene un sistema de sesiones locales para poder guardar los registros de varios juagores. Para ello es tan fácil como en el menú principal darle al botón de iniciar y crear o cargar el jugador.</string>
+    <string name="textSubtitle2Help">- Palabras:</string>
+    <string name="textWordHelp">Cuando le das al botón de palabras te llevara a la sección donde se puede registrar, crear o buscar palabras que existen para el juego.</string>
+    <string name="textWord2Help">Con el botón de la lupa buscaras la palabra con el nombre igual al campo de nombre de la pantalla, con el del medio registraras una nueva palabra o actualizaras una ya buscada y con la papelera borraras la palabra.</string>
+    <string name="textProfileHelp">En este apartado podras ver tu información, cambiar tu icono y borrar el jugador.</string>
+    <string name="textSubtitle3Help">- Perfil:</string>
+    <string name="textSubtitle4Help">- Juego:</string>
+    <string name="textGameHelp">Para empezar a jugar es tan simple como haber inciado sesión y darle al botón de jugar, tras esto nos aparecera la siguiente ventana:</string>
+    <string name="textGame2Help">Aqui tienes que elegir el modo de juego entre los siguientes dos: \'Empieza por\' - donde las palabras solo empezaran por la letra indicada y \'Contiene\' - donde las palabras contendran la letra indicada en cualquier parte. Tras elegir nos ira a la pantalla de juego:</string>
+    <string name="textGame3Help">Como se ve la lista de letras se situa arriba mostrando la letra actual, y las restantes. Tras estas esta la definición de la palabra y el hueco para introducir la respuesta. Y por último esta los botones de lupa para cambiar la definición, el del medio para responder y la flecha para saltar la palabra.</string>
+    <string name="textFinHelp">Fin de guía</string>
 
 </resources>

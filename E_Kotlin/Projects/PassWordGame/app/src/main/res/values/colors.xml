@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Light colors: -->
     <color name="primary">#dbd8a2</color>
     <color name="primaryBlonded">#ece9b3</color>
     <color name="secondary">#d74f33</color>
     <color name="secondaryBlonded">#e86044</color>
     <color name="tertiary">#4b3e4d</color>
     <color name="tertiaryBlonded">#5c4f5e</color>
-    <color name="textPrimary">#1e8c93</color>
-    <color name="textSecondary">#c4ac30</color>
+    <color name="textPrimary">#074E53</color>
+    <color name="textSecondary">#09154F</color>
+    <color name="correctLetter">#2CB213</color>
+    <color name="correctLetterBlonded">#3dc324</color>
+    <color name="incorrectLetter">#A80B0B</color>
+    <color name="incorrectLetterBlonded">#b91c1c</color>
+
+    <!-- Night colors: -->
+    <color name="primaryNight">#353533</color>
+    <color name="primaryBlondedNight">#464644</color>
+    <color name="secondaryNight">#673AB7</color>
+    <color name="secondaryBlondedNight">#9C27B0</color>
+    <color name="tertiaryNight">#FF9800</color>
+    <color name="tertiaryBlondedNight">#FFEB3B</color>
+    <color name="textPrimaryNight">#7CF7FF</color>
+    <color name="textSecondaryNight">#BCBBB8</color>
+    <color name="correctLetterNight">#1B680C</color>
+    <color name="correctLetterBlondedNight">#2c791d</color>
+    <color name="incorrectLetterNight">#6C0707</color>
+    <color name="incorrectLetterBlondedNight">#7d1818</color>
+
+
+    <!-- Extras: -->
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+
 </resources>

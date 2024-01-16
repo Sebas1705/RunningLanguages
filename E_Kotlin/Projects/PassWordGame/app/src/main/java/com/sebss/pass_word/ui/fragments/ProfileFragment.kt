@@ -6,16 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatButton
 import com.sebss.pass_word.R
 import com.sebss.pass_word.R.*
 import com.sebss.pass_word.ui.activities.MainMenuActivity
-import com.sebss.pass_word.data.AppDatabase
-import com.sebss.pass_word.Game
+import com.sebss.pass_word.domain.Game
 import com.sebss.pass_word.databinding.FragmentProfileFragmentsBinding
 
 class ProfileFragment(private val parent: AppCompatActivity) : Fragment() {

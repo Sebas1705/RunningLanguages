@@ -1,4 +1,4 @@
-package com.sebss.pass_word
+package com.sebss.pass_word.domain
 
 import android.content.Context
 import android.media.MediaPlayer

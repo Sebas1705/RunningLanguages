@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/icon_background"
-    android:paddingVertical="10dp"
-    android:paddingHorizontal="20dp"
+    style="@style/primary_grad"
+    android:paddingTop="10dp"
     android:orientation="vertical"
     tools:context=".ui.fragments.ProfileFragment">
 
@@ -14,7 +13,7 @@
         android:layout_height="0dp"
         android:layout_weight="6"
         android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
+        android:paddingHorizontal="20dp"
         tools:ignore="UselessParent">
         <ImageButton
             android:id="@+id/left"
@@ -54,23 +53,21 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
+        android:paddingHorizontal="30dp"
         android:baselineAligned="false">
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             tools:ignore="NestedWeights">
 
             <TextView
+                style="@style/text_view_extra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="@string/textName"
                 android:textAlignment="center"
-                android:textColor="@color/tertiary"
-                android:textStyle="bold"
-                android:textSize="20sp"
                 tools:ignore="NestedWeights" />
         </RelativeLayout>
         <RelativeLayout
@@ -80,28 +77,22 @@
 
             <TextView
                 android:id="@+id/name"
+                style="@style/text_view_secondTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:fontFamily="sans-serif-black"
-                android:hint="@string/Default_text"
-                android:textColor="@color/textPrimary"
-                android:textColorHint="@color/textPrimary"
-                android:textSize="30sp"
-                android:textStyle="italic|bold" />
+                android:text="@string/Default_text" />
         </RelativeLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:textAlignment="center"
         android:text="@string/historial"
-        android:textSize="40sp"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/tertiary"
-        android:textStyle="bold"
+        style="@style/text_view_mainTitle"
         tools:ignore="NestedWeights" />
 
     <TextView
@@ -109,27 +100,27 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textColor="@color/textPrimary"
+        style="@style/text_view_extra"
+        android:paddingHorizontal="30dp"
         android:text="@string/Default_text"
-        android:textSize="20sp"
         tools:ignore="NestedWeights" />
     <TextView
         android:id="@+id/correctText"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textColor="@color/textPrimary"
+        android:paddingHorizontal="30dp"
+        style="@style/text_view_extra"
         android:text="@string/Default_text"
-        android:textSize="20sp"
         tools:ignore="NestedWeights" />
     <TextView
         android:id="@+id/incorrectText"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textColor="@color/textPrimary"
+        android:paddingHorizontal="30dp"
+        style="@style/text_view_extra"
         android:text="@string/Default_text"
-        android:textSize="20sp"
         tools:ignore="NestedWeights" />
 
     <TextView
@@ -137,19 +128,21 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textColor="@color/textPrimary"
+        style="@style/text_view_extra"
+        android:paddingHorizontal="30dp"
         android:text="@string/Default_text"
-        android:textSize="20sp"
         tools:ignore="NestedWeights" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/deletePlayer"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:text="@string/buttonDeleteProfile"
-        android:textColor="@color/primaryBlonded"
-        android:background="@drawable/letters_background"/>
+        android:layout_gravity="center"
+        android:layout_marginVertical="20dp"
+        style="@style/button"/>
 
+    <include layout="@layout/default_bottom_bar"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

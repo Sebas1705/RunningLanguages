@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/icon_background"
+    style="@style/primary_grad"
     android:orientation="vertical"
     tools:context=".ui.activities.MainMenuActivity">
 
@@ -17,19 +17,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jetbrains_mono_thin"
             android:text="@string/ranking"
             android:layout_gravity="center"
-            android:textColor="@color/textPrimary"
-            android:textSize="30sp"
-            android:textStyle="bold|italic" />
+            style="@style/text_view_mainTitle"/>
 
     </FrameLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@drawable/secondary_grad"/>
+        style="@style/secondary_grad"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ranking"
@@ -41,15 +38,15 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@drawable/secondary_grad"/>
+        style="@style/secondary_grad"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"
+        android:layout_weight="12"
         android:orientation="horizontal"
         android:paddingHorizontal="10dp"
-        android:paddingVertical="20dp"
+        android:paddingTop="20dp"
         android:baselineAligned="false">
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -77,14 +74,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/jetbrains_mono_thin"
+                android:layout_weight="2"
                 android:text="@string/textDictionaryMainMenu"
                 android:textAlignment="center"
-                android:textColor="@color/textPrimary"
-                android:layout_marginBottom="20dp"
-                android:textSize="30sp"
-                android:textStyle="bold|italic" />
+                android:layout_marginBottom="5dp"
+                style="@style/text_view_secondTitle"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -106,13 +100,10 @@
                 android:id="@+id/loginText"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/jetbrains_mono_thin"
+                android:layout_weight="2"
                 android:text="@string/textSignInMainMenu"
                 android:textAlignment="center"
-                android:textColor="@color/textPrimary"
-                android:textSize="30sp"
-                android:textStyle="bold|italic" />
+                style="@style/text_view_secondTitle" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -140,14 +131,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/jetbrains_mono_thin"
+                android:layout_weight="2"
                 android:text="@string/textPlayMainMenu"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="5dp"
                 android:textAlignment="center"
-                android:textColor="@color/textPrimary"
-                android:textSize="30sp"
-                android:textStyle="bold|italic" />
+                style="@style/text_view_secondTitle"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -168,13 +156,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/jetbrains_mono_thin"
+                android:layout_weight="2"
                 android:text="@string/textProfileMainMenu"
                 android:textAlignment="center"
-                android:textColor="@color/textPrimary"
-                android:textSize="30sp"
-                android:textStyle="bold|italic" />
+                style="@style/text_view_secondTitle"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
 

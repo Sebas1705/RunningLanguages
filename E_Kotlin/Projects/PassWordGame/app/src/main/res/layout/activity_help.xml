@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.HelpActivity"
+    android:orientation="vertical"
+    style="@style/primary_grad">
+
+    <include layout="@layout/tool_bar"
+        android:id="@+id/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:ignore="ScrollViewCount">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp">
+
+            <View
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                style="@style/tertiary_grad"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_mainTitle"
+                android:text="@string/textTitleHelp"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:layout_gravity="center_horizontal"/>
+
+            <View
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                style="@style/tertiary_grad"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/textIntro"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_extra"/>
+
+            <TextView
+                android:id="@+id/textIntro2"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_extra"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_secondTitle"
+                android:text="@string/textSubtitle1Help"/>
+
+            <TextView
+                android:id="@+id/textLog"
+                android:layout_marginVertical="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_extra"/>
+
+            <include layout="@layout/login_popup" />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_secondTitle"
+                android:text="@string/textSubtitle2Help"/>
+
+            <TextView
+                android:id="@+id/textWord"
+                android:layout_marginVertical="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_extra"/>
+
+            <include layout="@layout/words_bottom_bar"/>
+
+            <TextView
+                android:id="@+id/textWord2"
+                android:layout_marginVertical="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_extra"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_secondTitle"
+                android:text="@string/textSubtitle3Help"/>
+
+            <TextView
+                android:id="@+id/textProfile"
+                android:layout_marginVertical="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_extra"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_secondTitle"
+                android:text="@string/textSubtitle4Help"/>
+
+            <TextView
+                android:id="@+id/textGame"
+                android:layout_marginVertical="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_extra"/>
+
+            <include layout="@layout/game_popup"/>
+
+            <TextView
+                android:id="@+id/textGame2"
+                android:layout_marginVertical="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_extra"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/game"
+                android:contentDescription="@string/contentDescriptionHelp" />
+
+            <TextView
+                android:id="@+id/textGame3"
+                android:layout_marginVertical="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_extra"/>
+
+            <TextView
+                android:layout_marginVertical="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/text_view_mainTitle"
+                android:layout_gravity="center_horizontal"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+    <include layout="@layout/default_bottom_bar"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

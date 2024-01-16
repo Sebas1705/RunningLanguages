@@ -9,7 +9,7 @@ import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
 import com.sebss.pass_word.R
-import com.sebss.pass_word.Game
+import com.sebss.pass_word.domain.Game
 import com.sebss.pass_word.databinding.ActivityGameBinding
 
 class GameActivity : AppCompatActivity() {
@@ -19,6 +19,7 @@ class GameActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGameBinding
     private var game = Game.getInstance(null)
 
+   
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,17 +35,17 @@ class GameActivity : AppCompatActivity() {
             )
         ) "Empieza: " else "Contiene: "
         Log.d("Word: ", game.wordsGame[0].name)
-        binding.questionText.text = preText + game.wordsGame[0].definitions.random()
+        binding.questionText.text = "$preText${game.wordsGame[0].definitions.random()}"
         var helpUsed = false
         binding.gamebar.response.setOnClickListener {
             animate(binding.gamebar.response, R.raw.correct_incorrect, R.drawable.response) {
                 val i = game.indexWord + 1
                 val word = game.wordsGame[i]
                 if (game.response(binding.editName.text.toString())) {
-                    lettersLayout[i - 1].setBackgroundResource(R.drawable.lettercorrect_background)
+                    lettersLayout[i - 1].setBackgroundResource(R.drawable.back_correct_letter)
                     game.soundPlayer.playSound(R.raw.acierto, this)
                 } else {
-                    lettersLayout[i - 1].setBackgroundResource(R.drawable.letterincorrect_background)
+                    lettersLayout[i - 1].setBackgroundResource(R.drawable.back_incorrect_letter)
                     game.soundPlayer.playSound(R.raw.fallo, this)
                 }
                 if (game.finishGame()) {
@@ -68,7 +69,7 @@ class GameActivity : AppCompatActivity() {
                     game.saveActualData()
                     Game.changeActivity(this, MainMenuActivity::class.java, true)
                 }else {
-                    lettersLayout[game.indexWord].setBackgroundResource(R.drawable.letters_background)
+                    lettersLayout[game.indexWord].setBackgroundResource(R.drawable.back_letter)
                     game.indexWord++
                     lettersLayout[game.indexWord].setBackgroundResource(R.drawable.transparent)
                     binding.questionText.text = (if (game.wordsGame[game.indexWord].name.startsWith(
@@ -97,10 +98,12 @@ class GameActivity : AppCompatActivity() {
             }
         }
         binding.toolbar.helpTool.setOnClickListener {
-            //Game.changeActivity(this,HelpActivity::class.java,true)
+            game.soundPlayer.playSound(R.raw.button_sound, this)
+            Game.changeActivity(this,HelpActivity::class.java,true)
         }
         binding.toolbar.homeTool.setOnClickListener {
-            Game.changeActivity(this,MainMenuActivity::class.java,true)
+            game.soundPlayer.playSound(R.raw.button_sound, this)
+            Game.changeActivity(this, MainMenuActivity::class.java, true)
         }
 
     }

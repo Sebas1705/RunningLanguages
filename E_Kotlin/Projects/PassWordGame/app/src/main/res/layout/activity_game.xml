@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/icon_background"
+    style="@style/primary_grad"
     android:orientation="vertical"
     tools:context=".ui.activities.GameActivity">
 
@@ -29,7 +29,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -61,7 +61,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -157,7 +157,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -173,7 +173,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -189,7 +189,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -205,7 +205,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -221,7 +221,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -237,7 +237,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -253,7 +253,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -269,7 +269,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -285,7 +285,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -301,7 +301,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -317,7 +317,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -333,7 +333,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -349,7 +349,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -365,7 +365,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -381,7 +381,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -397,7 +397,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -413,7 +413,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@drawable/letters_background">
+                style="@style/back_letter">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -435,15 +435,13 @@
 
         <TextView
             android:id="@+id/questionText"
+            style="@style/text_view_extra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="sans-serif-black"
             android:text="@string/Default_text"
-            android:textAlignment="center"
-            android:textColor="@color/textPrimary"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textAlignment="center" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -453,17 +451,14 @@
 
         <EditText
             android:id="@+id/edit_name"
+            style="@style/text_view_secondTitle"
             android:layout_width="300dp"
             android:layout_height="75dp"
             android:layout_centerInParent="true"
             android:autofillHints="username"
             android:fontFamily="sans-serif-black"
             android:hint="@string/hint_game"
-            android:inputType="textShortMessage"
-            android:textColor="@color/textPrimary"
-            android:textColorHint="@color/textPrimary"
-            android:textSize="30sp"
-            android:textStyle="italic|bold" />
+            android:inputType="textShortMessage" />
 
     </RelativeLayout>
 

@@ -2,32 +2,31 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/primary"
+    style="@style/primary_grad"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/secondary_grad"
+        style="@style/secondary_grad"
         android:orientation="horizontal">
         <TextView
             android:layout_width="0dp"
             android:layout_weight="6"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jetbrains_mono_thin"
             android:text="@string/textSignInMainMenu"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="40sp"
+            style="@style/text_view_popup_title"
             android:paddingVertical="20dp"/>
         <ImageButton
             android:id="@+id/cancelButton"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="55dp"
             android:src="@drawable/quit"
             android:scaleType="fitCenter"
-            android:background="@drawable/transparent"
+            android:background="@drawable/back_secondary_night"
             android:contentDescription="@string/contentDescriptionCancelPopup" />
     </LinearLayout>
 
@@ -36,33 +35,26 @@
         android:id="@+id/textMsg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
         android:text="@string/namePopup"
         android:textAlignment="center"
-        android:textColor="@color/textPrimary"
-        android:textSize="50sp"
-        android:textStyle="italic"
+        style="@style/text_view_mainTitle"
         android:paddingHorizontal="20dp"
-        android:paddingTop="80dp"/>
+        android:paddingTop="60dp"/>
 
     <EditText
         android:id="@+id/edit_name"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:maxWidth="400dp"
         android:layout_height="wrap_content"
         android:autofillHints="username"
-        android:fontFamily="sans-serif-black"
         android:hint="@string/hint_game"
-        android:textColorHint="@color/textPrimary"
         android:inputType="textShortMessage"
-        android:textColor="@color/textPrimary"
-        android:textSize="30sp"
-        android:textStyle="italic|bold"
+        style="@style/text_view_secondTitle"
         android:layout_marginHorizontal="40dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="200dp"
         android:paddingHorizontal="20dp"
         android:layout_marginVertical="20dp"
         android:orientation="horizontal">

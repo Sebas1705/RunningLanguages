@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/icon_background"
+    style="@style/primary_grad"
     android:orientation="vertical"
     tools:context=".ui.fragments.ProfileFragment">
 
@@ -18,9 +18,7 @@
         android:layout_marginBottom="10dp"
         android:text="@string/palabra"
         android:textAlignment="center"
-        android:textColor="@color/tertiary"
-        android:textSize="40sp"
-        android:textStyle="bold"
+        style="@style/text_view_mainTitle"
         tools:ignore="NestedWeights" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -34,18 +32,17 @@
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             tools:ignore="NestedWeights">
 
             <TextView
+                style="@style/text_view_extra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="@string/textName"
                 android:textAlignment="center"
-                android:textColor="@color/tertiary"
                 android:textStyle="bold"
-                android:textSize="20sp"
                 tools:ignore="NestedWeights" />
         </RelativeLayout>
         <RelativeLayout
@@ -54,18 +51,15 @@
             android:layout_weight="3">
 
             <EditText
-                android:autofillHints="name"
-                android:inputType="textShortMessage"
                 android:id="@+id/name"
+                style="@style/edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:fontFamily="sans-serif-black"
+                android:autofillHints="name"
                 android:hint="@string/nombre"
-                android:textColor="@color/textPrimary"
-                android:textColorHint="@color/textPrimary"
-                android:textSize="30sp"
-                android:textStyle="italic|bold" />
+                android:inputType="textShortMessage"
+                android:textColor="@color/textPrimary" />
         </RelativeLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -92,14 +86,12 @@
                     tools:ignore="NestedWeights">
 
                     <TextView
+                        style="@style/text_view_extra"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:text="@string/definci_n"
                         android:textAlignment="center"
-                        android:textColor="@color/tertiary"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
                         tools:ignore="NestedWeights" />
                 </RelativeLayout>
                 <RelativeLayout
@@ -112,12 +104,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:fontFamily="sans-serif-black"
                         android:hint="@string/definici_n_1"
-                        android:textColor="@color/textPrimary"
-                        android:textColorHint="@color/textPrimary"
-                        android:textSize="20sp"
-                        android:textStyle="italic|bold"
+                        style="@style/edit_text"
                         android:autofillHints="name"
                         android:inputType="textLongMessage"/>
                 </RelativeLayout>
@@ -135,14 +123,12 @@
                     tools:ignore="NestedWeights">
 
                     <TextView
+                        style="@style/text_view_extra"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:text="@string/definci_n"
                         android:textAlignment="center"
-                        android:textColor="@color/tertiary"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
                         tools:ignore="NestedWeights" />
                 </RelativeLayout>
                 <RelativeLayout
@@ -151,18 +137,15 @@
                     android:layout_weight="4">
 
                     <EditText
-                        android:autofillHints="name"
-                        android:inputType="textLongMessage"
                         android:id="@+id/def1"
+                        style="@style/edit_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
+                        android:autofillHints="name"
                         android:fontFamily="sans-serif-black"
                         android:hint="@string/definici_n_2"
-                        android:textColor="@color/textPrimary"
-                        android:textColorHint="@color/textPrimary"
-                        android:textSize="20sp"
-                        android:textStyle="italic|bold" />
+                        android:inputType="textLongMessage" />
                 </RelativeLayout>
             </androidx.appcompat.widget.LinearLayoutCompat>
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -183,9 +166,7 @@
                         android:layout_centerInParent="true"
                         android:text="@string/definci_n"
                         android:textAlignment="center"
-                        android:textColor="@color/tertiary"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
+                        style="@style/text_view_extra"
                         tools:ignore="NestedWeights" />
                 </RelativeLayout>
                 <RelativeLayout
@@ -194,18 +175,15 @@
                     android:layout_weight="4">
 
                     <EditText
-                        android:autofillHints="name"
-                        android:inputType="textLongMessage"
                         android:id="@+id/def2"
+                        style="@style/edit_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
+                        android:autofillHints="name"
                         android:fontFamily="sans-serif-black"
                         android:hint="@string/definici_n_3"
-                        android:textColor="@color/textPrimary"
-                        android:textColorHint="@color/textPrimary"
-                        android:textSize="20sp"
-                        android:textStyle="italic|bold" />
+                        android:inputType="textLongMessage" />
                 </RelativeLayout>
             </androidx.appcompat.widget.LinearLayoutCompat>
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -226,9 +204,7 @@
                         android:layout_centerInParent="true"
                         android:text="@string/definci_n"
                         android:textAlignment="center"
-                        android:textColor="@color/tertiary"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
+                        style="@style/text_view_extra"
                         tools:ignore="NestedWeights" />
                 </RelativeLayout>
                 <RelativeLayout
@@ -237,18 +213,15 @@
                     android:layout_weight="4">
 
                     <EditText
-                        android:autofillHints="name"
-                        android:inputType="textLongMessage"
                         android:id="@+id/def3"
+                        style="@style/edit_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
+                        android:autofillHints="name"
                         android:fontFamily="sans-serif-black"
                         android:hint="@string/definici_n_4"
-                        android:textColor="@color/textPrimary"
-                        android:textColorHint="@color/textPrimary"
-                        android:textSize="20sp"
-                        android:textStyle="italic|bold" />
+                        android:inputType="textLongMessage" />
                 </RelativeLayout>
             </androidx.appcompat.widget.LinearLayoutCompat>
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -269,9 +242,7 @@
                         android:layout_centerInParent="true"
                         android:text="@string/definci_n"
                         android:textAlignment="center"
-                        android:textColor="@color/tertiary"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
+                        style="@style/text_view_extra"
                         tools:ignore="NestedWeights" />
                 </RelativeLayout>
                 <RelativeLayout
@@ -280,18 +251,15 @@
                     android:layout_weight="4">
 
                     <EditText
-                        android:autofillHints="name"
-                        android:inputType="textLongMessage"
                         android:id="@+id/def4"
+                        style="@style/text_view_secondTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
+                        android:autofillHints="name"
                         android:fontFamily="sans-serif-black"
                         android:hint="@string/definici_5"
-                        android:textColor="@color/textPrimary"
-                        android:textColorHint="@color/textPrimary"
-                        android:textSize="20sp"
-                        android:textStyle="italic|bold" />
+                        android:inputType="textLongMessage" />
                 </RelativeLayout>
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -304,14 +272,12 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/dictionaryButton"
+            style="@style/button"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:background="@drawable/letters_background"
             android:fontFamily="sans-serif-condensed"
-            android:text="@string/diccionario"
-            android:textColor="@color/textSecondary"
-            android:textSize="40sp" />
+            android:text="@string/diccionario"/>
     </RelativeLayout>
 
     <include layout="@layout/words_bottom_bar" android:id="@+id/wordbar"/>

@@ -3,7 +3,4 @@
     <gradient
         android:startColor="@color/primary"
         android:endColor="@color/primaryBlonded" />
-    <corners android:radius="40dp" />
-    <stroke android:color="@color/textPrimary"
-        android:width="5dp"/>
 </shape>

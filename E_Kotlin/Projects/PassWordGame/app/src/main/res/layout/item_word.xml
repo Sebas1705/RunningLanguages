@@ -2,13 +2,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/back_secondary"
+    style="@style/back_secondary"
     android:padding="20dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/icon_background"
+        style="@style/primary_grad"
         android:orientation="vertical">
         <TextView
             android:id="@+id/name"
@@ -16,12 +16,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textAlignment="center"
-            android:textSize="40sp"
-            android:fontFamily="cursive"
-            android:textStyle="bold"
             android:padding="20dp"
-            android:textColor="@color/textPrimary"
-            android:text="@string/Default_text"/>
+            android:text="@string/Default_text"
+            style="@style/text_view_mainTitle"/>
 
         <TextView
             android:id="@+id/def"
@@ -30,10 +27,8 @@
             android:layout_gravity="center"
             android:gravity="fill_horizontal"
             android:paddingHorizontal="40dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            style="@style/text_view_secondTitle"
             android:padding="20dp"
-            android:textColor="@color/textPrimary"
             android:text="@string/Default_text"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat

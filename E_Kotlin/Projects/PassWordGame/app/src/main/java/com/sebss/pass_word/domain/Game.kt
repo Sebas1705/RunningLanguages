@@ -1,4 +1,4 @@
-package com.sebss.pass_word
+package com.sebss.pass_word.domain
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
+import com.sebss.pass_word.R
 import com.sebss.pass_word.data.AppDatabase
 import com.sebss.pass_word.data.SharedPreferences
 import com.sebss.pass_word.data.entities.PlayerEntity

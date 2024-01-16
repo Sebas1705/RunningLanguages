@@ -2,32 +2,31 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/primary"
+    style="@style/primary_grad"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/secondary_grad"
+        android:layout_height="100dp"
+        style="@style/secondary_grad"
         android:orientation="horizontal">
         <TextView
             android:layout_width="0dp"
             android:layout_weight="6"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jetbrains_mono_thin"
             android:text="@string/textGameModeMainMenu"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="40sp"
-            android:paddingVertical="20dp"/>
+            android:layout_gravity="center"
+            style="@style/text_view_popup_title"/>
         <ImageButton
             android:id="@+id/cancelButton"
             android:layout_width="0dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:layout_height="match_parent"
+            android:layout_height="55dp"
             android:src="@drawable/quit"
             android:scaleType="fitCenter"
-            android:background="@drawable/transparent"
+            android:background="@drawable/back_secondary"
             android:contentDescription="@string/contentDescriptionCancelPopup" />
     </LinearLayout>
 
@@ -42,29 +41,23 @@
 
         <RadioButton
             android:id="@+id/start_option"
-            android:buttonTint="@color/secondary"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_marginVertical="10dp"
-            android:background="@drawable/radio_form"
+            style="@style/radio_form"
             android:paddingHorizontal="50dp"
             android:paddingVertical="10dp"
-            android:text="@string/mode_start"
-            android:textColor="@color/textSecondary"
-            android:textSize="20sp" />
+            android:text="@string/mode_start" />
 
         <RadioButton
             android:id="@+id/all_option"
-            android:buttonTint="@color/secondary"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_marginVertical="10dp"
-            android:background="@drawable/radio_form"
+            style="@style/radio_form"
             android:paddingHorizontal="50dp"
             android:paddingVertical="10dp"
-            android:text="@string/mode_all"
-            android:textColor="@color/textSecondary"
-            android:textSize="20sp" />
+            android:text="@string/mode_all" />
     </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -75,8 +68,7 @@
         android:textSize="30sp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
-        android:textColor="@color/textSecondary"
-        android:background="@drawable/letters_background"/>
+        style="@style/button"/>
     <include layout="@layout/default_bottom_bar"/>
 
 

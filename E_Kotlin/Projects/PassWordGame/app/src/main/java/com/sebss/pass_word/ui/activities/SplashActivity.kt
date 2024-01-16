@@ -6,9 +6,9 @@ import android.os.Bundle
 import com.airbnb.lottie.LottieAnimationView
 import com.sebss.pass_word.R
 import com.sebss.pass_word.data.entities.PlayerEntity
-import com.sebss.pass_word.Game
+import com.sebss.pass_word.domain.Game
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @SuppressLint("CustomSplashScreen")
@@ -16,6 +16,7 @@ class SplashActivity : AppCompatActivity() {
 
     private lateinit var lottieCharge: LottieAnimationView
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -33,5 +34,6 @@ class SplashActivity : AppCompatActivity() {
             game.loadLastPlayer()
             Game.changeActivity(this@SplashActivity, MainMenuActivity::class.java,true)
         }
+        finish()
     }
 }

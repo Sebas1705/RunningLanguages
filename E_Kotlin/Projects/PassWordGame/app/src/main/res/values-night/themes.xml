@@ -1,7 +1,90 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Pass_Word" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.Pass_Word" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+    <style name="back_correct_letter" parent="Theme.Pass_Word">
+        <item name="android:background">@drawable/back_correct_letter_night</item>
+    </style>
+
+    <style name="back_incorrect_letter" parent="Theme.Pass_Word">
+        <item name="android:background">@drawable/back_incorrect_letter_night</item>
+    </style>
+
+    <style name="back_item" parent="Theme.Pass_Word">
+        <item name="android:background">@drawable/back_item_night</item>
+    </style>
+
+    <style name="back_letter" parent="Theme.Pass_Word">
+        <item name="android:background">@drawable/back_letter_night</item>
+    </style>
+
+    <style name="back_secondary" parent="Theme.Pass_Word">
+        <item name="android:background">@drawable/back_secondary_night</item>
+    </style>
+
+    <style name="primary_grad" parent="Theme.Pass_Word">
+        <item name="android:background">@drawable/primary_grad_night</item>
+    </style>
+
+    <style name="radio_form" parent="Theme.Pass_Word">
+        <item name="android:background">@drawable/radio_form_night</item>
+        <item name="android:textColor">@color/tertiaryNight</item>
+        <item name="android:textSize">30sp</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
+        <item name="buttonTint">@color/tertiaryNight</item>
+    </style>
+
+    <style name="secondary_grad" parent="Theme.Pass_Word">
+        <item name="android:background">@drawable/secondary_grad_night</item>
+    </style>
+
+    <style name="tertiary_grad" parent="Theme.Pass_Word">
+        <item name="android:background">@drawable/tertiary_grad_night</item>
+    </style>
+
+    <style name="text_view_mainTitle">
+        <item name="android:textColor">@color/textPrimaryNight</item>
+        <item name="android:textColorHint">@color/textPrimaryNight</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="fontFamily">@font/jetbrains_mono_thin</item>
+    </style>
+
+    <style name="text_view_popup_title">
+        <item name="android:textColor">@color/textSecondaryNight</item>
+        <item name="android:textColorHint">@color/textSecondaryNight</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="fontFamily">@font/jetbrains_mono_thin</item>
+    </style>
+
+    <style name="text_view_secondTitle">
+        <item name="android:textColor">@color/tertiaryNight</item>
+        <item name="android:textColorHint">@color/tertiaryNight</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">casual</item>
+    </style>
+
+    <style name="text_view_extra">
+        <item name="android:textColor">@color/textSecondaryNight</item>
+        <item name="android:textColorHint">@color/textSecondaryNight</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/ubuntu_regular</item>
+    </style>
+
+    <style name="button" parent="back_letter">
+        <item name="android:width">300dp</item>
+        <item name="android:textColor">@color/tertiaryNight</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="edit_text" parent="text_view_secondTitle">
+        <item name="background">@drawable/edit_text_border_night</item>
+    </style>
+
 </resources>

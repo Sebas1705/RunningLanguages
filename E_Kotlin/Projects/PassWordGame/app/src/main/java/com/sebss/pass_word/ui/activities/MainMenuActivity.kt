@@ -4,18 +4,17 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sebss.pass_word.Game
+import com.sebss.pass_word.domain.Game
 import com.sebss.pass_word.R
 import com.sebss.pass_word.data.entities.PlayerEntity
 import com.sebss.pass_word.databinding.ActivityMainmenuBinding
+import com.sebss.pass_word.databinding.GamePopupBinding
 import com.sebss.pass_word.ui.adapters.PlayerAdapter
 import com.sebss.pass_word.ui.fragments.ProfileFragment
 import com.sebss.pass_word.ui.fragments.WordsFragment
@@ -36,8 +35,10 @@ class MainMenuActivity : AppCompatActivity() {
         game = Game.getInstance(null)
 
         binding.loginText.text = if (game.player == null) "Iniciar" else "Cambiar"
-        binding.ranking.layoutManager = LinearLayoutManager(this)
-        binding.ranking.adapter = PlayerAdapter(game.getAllPlayers())
+        binding.ranking.apply{
+            layoutManager = LinearLayoutManager(this@MainMenuActivity)
+            adapter = PlayerAdapter(game.getAllPlayers())
+        }
         binding.login.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
             showLogInPopUp()
@@ -60,7 +61,7 @@ class MainMenuActivity : AppCompatActivity() {
         }
         binding.toolbar.helpTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            //Game.changeActivity(this,HelpActivity::class.java,true)
+            Game.changeActivity(this,HelpActivity::class.java,true)
         }
         binding.toolbar.homeTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
@@ -152,17 +153,14 @@ class MainMenuActivity : AppCompatActivity() {
     private fun showGamePopUp() {
 
         // Create popup
-        val popUpView = layoutInflater.inflate(R.layout.game_popup, null)
-        val cancelImageButton: ImageButton = popUpView.findViewById(R.id.cancelButton)
-        val radioGroup = popUpView.findViewById<RadioGroup>(R.id.modeRadio)
-        val confirmButton = popUpView.findViewById<AppCompatButton>(R.id.confirm_button)
-        val popUp = AlertDialog.Builder(this).setView(popUpView).create()
+        val popUpBinding = GamePopupBinding.inflate(layoutInflater)
+        val popUp = AlertDialog.Builder(this).setView(popUpBinding.root).create()
 
-        cancelImageButton.setOnClickListener { popUp.dismiss() }
-        confirmButton.setOnClickListener {
+        popUpBinding.cancelButton.setOnClickListener { popUp.dismiss() }
+        popUpBinding.confirmButton.setOnClickListener {
             if (game.player != null) {
                 game.soundPlayer.playSound(R.raw.button_sound, this)
-                when (radioGroup.checkedRadioButtonId) {
+                when (popUpBinding.modeRadio.checkedRadioButtonId) {
                     R.id.start_option -> {
                         game.generateWordsGame { word, letter ->
                             Game.removeAccents(word.name).startsWith(letter, ignoreCase = true)
