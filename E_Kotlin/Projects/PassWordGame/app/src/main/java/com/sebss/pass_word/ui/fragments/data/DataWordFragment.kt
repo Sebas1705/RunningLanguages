@@ -1,4 +1,4 @@
-package com.sebss.pass_word.ui.fragments
+package com.sebss.pass_word.ui.fragments.data
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -15,15 +15,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sebss.pass_word.R
 import com.sebss.pass_word.data.entities.WordEntity
+import com.sebss.pass_word.databinding.FragmentDataWordBinding
 import com.sebss.pass_word.domain.Game
-import com.sebss.pass_word.databinding.FragmentWordsFragmentsBinding
 import com.sebss.pass_word.ui.adapters.WordsAdapter
 
-class WordsFragment(private val parent: AppCompatActivity) : Fragment() {
+class DataWordFragment(private val parent: AppCompatActivity) : Fragment() {
 
     //Components:
     private lateinit var listDefsEdits: List<EditText>
-    private var _binding: FragmentWordsFragmentsBinding? = null
+    private var _binding: FragmentDataWordBinding? = null
     private val binding get() = _binding!!
     private lateinit var game: Game
     @SuppressLint("SetTextI18n")
@@ -31,7 +31,7 @@ class WordsFragment(private val parent: AppCompatActivity) : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentWordsFragmentsBinding.inflate(inflater, container, false)
+        _binding = FragmentDataWordBinding.inflate(inflater, container, false)
         game = Game.getInstance(null)
 
         listDefsEdits = listOf(binding.def0,binding.def1,binding.def2,binding.def3,binding.def4)

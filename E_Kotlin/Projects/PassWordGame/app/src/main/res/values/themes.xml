@@ -1,7 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Pass_Word" parent="Theme.AppCompat.NoActionBar">
-
     </style>
 
     <style name="back_correct_letter" parent="Theme.Pass_Word">
@@ -49,7 +48,7 @@
         <item name="android:textColorHint">@color/textPrimary</item>
         <item name="android:textSize">40sp</item>
         <item name="android:textStyle">bold|italic</item>
-        <item name="fontFamily">@font/jetbrains_mono_thin</item>
+        <item name="fontFamily">@font/jetbrains_mono_bold</item>
     </style>
 
     <style name="text_view_popup_title">
@@ -57,7 +56,7 @@
         <item name="android:textColorHint">@color/white</item>
         <item name="android:textSize">40sp</item>
         <item name="android:textStyle">bold|italic</item>
-        <item name="fontFamily">@font/jetbrains_mono_thin</item>
+        <item name="fontFamily">@font/jetbrains_mono_bold</item>
     </style>
 
     <style name="text_view_secondTitle">
@@ -82,6 +81,12 @@
     </style>
 
     <style name="edit_text" parent="text_view_secondTitle">
-        <item name="background">@drawable/edit_text_border</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:background">@drawable/edit_text_border</item>
     </style>
+
+    <style name="image_game">
+        <item name="android:src">@drawable/game</item>
+    </style>
+
 </resources>

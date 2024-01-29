@@ -16,8 +16,8 @@ import com.sebss.pass_word.data.entities.PlayerEntity
 import com.sebss.pass_word.databinding.ActivityMainmenuBinding
 import com.sebss.pass_word.databinding.GamePopupBinding
 import com.sebss.pass_word.ui.adapters.PlayerAdapter
-import com.sebss.pass_word.ui.fragments.ProfileFragment
-import com.sebss.pass_word.ui.fragments.WordsFragment
+import com.sebss.pass_word.ui.fragments.data.DataProfileFragment
+import com.sebss.pass_word.ui.fragments.data.DataWordFragment
 
 @SuppressLint("SetTextI18n")
 class MainMenuActivity : AppCompatActivity() {
@@ -32,7 +32,7 @@ class MainMenuActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        game = Game.getInstance(null)
+        game = Game.getInstance(this)
 
         binding.loginText.text = if (game.player == null) "Iniciar" else "Cambiar"
         binding.ranking.apply{
@@ -50,22 +50,22 @@ class MainMenuActivity : AppCompatActivity() {
         binding.words.setOnClickListener {
             changeWithLog(
                 DataActivity::class.java,
-                WordsFragment(this)
+                DataWordFragment(this)
             )
         }
         binding.perfil.setOnClickListener {
             changeWithLog(
                 DataActivity::class.java,
-                ProfileFragment(this)
+                DataProfileFragment(this)
             )
         }
         binding.toolbar.helpTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            Game.changeActivity(this,HelpActivity::class.java,true)
+            game.changeActivity(this,HelpActivity::class.java,true)
         }
         binding.toolbar.homeTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            Game.changeActivity(this, MainMenuActivity::class.java, true)
+            game.changeActivity(this, MainMenuActivity::class.java, true)
         }
     }
 
@@ -75,7 +75,7 @@ class MainMenuActivity : AppCompatActivity() {
     ) {
         if (game.player != null) {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            Game.changeActivity(this, activity, true)
+            game.changeActivity(this, activity, true)
             game.dataFragment = dataFragment
         } else {
             game.soundPlayer.playSound(R.raw.fallo, this)
@@ -173,7 +173,7 @@ class MainMenuActivity : AppCompatActivity() {
                         }
                     }
                 }
-                Game.changeActivity(this, GameActivity::class.java, true)
+                game.changeActivity(this, GameActivity::class.java, true)
                 popUp.dismiss()
             } else {
                 game.soundPlayer.playSound(R.raw.fallo, this)

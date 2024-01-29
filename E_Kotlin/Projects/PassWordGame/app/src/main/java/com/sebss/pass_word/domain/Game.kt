@@ -54,23 +54,23 @@ class Game private constructor(context: Context)  {
             return instance!!
         }
 
-        fun changeActivity(
-            activity: AppCompatActivity,
-            cls: Class<out AppCompatActivity>,
-            clearOfTop: Boolean,
-            animStart: Int = R.anim.zoom_in,
-            animEnd: Int = R.anim.zoom_out
-        ) {
-            val intent = Intent(activity, cls)
-            if (clearOfTop) intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            val options = ActivityOptionsCompat.makeCustomAnimation(activity, animStart, animEnd)
-            ActivityCompat.startActivity(activity, intent, options.toBundle())
-        }
-
         fun removeAccents(input: String): String {
             val normalizedString = Normalizer.normalize(input, Normalizer.Form.NFD)
             return normalizedString.replace("[^\\p{ASCII}]".toRegex(), "")
         }
+    }
+
+    fun changeActivity(
+        activity: AppCompatActivity,
+        cls: Class<out AppCompatActivity>,
+        clearOfTop: Boolean,
+        animStart: Int = R.anim.zoom_in,
+        animEnd: Int = R.anim.zoom_out
+    ) {
+        val intent = Intent(activity, cls)
+        if (clearOfTop) intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        val options = ActivityOptionsCompat.makeCustomAnimation(activity, animStart, animEnd)
+        ActivityCompat.startActivity(activity, intent, options.toBundle())
     }
 
     //Game functions:

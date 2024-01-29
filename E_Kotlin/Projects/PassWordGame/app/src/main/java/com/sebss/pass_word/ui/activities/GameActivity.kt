@@ -50,7 +50,7 @@ class GameActivity : AppCompatActivity() {
                 }
                 if (game.finishGame()) {
                     game.saveActualData()
-                    Game.changeActivity(this, MainMenuActivity::class.java, true)
+                    game.changeActivity(this, MainMenuActivity::class.java, true)
                 } else {
                     lettersLayout[game.indexWord].setBackgroundResource(R.drawable.transparent)
                     binding.questionText.text = (if (word.name.startsWith(
@@ -67,7 +67,7 @@ class GameActivity : AppCompatActivity() {
             animate(binding.gamebar.skip, R.raw.skip, R.drawable.skip) {
                 if (game.finishGame()) {
                     game.saveActualData()
-                    Game.changeActivity(this, MainMenuActivity::class.java, true)
+                    game.changeActivity(this, MainMenuActivity::class.java, true)
                 }else {
                     lettersLayout[game.indexWord].setBackgroundResource(R.drawable.back_letter)
                     game.indexWord++
@@ -99,11 +99,11 @@ class GameActivity : AppCompatActivity() {
         }
         binding.toolbar.helpTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            Game.changeActivity(this,HelpActivity::class.java,true)
+            game.changeActivity(this,HelpActivity::class.java,true)
         }
         binding.toolbar.homeTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            Game.changeActivity(this, MainMenuActivity::class.java, true)
+            game.changeActivity(this, MainMenuActivity::class.java, true)
         }
 
     }

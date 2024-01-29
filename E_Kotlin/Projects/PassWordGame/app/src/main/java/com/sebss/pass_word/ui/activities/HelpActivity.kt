@@ -14,24 +14,15 @@ class HelpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHelpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        game = Game.getInstance(null)
-
-        binding.textIntro.text = getText(R.string.textIntroHelp)
-        binding.textIntro2.text = getText(R.string.textIntro2Help)
-        binding.textLog.text = getText(R.string.textLogHelp)
-        binding.textWord.text = getText(R.string.textWordHelp)
-        binding.textWord2.text = getText(R.string.textWord2Help)
-        binding.textGame.text = getText(R.string.textGameHelp)
-        binding.textGame2.text = getText(R.string.textGame2Help)
-        binding.textGame3.text = getText(R.string.textGame3Help)
+        game = Game.getInstance(this)
 
         binding.toolbar.helpTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            Game.changeActivity(this,HelpActivity::class.java,true)
+            game.changeActivity(this,HelpActivity::class.java,true)
         }
         binding.toolbar.homeTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            Game.changeActivity(this, MainMenuActivity::class.java, true)
+            game.changeActivity(this, MainMenuActivity::class.java, true)
         }
     }
 }

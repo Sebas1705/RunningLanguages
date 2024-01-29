@@ -39,18 +39,20 @@
         android:textAlignment="center"
         style="@style/text_view_mainTitle"
         android:paddingHorizontal="20dp"
-        android:paddingTop="60dp"/>
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"/>
 
     <EditText
+        style="@style/edit_text"
         android:id="@+id/edit_name"
         android:layout_width="300dp"
-        android:maxWidth="400dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:autofillHints="username"
         android:hint="@string/hint_game"
         android:inputType="textShortMessage"
-        style="@style/text_view_secondTitle"
-        android:layout_marginHorizontal="40dp" />
+        android:layout_gravity="center_horizontal"/>
 
     <LinearLayout
         android:layout_width="match_parent"

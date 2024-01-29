@@ -1,6 +1,5 @@
 package com.sebss.pass_word.data
 
-import android.annotation.SuppressLint
 import android.content.Context
 
 class SharedPreferences(val context: Context) {

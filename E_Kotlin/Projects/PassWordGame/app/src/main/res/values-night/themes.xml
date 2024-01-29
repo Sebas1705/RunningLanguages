@@ -1,8 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Pass_Word" parent="Theme.AppCompat.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
 
     <style name="back_correct_letter" parent="Theme.Pass_Word">
@@ -50,7 +48,7 @@
         <item name="android:textColorHint">@color/textPrimaryNight</item>
         <item name="android:textSize">40sp</item>
         <item name="android:textStyle">bold|italic</item>
-        <item name="fontFamily">@font/jetbrains_mono_thin</item>
+        <item name="fontFamily">@font/jetbrains_mono_bold</item>
     </style>
 
     <style name="text_view_popup_title">
@@ -58,7 +56,7 @@
         <item name="android:textColorHint">@color/textSecondaryNight</item>
         <item name="android:textSize">40sp</item>
         <item name="android:textStyle">bold|italic</item>
-        <item name="fontFamily">@font/jetbrains_mono_thin</item>
+        <item name="fontFamily">@font/jetbrains_mono_bold</item>
     </style>
 
     <style name="text_view_secondTitle">
@@ -84,7 +82,12 @@
     </style>
 
     <style name="edit_text" parent="text_view_secondTitle">
-        <item name="background">@drawable/edit_text_border_night</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:background">@drawable/edit_text_border_night</item>
+    </style>
+
+    <style name="image_game">
+        <item name="android:src">@drawable/game_night</item>
     </style>
 
 </resources>

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.sebss.pass_word"
-        minSdk = 22
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -49,8 +49,14 @@ dependencies {
     implementation("androidx.annotation:annotation:1.7.1")
 
     //Lifecycle (view-model & livedata)
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+
+    //Navigation:
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
 
     //JUnit:
     testImplementation("junit:junit:4.13.2")
@@ -73,9 +79,6 @@ dependencies {
 
     //Material
     implementation("com.google.android.material:material:1.11.0")
-
-    //Picasso:
-    implementation ("com.squareup.picasso:picasso:2.8")
 
     //Lottie:
     implementation("com.airbnb.android:lottie:6.1.0")

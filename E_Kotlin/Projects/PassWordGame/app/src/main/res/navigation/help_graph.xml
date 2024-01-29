@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/help_graph"
+    app:startDestination="@id/helpIntroFragement">
+
+    <fragment
+        android:id="@+id/helpIntroFragement"
+        android:name="com.sebss.pass_word.ui.fragments.help.HelpIntroFragment"
+        android:label="fragment_help_intro_fragement"
+        tools:layout="@layout/fragment_help_intro">
+        <action
+            android:id="@+id/action_helpIntroFragement_to_helpLogFragment"
+            app:destination="@id/helpLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpLogFragment"
+        android:name="com.sebss.pass_word.ui.fragments.help.HelpLogFragment"
+        android:label="fragment_help_log"
+        tools:layout="@layout/fragment_help_log">
+        <action
+            android:id="@+id/action_helpLogFragment_to_helpWordFragment"
+            app:destination="@id/helpWordFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/zoom_in"
+            app:popExitAnim="@anim/zoom_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpWordFragment"
+        android:name="com.sebss.pass_word.ui.fragments.help.HelpWordFragment"
+        android:label="fragment_help_word"
+        tools:layout="@layout/fragment_help_word">
+        <action
+            android:id="@+id/action_helpWordFragment_to_helpProfileFragment"
+            app:destination="@id/helpProfileFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/zoom_in"
+            app:popExitAnim="@anim/zoom_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpProfileFragment"
+        android:name="com.sebss.pass_word.ui.fragments.help.HelpProfileFragment"
+        android:label="fragment_help_profile"
+        tools:layout="@layout/fragment_help_profile">
+        <action
+            android:id="@+id/action_helpProfileFragment_to_helpGameFragment"
+            app:destination="@id/helpGameFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/zoom_in"
+            app:popExitAnim="@anim/zoom_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpGameFragment"
+        android:name="com.sebss.pass_word.ui.fragments.help.HelpGameFragment"
+        android:label="fragment_help_game"
+        tools:layout="@layout/fragment_help_game">
+        <action
+            android:id="@+id/action_helpGameFragment_to_helpIntroFragement"
+            app:destination="@id/helpIntroFragement"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/zoom_in"
+            app:popExitAnim="@anim/zoom_out" />
+    </fragment>
+
+</navigation>

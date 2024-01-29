@@ -6,7 +6,7 @@
     style="@style/primary_grad"
     android:paddingTop="10dp"
     android:orientation="vertical"
-    tools:context=".ui.fragments.ProfileFragment">
+    tools:context=".ui.fragments.data.DataProfileFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -85,15 +85,23 @@
         </RelativeLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:textAlignment="center"
-        android:text="@string/historial"
-        android:layout_marginBottom="10dp"
-        style="@style/text_view_mainTitle"
-        tools:ignore="NestedWeights" />
+        android:layout_weight="2">
+
+        <TextView
+            style="@style/text_view_mainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="20dp"
+            android:text="@string/historial"
+            tools:ignore="NestedWeights" />
+    </RelativeLayout>
+
 
     <TextView
         android:id="@+id/scoreText"

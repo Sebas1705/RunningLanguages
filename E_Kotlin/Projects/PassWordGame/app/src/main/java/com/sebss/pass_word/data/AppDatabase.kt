@@ -53,7 +53,7 @@ abstract class AppDatabase : RoomDatabase() {
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
                         //Init insert data (default data)
-                        GlobalScope.launch {
+                        GlobalScope.launch(Dispatchers.IO) {
                             Log.d("BD", "CALLBACK INIT")
                             insertInitialData(getInstance(context))
                             Log.d("BD", "CALLBACK END")
@@ -66,7 +66,7 @@ abstract class AppDatabase : RoomDatabase() {
         }
 
         private suspend fun insertInitialData(database: AppDatabase) {
-            val words = arrayListOf<WordEntity>(
+            val words = arrayListOf(
                 WordEntity(
                     "Perro",
 

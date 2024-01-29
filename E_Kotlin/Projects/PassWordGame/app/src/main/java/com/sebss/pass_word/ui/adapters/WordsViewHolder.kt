@@ -2,10 +2,7 @@ package com.sebss.pass_word.ui.adapters
 
 import android.annotation.SuppressLint
 import android.view.View
-import android.widget.ImageButton
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.sebss.pass_word.R
 import com.sebss.pass_word.data.entities.WordEntity
 import com.sebss.pass_word.databinding.ItemWordBinding
 

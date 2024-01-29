@@ -17,15 +17,15 @@ class DataActivity : AppCompatActivity() {
         binding = ActivityDataBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        game = Game.getInstance(null)
+        game = Game.getInstance(this)
 
         binding.toolbar.helpTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            Game.changeActivity(this,HelpActivity::class.java,true)
+            game.changeActivity(this,HelpActivity::class.java,true)
         }
         binding.toolbar.homeTool.setOnClickListener {
             game.soundPlayer.playSound(R.raw.button_sound, this)
-            Game.changeActivity(this, MainMenuActivity::class.java, true)
+            game.changeActivity(this, MainMenuActivity::class.java, true)
         }
 
         supportFragmentManager.beginTransaction().add(R.id.containerFrames, game.dataFragment!!).commit()

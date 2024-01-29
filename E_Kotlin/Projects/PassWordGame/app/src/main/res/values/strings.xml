@@ -55,7 +55,7 @@
     <string name="textGamesMainMenu">Partidas</string>
     <string name="textProfileMainMenu">Perfil</string>
     <string name="namePopup">Nombre:</string>
-    <string name="textGameModeMainMenu">Modo de juego</string>
+    <string name="textGameModeMainMenu">Modo</string>
     <string name="mode_start">Empieza por</string>
     <string name="mode_all">Contiene</string>
     <string name="confirmTextMainMenu">Confirmar</string>
@@ -91,7 +91,7 @@
     <string name="left_arrow">left arrow</string>
     <string name="right_arrow">right arrow</string>
     <string name="iconContentDescriptionToolBar">icon for home</string>
-    <string name="textTitleHelp">| Guia usuarios |</string>
+    <string name="textTitleHelp"> Guia usuarios </string>
     <string name="textIntroHelp">Pasapalabras es un juego que consiste en asociar unas definiciones concretas con sus palabras.</string>
     <string name="textIntro2Help">La gracia es que en una partida se haya respondido tantas como letras haya, se puede saltar y pedir otra ayuda en caso de no saberla.</string>
     <string name="textSubtitle1Help">- Inicio de sesión:</string>
@@ -105,6 +105,8 @@
     <string name="textGameHelp">Para empezar a jugar es tan simple como haber inciado sesión y darle al botón de jugar, tras esto nos aparecera la siguiente ventana:</string>
     <string name="textGame2Help">Aqui tienes que elegir el modo de juego entre los siguientes dos: \'Empieza por\' - donde las palabras solo empezaran por la letra indicada y \'Contiene\' - donde las palabras contendran la letra indicada en cualquier parte. Tras elegir nos ira a la pantalla de juego:</string>
     <string name="textGame3Help">Como se ve la lista de letras se situa arriba mostrando la letra actual, y las restantes. Tras estas esta la definición de la palabra y el hueco para introducir la respuesta. Y por último esta los botones de lupa para cambiar la definición, el del medio para responder y la flecha para saltar la palabra.</string>
-    <string name="textFinHelp">Fin de guía</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buttonTextHelp">Siguiente</string>
 
 </resources>
