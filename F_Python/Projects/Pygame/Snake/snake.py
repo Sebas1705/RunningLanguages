@@ -8,10 +8,10 @@ size=(500,500)
 tam=(size[x]/boxes[x],size[y]/boxes[y])
 screen=pygame.display.set_mode(size)
 clock=pygame.time.Clock()
-recordFile="./1-Python/Pygame/Snake/data/record.txt"
-appleImg="1-Python/Pygame/Snake/img/apple.png"
-headImg="1-Python/Pygame/Snake/img/head.png"
-bodyImg="1-Python/Pygame/Snake/img/body.png"
+recordFile="./F-Python/Pygame/Snake/data/record.txt"
+appleImg="F-Python/Pygame/Snake/img/apple.png"
+headImg="F-Python/Pygame/Snake/img/head.png"
+bodyImg="F-Python/Pygame/Snake/img/body.png"
 
 #Events
 move_event=pygame.USEREVENT
@@ -19,8 +19,8 @@ pygame.time.set_timer(move_event,300)
   
 class Snake:
     def __init__(self,x,y,size,image_body,image_head):
-        self.posibleDir=("up","down","left","right")
-        self.dir=random.choice(self.posibleDir)
+        self.possibleDir=("up","down","left","right")
+        self.dir=random.choice(self.possibleDir)
         self.tam=size
         self.image_body=pygame.transform.scale(image_body,tam)
         self.image_head=pygame.transform.scale(image_head,tam)
@@ -29,24 +29,24 @@ class Snake:
         self.tam+=1
         self.pos.append(self.pos[self.tam-2])
     def go(self):
-        if self.dir==self.posibleDir[0]:
+        if self.dir==self.possibleDir[0]:
             new_pos=(self.pos[0][x],((self.pos[0][y]-tam[y])%size[y]))
             self.pos.pop()
             self.pos.insert(0,new_pos)
-        elif self.dir==self.posibleDir[1]:
+        elif self.dir==self.possibleDir[1]:
             new_pos=(self.pos[0][x],((self.pos[0][y]+tam[y])%size[y]))
             self.pos.pop()
             self.pos.insert(0,new_pos)
-        elif self.dir==self.posibleDir[2]:
+        elif self.dir==self.possibleDir[2]:
             new_pos=(((self.pos[0][x]-tam[x])%size[x]),self.pos[0][y])
             self.pos.pop()
             self.pos.insert(0,new_pos)
-        elif self.dir==self.posibleDir[3]:
+        elif self.dir==self.possibleDir[3]:
             new_pos=(((self.pos[0][x]+tam[x])%size[x]),self.pos[0][y])
             self.pos.pop()
             self.pos.insert(0,new_pos)  
     def change_dir(self,direction):
-        if (direction==self.posibleDir[0] and self.dir!=self.posibleDir[1]) or (direction==self.posibleDir[1] and self.dir!=self.posibleDir[0]) or (direction==self.posibleDir[2] and self.dir!=self.posibleDir[3]) or (direction==self.posibleDir[3] and self.dir!=self.posibleDir[2]):
+        if (direction==self.possibleDir[0] and self.dir!=self.possibleDir[1]) or (direction==self.possibleDir[1] and self.dir!=self.possibleDir[0]) or (direction==self.possibleDir[2] and self.dir!=self.possibleDir[3]) or (direction==self.possibleDir[3] and self.dir!=self.possibleDir[2]):
             self.dir=direction
     def collideApple(self,apple):
         return apple.x==self.pos[0][x] and apple.y==self.pos[0][y]
@@ -58,13 +58,13 @@ class Snake:
     def draw(self):
         for i in range(self.tam):
             if i==0:
-                if self.dir==self.posibleDir[0]:
+                if self.dir==self.possibleDir[0]:
                     screen.blit(pygame.transform.rotate(self.image_head,180),self.pos[i])
-                elif self.dir==self.posibleDir[1]:
+                elif self.dir==self.possibleDir[1]:
                     screen.blit(self.image_head,self.pos[i])
-                elif self.dir==self.posibleDir[2]:
+                elif self.dir==self.possibleDir[2]:
                     screen.blit(pygame.transform.rotate(self.image_head,270),self.pos[i])
-                elif self.dir==self.posibleDir[3]:
+                elif self.dir==self.possibleDir[3]:
                     screen.blit(pygame.transform.rotate(self.image_head,90),self.pos[i])
             else:
                 screen.blit(self.image_body,self.pos[i])

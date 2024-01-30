@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_init"
+    android:orientation="vertical"
+    tools:context=".activities.PlayersSelectActivity">
+
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        android:paddingTop="90dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_sp"
+                android:textColor="@color/textPrimary"
+                android:textSize="40sp"
+                android:textStyle="italic|bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="300dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:autofillHints="username"
+                android:background="@drawable/gradient_background"
+                android:hint="@string/hint_sp"
+                android:inputType="textPersonName"
+                android:textColor="@color/textPrimary"
+                android:textSize="30sp"
+                android:textStyle="italic|bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2">
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRadio"
+            android:layout_centerInParent="true"
+            android:text="@string/titleInfo_sp"
+            android:textColor="@color/textSecondary"
+            android:textSize="20sp"
+            android:textStyle="italic|bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/search_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:contentDescription="@string/content1_sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/search" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/start_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:contentDescription="@string/content2_sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/start" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/add_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:contentDescription="@string/content3_sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:contentDescription="@string/content4_sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/delete" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_bottom" />
+</LinearLayout>

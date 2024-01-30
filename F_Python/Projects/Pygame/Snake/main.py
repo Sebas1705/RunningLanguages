@@ -3,9 +3,9 @@ import snake
 def main():
     
     print("\n:::::::::::::::::::::::::::::::::::::::::::::::")
-    print("First project: GuessNumberGame")
+    print("First project: SnakeGame")
     print("Author: Sebas1705")
-    print("Just a snake game more jaja. Enjoy :)")
+    print("Just a snake game more haha. Enjoy :)")
     print(":::::::::::::::::::::::::::::::::::::::::::::::\n")
     
     snake.init()

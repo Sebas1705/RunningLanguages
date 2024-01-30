@@ -12,7 +12,7 @@ const PI:Number = 3.141592653589793 //Constant
 let nw:number = 10 
 let d = 10.20 
 let e = 10.20e-10 
-console.log(n,d,e)
+console.log(nw,d,e)
 
 //String:
 const type:string = "PRESSURE"
