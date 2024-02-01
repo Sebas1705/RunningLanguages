@@ -1,3 +1,5 @@
+package com.sebss.Algorithms.G_Probabilist;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
