@@ -1,3 +1,26 @@
+public abstract class Component extends Component { 
+  protected String text="";
+  protected color c = color(0, 0, 0);
+  public SComponent() {
+    super();
+  }
+  public void setText(String text) {
+    this.text=text;
+  }
+  public String getText() {
+    return text;
+  }
+  public void setColor(color c) {
+    this.c=c;
+  }
+  public color getColor() {
+    return c;
+  }
+  public abstract void showCompt();
+  public abstract int listen();
+}
+
+
 public class Buttom extends Component{
   
   //Atributes
