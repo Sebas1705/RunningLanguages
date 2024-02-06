@@ -3,9 +3,6 @@
 
 class Point
 {
-
-private:
-
     double x,y;
 
     double module(double disX, double disY);

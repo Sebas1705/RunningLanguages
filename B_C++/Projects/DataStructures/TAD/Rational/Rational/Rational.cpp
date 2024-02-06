@@ -1,7 +1,9 @@
 #include "Rational.h"
-#include "cassert"
+#include <cassert>
+#include <iostream>
+using namespace std;
 
-int calcGDC(int a, int b)
+int Rational::calcGDC(int a, int b)
 {
     assert(a>=0);
     if(b==0)
@@ -14,33 +16,47 @@ int calcGDC(int a, int b)
     }
 }
 
-rational create_rational(int a,int b)
+Rational::Rational(int a,int b)
 {
-    rational r;
-    r.numerator = a;
-    r.denominator = b;
-    return r;
+    this->numerator = a;
+    this->denominator = b;
 }
 
-rational sum_rational(rational a,rational b)
+Rational Rational::sum_rational(Rational r)
 {
-    rational r;
-    r.numerator = a.numerator*b.denominator + b.numerator*a.denominator;
-    r.denominator = a.denominator*b.denominator;
-    return r;
+    return Rational(
+        this->numerator*r.denominator+this->denominator*r.numerator,
+        this->denominator*r.denominator
+    );
 }
 
-rational mult_rational(rational a,rational b)
+Rational Rational::mult_rational(Rational r)
 {
-    rational r;
-    r.numerator = a.numerator*b.numerator;
-    r.denominator = a.denominator*b.denominator;
-    return r;
+    return Rational(
+        this->numerator*r.numerator,
+        this->denominator*r.denominator
+    );
 }
 
-void simplify_rational(rational* a)
+void Rational::simplify_rational()
 {
-    int gcd = calcGDC(a->numerator,a->denominator);
-    a->numerator/=gcd;
-    a->denominator/=gcd;
+    int gcd = calcGDC(this->numerator,this->denominator);
+    this->numerator/=gcd;
+    this->denominator/=gcd;
+}
+
+void Rational::print()
+{
+    if(this->numerator==0)
+    {
+        cout << "0" << endl;
+    }
+    else if (this->denominator==1)
+    {
+        cout << this->numerator << endl;
+    }
+    else
+    {
+        cout << this->numerator << "/" << this->denominator;
+    }
 }

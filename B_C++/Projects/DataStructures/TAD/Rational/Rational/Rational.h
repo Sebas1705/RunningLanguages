@@ -1,20 +1,24 @@
 #ifndef __RATIONAL
 #define __RATIONAL
 
-typedef struct {
-    int numerator;
-    int denominator;
-} rational;
+class Rational
+{
 
+    int numerator,denominator;
 
-int calcGDC(int a, int b);
+    int calcGDC(int a,int b);
 
-rational create_rational(int a,int b);
+public:
 
-rational sum_rational(rational a,rational b);
+    Rational(int a,int b);
 
-rational mult_rational(rational a,rational b);
+    Rational sum_rational(Rational r);
 
-void simplify_rational(rational* a);
+    Rational mult_rational(Rational r);
+
+    void simplify_rational();
+    
+    void print();
+};
 
 #endif

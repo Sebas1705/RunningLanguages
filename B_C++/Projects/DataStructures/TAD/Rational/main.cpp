@@ -1,51 +1,51 @@
-#include "Rational/Rational.h"
-#include "PrintRational/PrintRational.h"
+#include "Rational/rational.h"
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    rational a;
+    int num,den;
     do
     {
         cout << "Introduce a's numerator and denominator (split with spaces)." << endl;
         cout << "Denominator not equal to zero: ";
-        cin >> a.numerator >> a.denominator; 
+        cin >> num >> den; 
     }
-    while(a.denominator==0);
-    print_rational(a);
+    while(den==0);
+    Rational a = Rational(num,den);
+    a.print();
     cout << endl;
     
-    rational b;
     do
     {
         cout << "Introduce b's numerator and denominator (split with spaces)." << endl;
         cout << "Denominator not equal to zero: ";
-        cin >> b.numerator >> b.denominator; 
+        cin >> num >> den; 
     }
-    while(b.denominator==0);
-    print_rational(b);
+    while(den==0);
+    Rational b = Rational(num,den);
+    b.print();
     cout << endl;
 
-    rational a_plus_b = sum_rational(a,b);
+    Rational a_plus_b = a.sum_rational(b);
     cout << "Rational a+b: ";
-    print_rational(a_plus_b);
+    a_plus_b.print();
     cout << endl;
 
-    simplify_rational(&a_plus_b);
+    a_plus_b.simplify_rational();
     cout << "Rational a+b simplify: ";
-    print_rational(a_plus_b);
+    a_plus_b.print();
     cout << endl;
 
 
-    rational a_mult_b = mult_rational(a,b);
+    Rational a_mult_b = a.mult_rational(b);
     cout << "Rational a*b: ";
-    print_rational(a_mult_b);
+    a_mult_b.print();
     cout << endl;
 
-    simplify_rational(&a_mult_b);
+    a_mult_b.simplify_rational();
     cout << "Rational a*b simplify: ";
-    print_rational(a_mult_b);
+    a_mult_b.print();
     cout << endl;
 
     return 0;
