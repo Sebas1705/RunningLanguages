@@ -78,5 +78,8 @@ int main()
 	setValue(&list,2,-40);
 	setValue(&list,6,-60);
 	print(&list);
+
+	destructor(&list);
+
 	return 0;
 }

@@ -7,7 +7,7 @@ Node* getNode(SimpleLinkedList* list,int index)
 {
     assert(index<list->n&&index>=0);
     Node* n = list->firstNode;
-    for(int i=0;i<index;i++)
+    for(int i=0;i<index-1;i++)
     {
         n = n->nextNode;
     }
@@ -39,7 +39,7 @@ void insert(SimpleLinkedList* list,int index,int value)
     assert(index<=list->n&&index>=0);
     Node n;
     n.value = value;
-    n.nextNode = NULL;
+    printf("Value to insert: %d\n",n.value);
     if(list->n==0)
     {
         list->firstNode=&n;
@@ -48,18 +48,22 @@ void insert(SimpleLinkedList* list,int index,int value)
     {
         if(index==0)
         {
+            printf("INDEX 0\n");
             n.nextNode = list->firstNode;
             list->firstNode = &n;
         }
         else if(index==list->n)
         {
-            n.nextNode = NULL;
-            Node* last = getNode(list,list->n-1);
+            printf("INDEX N\n");
+            Node* last = getNode(list,index-1);
+            printf("INDEX-1 Value:%d\n",last->value);
             last->nextNode = &n;
         }
         else
         {
+            printf("INDEX %d\n",index);
             Node* prev = getNode(list,index-1);
+            printf("INDEX-1 Value:%d\n",prev->value);
             n.nextNode = prev->nextNode;
             prev->nextNode = &n;
         }

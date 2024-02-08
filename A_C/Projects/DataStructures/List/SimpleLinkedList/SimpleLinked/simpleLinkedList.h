@@ -1,13 +1,11 @@
 #ifndef __SIMPLE_LINKED_LIST
 #define __SIMPLE_LINKED_LIST
 
-struct Node
+typedef struct Node
 {
     int value;
     struct Node* nextNode;
-};
-
-typedef struct Node Node;
+}Node;
 
 typedef struct
 {
