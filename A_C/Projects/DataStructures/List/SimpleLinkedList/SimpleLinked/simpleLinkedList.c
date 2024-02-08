@@ -1,6 +1,7 @@
 #include "./simpleLinkedList.h"
 #include <assert.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 Node* getNode(SimpleLinkedList* list,int index)
 {
@@ -41,7 +42,7 @@ void insert(SimpleLinkedList* list,int index,int value)
     n.nextNode = NULL;
     if(list->n==0)
     {
-        list->firstNode;
+        list->firstNode=&n;
     }
     else
     {
@@ -66,7 +67,12 @@ void insert(SimpleLinkedList* list,int index,int value)
     list->n++;
 }
 
-void remove(SimpleLinkedList* list,int index)
+void insertLast(SimpleLinkedList* list,int value)
+{
+    insert(list,list->n,value);
+}
+
+void removeAtIndex(SimpleLinkedList* list,int index)
 {
     assert(index<list->n&&index>=0);
     Node* eleminated;
@@ -93,9 +99,14 @@ void remove(SimpleLinkedList* list,int index)
     list->n--;
 }
 
+void removeLast(SimpleLinkedList* list)
+{
+    removeAtIndex(list,list->n-1);
+}
+
 void destructor(SimpleLinkedList* list)
 {
-    while(list->n>0) removeNode(list,0);
+    while(list->n>0) removeAtIndex(list,0);
 }
 
 void print(SimpleLinkedList* list)

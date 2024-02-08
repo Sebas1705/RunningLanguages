@@ -1,12 +1,13 @@
 #ifndef __SIMPLE_LINKED_LIST
 #define __SIMPLE_LINKED_LIST
 
-typedef struct
+struct Node
 {
     int value;
-    Node* nextNode;
-}
-Node;
+    struct Node* nextNode;
+};
+
+typedef struct Node Node;
 
 typedef struct
 {
@@ -25,7 +26,11 @@ int getValue(SimpleLinkedList* list,int index);
 
 void insert(SimpleLinkedList* list,int index,int value);
 
-void remove(SimpleLinkedList* list,int index);
+void insertLast(SimpleLinkedList* list,int value);
+
+void removeAtIndex(SimpleLinkedList* list,int index);
+
+void removeLast(SimpleLinkedList* list);
 
 void destructor(SimpleLinkedList* list);
 
