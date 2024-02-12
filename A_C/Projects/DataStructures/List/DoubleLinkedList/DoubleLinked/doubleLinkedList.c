@@ -1,9 +1,9 @@
-#include "./simpleLinkedList.h"
+#include "./doubleLinkedList.h"
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Node* getNode(SimpleLinkedList* list,int index)
+struct Node* getNode(DoubleLinkedList* list,int index)
 {
     assert(index<list->n&&index>=0);
     struct Node* n = list->firstNode;
@@ -14,30 +14,31 @@ struct Node* getNode(SimpleLinkedList* list,int index)
     return n;
 }
 
-SimpleLinkedList* constructor()
+DoubleLinkedList* constructor()
 {
-    SimpleLinkedList* list =(SimpleLinkedList*)malloc(sizeof(SimpleLinkedList));
+    DoubleLinkedList* list =(DoubleLinkedList*)malloc(sizeof(DoubleLinkedList));
     list->firstNode = NULL;
     list->n = 0;
     return list;
 }
 
-void setValue(SimpleLinkedList* list,int index,int value)
+void setValue(DoubleLinkedList* list,int index,int value)
 {
     getNode(list,index)->value = value;
 }
 
-int getValue(SimpleLinkedList* list,int index)
+int getValue(DoubleLinkedList* list,int index)
 {
     return getNode(list,index)->value;
 }
 
-void insert(SimpleLinkedList* list,int index,int value)
+void insert(DoubleLinkedList* list,int index,int value)
 {
     assert(index<=list->n&&index>=0);
     struct Node* n = (struct Node*)malloc(sizeof(struct Node));
     n->value = value;
     n->nextNode = NULL;
+    n->prevNode = NULL;
     if(list->n==0)
     {
         list->firstNode = n;
@@ -53,37 +54,45 @@ void insert(SimpleLinkedList* list,int index,int value)
         {
             struct Node* last = getNode(list,index-1);
             last->nextNode = n;
+            n->prevNode = last;
         }
         else
         {
             struct Node* prev = getNode(list,index-1);
-            n->nextNode = prev->nextNode;
+            struct Node* next = prev->nextNode;
             prev->nextNode = n;
+            next->prevNode = n;
+            n->nextNode = next;
+            n->prevNode = prev;
         }
     }  
     list->n++;
 }
 
-void insertLast(SimpleLinkedList* list,int value)
+void insertLast(DoubleLinkedList* list,int value)
 {
     insert(list,list->n,value);
 }
 
-void removeAtIndex(SimpleLinkedList* list,int index)
+void removeAtIndex(DoubleLinkedList* list,int index)
 {
     assert(index<list->n&&index>=0);
     struct Node* eleminated;
     if(index==0)
     {
         eleminated = list->firstNode;
-        struct Node* first = eleminated->nextNode;
-        list->firstNode = first;
+        struct Node* next = eleminated->nextNode;
+        list->firstNode = next;
+        if(next!=NULL)
+        {
+            next->prevNode = NULL;
+        }
     }
     else if(index==list->n-1)
     {
-        struct Node* eleminatedPrev = getNode(list,index-1);
-        eleminated = eleminatedPrev->nextNode;
-        eleminatedPrev->nextNode = NULL;
+        struct Node* newLast = getNode(list,index-1);
+        eleminated = newLast->nextNode;
+        newLast->nextNode = NULL;
     }
     else
     {
@@ -96,17 +105,17 @@ void removeAtIndex(SimpleLinkedList* list,int index)
     list->n--;
 }
 
-void removeLast(SimpleLinkedList* list)
+void removeLast(DoubleLinkedList* list)
 {
     removeAtIndex(list,list->n-1);
 }
 
-void destructor(SimpleLinkedList* list)
+void destructor(DoubleLinkedList* list)
 {
     while(list->n>0) removeAtIndex(list,0);
 }
 
-void print(SimpleLinkedList* list)
+void print(DoubleLinkedList* list)
 {
     printf("->List (n=%d): ",list->n);
     if(list->n==0)

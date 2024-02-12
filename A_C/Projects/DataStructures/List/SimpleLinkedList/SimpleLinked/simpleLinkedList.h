@@ -1,22 +1,22 @@
 #ifndef __SIMPLE_LINKED_LIST
 #define __SIMPLE_LINKED_LIST
 
-typedef struct Node
+struct Node
 {
     int value;
     struct Node* nextNode;
-}Node;
+};
 
 typedef struct
 {
-    Node* firstNode;
+    struct Node* firstNode;
     int n;
 }
 SimpleLinkedList;
 
-Node* getNode(SimpleLinkedList* list,int index);
+struct Node* getNode(SimpleLinkedList* list,int index);
 
-SimpleLinkedList constructor();
+SimpleLinkedList* constructor();
 
 void setValue(SimpleLinkedList* list,int index,int value);
 

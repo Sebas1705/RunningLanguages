@@ -36,9 +36,11 @@ int main()
     printf("Removes 5 firsts: \n");
     for(int i=0;i<=5;i++)
     {
-        remove(&list,0);
+        removeInList(&list,0);
         print(&list);
     }
+
+    destructor(&list);
 
 	return 0;
 }

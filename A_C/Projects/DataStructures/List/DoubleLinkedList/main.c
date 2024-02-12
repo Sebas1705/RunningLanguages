@@ -1,10 +1,10 @@
-#include "./SimpleLinked/simpleLinkedList.h"
+#include "./DoubleLinked/doubleLinkedList.h"
 #include <stdio.h>
 
 int main() 
 {
 
-	SimpleLinkedList* list = constructor();
+	DoubleLinkedList* list = constructor();
 	printf("New Linked list:\n");
 	print(list);
 

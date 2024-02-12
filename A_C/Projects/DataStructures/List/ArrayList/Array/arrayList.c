@@ -1,5 +1,6 @@
 #include "./arrayList.h"
 #include <stdlib.h>
+#include <string.h>
 #include <assert.h>
 #include <stdio.h>
 
@@ -60,7 +61,7 @@ void insertLast(ArrayList *array,int value)
     insert(array,array->n,value);
 }
 
-void remove(ArrayList *array,int index)
+void removeInList(ArrayList *array,int index)
 {
     assert(index<array->n&&index>=0);
     memmove(&array->array[index],&array->array[index+1],sizeof(int)*(array->n-index-1));
@@ -73,7 +74,7 @@ void remove(ArrayList *array,int index)
 
 void removeLast(ArrayList *array)
 {
-    remove(array,array->n-1);
+    removeInList(array,array->n-1);
 }
 
 void concat(ArrayList *array1,ArrayList *array2)

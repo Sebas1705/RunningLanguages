@@ -25,7 +25,7 @@ void insert(ArrayList *array,int index,int value);
 
 void insertLast(ArrayList *array,int value);
 
-void remove(ArrayList *array,int index);
+void removeInList(ArrayList *array,int index);
 
 void removeLast(ArrayList *array);
 
