@@ -1,0 +1,38 @@
+B 3 C o m p i l a t i o n
+B 44 Equation Listing    SOLVE Lab1_Ejercicio6 Using LP From line 32
+D 47 beneficio
+D 52 restriccion_1
+D 57 restriccion_2
+D 62 restriccion_3
+D 67 restriccion_4
+D 72 restriccion_5
+B 78 Column Listing      SOLVE Lab1_Ejercicio6 Using LP From line 32
+E 81 z
+E 88 x1
+E 96 x2
+E 104 x3
+E 112 x4
+E 120 s0
+E 128 s1
+E 136 s2
+E 144 s3
+E 152 s4
+B 160 Range Statistics    SOLVE Lab1_Ejercicio6 Using LP From line 32
+B 171 Model Statistics    SOLVE Lab1_Ejercicio6 Using LP From line 32
+B 184 Solution Report     SOLVE Lab1_Ejercicio6 Using LP From line 32
+F 217 beneficio
+F 218 restriccion_1
+F 219 restriccion_2
+F 220 restriccion_3
+F 221 restriccion_4
+F 222 restriccion_5
+G 226 z
+G 227 x1
+G 228 x2
+G 229 x3
+G 230 x4
+G 231 s0
+G 232 s1
+G 233 s2
+G 234 s3
+G 235 s4

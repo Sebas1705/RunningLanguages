@@ -1,0 +1,29 @@
+--- Job LAB1_Ejemplo01.gms Start 02/13/24 18:53:15 45.7.0 64fbf3ce WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\45\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejemplo01.gms
+    PageSize 0
+    ScrDir C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\225a\
+    SysDir C:\GAMS\45\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: GAMS Demo, for EULA and demo limitations see   G230930/0001CB-GEN
+          https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
+          C:\GAMS\45\gamslice.txt
+          Demo license for demonstration and instructional purposes only
+Processor information: 1 socket(s), 14 core(s), and 20 thread(s) available
+GAMS 45.7.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+--- Starting compilation
+--- LAB1_Ejemplo01.gms(23) 2 Mb 1 Error
+*** Error 140 in C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejemplo01.gms
+    Unknown symbol
+--- LAB1_Ejemplo01.gms(29) 2 Mb 2 Errors
+*** Error 257 in C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejemplo01.gms
+    Solve statement not checked because of previous errors
+--- LAB1_Ejemplo01.gms(30) 2 Mb 2 Errors
+*** Status: Compilation error(s)
+--- Job LAB1_Ejemplo01.gms Stop 02/13/24 18:53:15 elapsed 0:00:00.019
