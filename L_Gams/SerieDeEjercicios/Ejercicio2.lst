@@ -1,0 +1,181 @@
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/16/22 13:09:39 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Sets
+   2           i fabricas /F1,F2,F3/
+   3           j residuos /C1, C2/
+   4  ;
+   5   
+   6  Parameters
+   7           costes(i) costes de tratamiento de resisduos
+   8                   / F1     15
+   9                     F2     12
+  10                     F3     19/
+  11           min(j) cantidad minima de resisduos procesados
+  12                   /C1     34
+  13                    C2     45/
+  14  ;
+  15   
+  16  Free Variables
+  17           z beneficio venta ordenadores
+  18  ;
+  19   
+  20  Positive Variables
+  21           x(i,j) cantidades de ordenadores producidos
+  22  ;
+  23   
+  24  Equations
+  25           beneficio beneficio de venta de ordenadores
+  26           limites_recursos(j) restricciones de recursos
+  27  ;
+  28   
+  29           beneficio..      z =e= costes("F1")*(x("F1","C1")/0.12) + costes("F2")*(x("F2","C1")/0.36) + costes("F3")*(x("F3","C2")/0.25);
+  30           limites_recursos(j)..    sum(i, x(i,j)) =g= min(j);
+  31   
+  32  Model Ejercicio2 /all/;
+  33   
+  34   
+  35  Solve Ejercicio2 using lp min z;
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  38.1.0 a1a3b545 WEX-WEI
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/16/22 13:09:39 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE Ejercicio2 Using LP From line 35
+
+
+---- beneficio  =E=  beneficio de venta de ordenadores
+
+beneficio..  z - 125*x(F1,C1) - 33.3333333333333*x(F2,C1) - 76*x(F3,C2) =E= 0 ; (LHS = 0)
+     
+
+---- limites_recursos  =G=  restricciones de recursos
+
+limites_recursos(C1)..  x(F1,C1) + x(F2,C1) + x(F3,C1) =G= 34 ; (LHS = 0, INFES = 34 ****)
+     
+limites_recursos(C2)..  x(F1,C2) + x(F2,C2) + x(F3,C2) =G= 45 ; (LHS = 0, INFES = 45 ****)
+     
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/16/22 13:09:39 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE Ejercicio2 Using LP From line 35
+
+
+---- z  beneficio venta ordenadores
+
+z
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       beneficio
+
+
+---- x  cantidades de ordenadores producidos
+
+x(F1,C1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -125       beneficio
+        1       limites_recursos(C1)
+
+x(F1,C2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       limites_recursos(C2)
+
+x(F2,C1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -33.3333  beneficio
+        1       limites_recursos(C1)
+
+REMAINING 3 ENTRIES SKIPPED
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/16/22 13:09:39 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE Ejercicio2 Using LP From line 35
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           2     SINGLE EQUATIONS            3
+BLOCKS OF VARIABLES           2     SINGLE VARIABLES            7
+NON ZERO ELEMENTS            10
+
+
+GENERATION TIME      =        0.078 SECONDS      4 MB  38.1.0 a1a3b545 WEX-WEI
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/16/22 13:09:39 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE Ejercicio2 Using LP From line 35
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   Ejercicio2          OBJECTIVE  z
+     TYPE    LP                  DIRECTION  MINIMIZE
+     SOLVER  CPLEX               FROM LINE  35
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE                0.0000
+
+ RESOURCE USAGE, LIMIT          0.078 10000000000.000
+ ITERATION COUNT, LIMIT         0    2147483647
+--- *** This solver runs with a demo license. No commercial use.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 20.1.0.1 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.02sec (det. 0.00 ticks)
+
+
+Optimal solution found
+Objective:            0.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU beneficio           .              .              .             1.0000      
+
+  beneficio  beneficio de venta de ordenadores
+
+---- EQU limites_recursos  restricciones de recursos
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+C1        34.0000        34.0000        +INF            EPS         
+C2        45.0000        45.0000        +INF            EPS         
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR z                 -INF             .            +INF             .          
+
+  z  beneficio venta ordenadores
+
+---- VAR x  cantidades de ordenadores producidos
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+F1.C1          .              .            +INF          125.0000      
+F1.C2          .            45.0000        +INF             .          
+F2.C1          .              .            +INF           33.3333      
+F2.C2          .              .            +INF            EPS         
+F3.C1          .            34.0000        +INF             .          
+F3.C2          .              .            +INF           76.0000      
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.282 SECONDS      4 MB  38.1.0 a1a3b545 WEX-WEI
+
+
+USER: GAMS Demo license for Sebastian Ramiro EntrerriG220207|0002CO-GEN
+      Universidad Rey Juan Carlos, Spain                       DL059758
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+Output     C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.lst

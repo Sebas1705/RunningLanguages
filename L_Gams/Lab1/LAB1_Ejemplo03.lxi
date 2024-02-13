@@ -1,0 +1,19 @@
+B 3 C o m p i l a t i o n
+B 39 Equation Listing    SOLVE Lab1_Ejemplo03 Using MIP From line 28
+D 42 beneficio
+D 47 restriccion_1
+D 52 restriccion_2
+D 57 restriccion_3
+B 63 Column Listing      SOLVE Lab1_Ejemplo03 Using MIP From line 28
+E 66 z
+E 73 x1
+E 83 x2
+B 94 Model Statistics    SOLVE Lab1_Ejemplo03 Using MIP From line 28
+B 107 Solution Report     SOLVE Lab1_Ejemplo03 Using MIP From line 28
+F 140 beneficio
+F 141 restriccion_1
+F 142 restriccion_2
+F 143 restriccion_3
+G 147 z
+G 148 x1
+G 149 x2

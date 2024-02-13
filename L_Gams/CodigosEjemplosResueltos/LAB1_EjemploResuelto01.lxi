@@ -1,0 +1,19 @@
+B 3 C o m p i l a t i o n
+B 36 Equation Listing    SOLVE Lab1_Ejemplo01 Using LP From line 25
+D 39 beneficio
+D 44 restriccion_1
+D 49 restriccion_2
+B 55 Column Listing      SOLVE Lab1_Ejemplo01 Using LP From line 25
+E 58 z
+E 65 x1
+E 74 x2
+E 83 x3
+B 93 Model Statistics    SOLVE Lab1_Ejemplo01 Using LP From line 25
+B 106 Solution Report     SOLVE Lab1_Ejemplo01 Using LP From line 25
+F 139 beneficio
+F 140 restriccion_1
+F 141 restriccion_2
+G 145 z
+G 146 x1
+G 147 x2
+G 148 x3

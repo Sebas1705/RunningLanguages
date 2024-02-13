@@ -1,0 +1,21 @@
+B 3 C o m p i l a t i o n
+B 37 Equation Listing    SOLVE Ejercicio1 Using LP From line 26
+D 40 beneficio
+D 45 res_maxA
+D 50 res_maxB
+D 55 res_min
+D 60 res_max
+B 66 Column Listing      SOLVE Ejercicio1 Using LP From line 26
+E 69 z
+E 76 A
+E 86 B
+B 97 Model Statistics    SOLVE Ejercicio1 Using LP From line 26
+B 110 Solution Report     SOLVE Ejercicio1 Using LP From line 26
+F 143 beneficio
+F 144 res_maxA
+F 145 res_maxB
+F 146 res_min
+F 147 res_max
+G 151 z
+G 152 A
+G 153 B

@@ -1,0 +1,53 @@
+
+--- Job Ejercicio2.gms Start 03/16/22 13:08:47 38.1.0 a1a3b545 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\38\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    PageSize 0
+    ScrDir C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\225a\
+    SysDir C:\GAMS\38\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: GAMS Demo license for Sebastian Ramiro EntrerriG220207|0002CO-GEN
+          Universidad Rey Juan Carlos, Spain                       DL059758
+          C:\Users\sebss\OneDrive\Documentos\GAMS\gamslice.txt
+          sr.entrerrios.2020@alumnos.urjc.es, Sebastian Ramiro Entrerrios G
+          Demo license for demonstration and instructional purposes only
+Processor information: 1 socket(s), 6 core(s), and 12 thread(s) available
+GAMS 38.1.0   Copyright (C) 1987-2022 GAMS Development. All rights reserved
+--- Starting compilation
+--- Ejercicio2.gms(29) 3 Mb 27 Errors
+*** Error 140 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    Unknown symbol
+*** Error 120 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    Unknown identifier entered as set
+*** Error 340 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    A label/element with the same name exist. You may have forgotten
+       to quote a label/element reference. For example,
+       set i / a,b,c /; parameter x(i); x('a') = 10;
+*** Error 149 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    Uncontrolled set entered as constant
+*** Error 149 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    Uncontrolled set entered as constant
+*** Error 171 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    Domain violation for set
+*** Error 120 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    Unknown identifier entered as set
+*** Error 340 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    A label/element with the same name exist. You may have forgotten
+       to quote a label/element reference. For example,
+       set i / a,b,c /; parameter x(i); x('a') = 10;
+*** Error 149 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    Uncontrolled set entered as constant
+*** Error 300 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    Remaining errors not printed for this line
+--- Ejercicio2.gms(35) 3 Mb 28 Errors
+*** Error 257 in C:\Users\sebss\Escritorio\Programacion\GAMS\SerieDeEjercicios\Ejercicio2.gms
+    Solve statement not checked because of previous errors
+--- Ejercicio2.gms(35) 3 Mb 28 Errors
+*** Status: Compilation error(s)
+--- Job Ejercicio2.gms Stop 03/16/22 13:08:47 elapsed 0:00:00.006

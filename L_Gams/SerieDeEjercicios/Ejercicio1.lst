@@ -1,0 +1,171 @@
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 19:52:48 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Free Variables
+   2      z
+   3  ;
+   4   
+   5  Positive Variable
+   6      A, B
+   7  ;
+   8   
+   9  Equations
+  10      beneficio
+  11      res_maxA
+  12      res_maxB
+  13      res_min
+  14      res_max
+  15  ;
+  16   
+  17  beneficio.. z =e= 1.12*A + 1.13*B;
+  18  res_maxA.. A =l= 8000000;
+  19  res_maxB.. B =l= 8000000;
+  20  res_min.. A + B =g= 2000000;
+  21  res_max.. A + B =l= 10000000;
+  22  ;
+  23   
+  24  Model Ejercicio1 /all/;
+  25   
+  26  Solve Ejercicio1 using lp max z;
+
+
+COMPILATION TIME     =        0.000 SECONDS      2 MB  38.1.0 a1a3b545 WEX-WEI
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 19:52:48 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE Ejercicio1 Using LP From line 26
+
+
+---- beneficio  =E=  
+
+beneficio..  z - 1.12*A - 1.13*B =E= 0 ; (LHS = 0)
+     
+
+---- res_maxA  =L=  
+
+res_maxA..  A =L= 8000000 ; (LHS = 0)
+     
+
+---- res_maxB  =L=  
+
+res_maxB..  B =L= 8000000 ; (LHS = 0)
+     
+
+---- res_min  =G=  
+
+res_min..  A + B =G= 2000000 ; (LHS = 0, INFES = 2000000 ****)
+     
+
+---- res_max  =L=  
+
+res_max..  A + B =L= 10000000 ; (LHS = 0)
+     
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 19:52:48 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE Ejercicio1 Using LP From line 26
+
+
+---- z  
+
+z
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       beneficio
+
+
+---- A  
+
+A
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1.12    beneficio
+        1       res_maxA
+        1       res_min
+        1       res_max
+
+
+---- B  
+
+B
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1.13    beneficio
+        1       res_maxB
+        1       res_min
+        1       res_max
+
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 19:52:48 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE Ejercicio1 Using LP From line 26
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           5     SINGLE EQUATIONS            5
+BLOCKS OF VARIABLES           3     SINGLE VARIABLES            3
+NON ZERO ELEMENTS             9
+
+
+GENERATION TIME      =        0.000 SECONDS      3 MB  38.1.0 a1a3b545 WEX-WEI
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 19:52:48 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE Ejercicio1 Using LP From line 26
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   Ejercicio1          OBJECTIVE  z
+     TYPE    LP                  DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  26
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE         11280000.0000
+
+ RESOURCE USAGE, LIMIT          0.000 10000000000.000
+ ITERATION COUNT, LIMIT         1    2147483647
+--- *** This solver runs with a demo license. No commercial use.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 20.1.0.1 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.00 ticks)
+
+
+Optimal solution found
+Objective:     11280000.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU beneficio           .              .              .             1.0000      
+---- EQU res_maxA          -INF      2000000.0000   8000000.0000          .          
+---- EQU res_maxB          -INF      8000000.0000   8000000.0000         0.0100      
+---- EQU res_min      2000000.0000   1.0000000E+7        +INF             .          
+---- EQU res_max           -INF      1.0000000E+7   1.0000000E+7         1.1200      
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR z                 -INF      1.1280000E+7        +INF             .          
+---- VAR A                   .       2000000.0000        +INF             .          
+---- VAR B                   .       8000000.0000        +INF             .          
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.062 SECONDS      3 MB  38.1.0 a1a3b545 WEX-WEI
+
+
+USER: GAMS Demo license for Sebastian Ramiro EntrerriG220207|0002CO-GEN
+      Universidad Rey Juan Carlos, Spain                       DL059758
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebss\OneDrive\Escritorio\GAMS\Ejercicio1.gms
+Output     C:\Users\sebss\OneDrive\Escritorio\GAMS\Ejercicio1.lst

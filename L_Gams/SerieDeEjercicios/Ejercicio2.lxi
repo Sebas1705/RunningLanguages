@@ -1,0 +1,13 @@
+B 3 C o m p i l a t i o n
+B 46 Equation Listing    SOLVE Ejercicio2 Using LP From line 35
+D 49 beneficio
+D 54 limites_recursos
+B 62 Column Listing      SOLVE Ejercicio2 Using LP From line 35
+E 65 z
+E 72 x
+B 91 Model Statistics    SOLVE Ejercicio2 Using LP From line 35
+B 104 Solution Report     SOLVE Ejercicio2 Using LP From line 35
+F 137 beneficio
+F 141 limites_recursos
+G 150 z
+G 154 x

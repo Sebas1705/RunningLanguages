@@ -1,0 +1,166 @@
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 02/22/22 18:21:14 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  ***** LAB 1
+   2  ***** EjemploResuelto01
+   3   
+   4  Free Variables
+   5  z,x1
+   6  ;
+   7   
+   8  Positive Variables
+   9  x2,x3
+  10  ;
+  11   
+  12  Equations
+  13  beneficio
+  14  restriccion_1
+  15  restriccion_2
+  16  ;
+  17   
+  18  beneficio..      z =e= x1 + 3*x2 + 4*x3;
+  19  restriccion_1..  x1 + 2*x2 + x3 =e= 5;
+  20  restriccion_2..  2*x1 + 3*x2 + x3 =e= 6;
+  21  ;
+  22   
+  23  Model Lab1_Ejemplo01 /all/;
+  24   
+  25  Solve Lab1_Ejemplo01 using lp minimizing z;
+
+
+COMPILATION TIME     =        0.000 SECONDS      2 MB  38.1.0 a1a3b545 WEX-WEI
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 02/22/22 18:21:14 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE Lab1_Ejemplo01 Using LP From line 25
+
+
+---- beneficio  =E=  
+
+beneficio..  z - x1 - 3*x2 - 4*x3 =E= 0 ; (LHS = 0)
+     
+
+---- restriccion_1  =E=  
+
+restriccion_1..  x1 + 2*x2 + x3 =E= 5 ; (LHS = 0, INFES = 5 ****)
+     
+
+---- restriccion_2  =E=  
+
+restriccion_2..  2*x1 + 3*x2 + x3 =E= 6 ; (LHS = 0, INFES = 6 ****)
+     
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 02/22/22 18:21:14 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE Lab1_Ejemplo01 Using LP From line 25
+
+
+---- z  
+
+z
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       beneficio
+
+
+---- x1  
+
+x1
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+       -1       beneficio
+        1       restriccion_1
+        2       restriccion_2
+
+
+---- x2  
+
+x2
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -3       beneficio
+        2       restriccion_1
+        3       restriccion_2
+
+
+---- x3  
+
+x3
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -4       beneficio
+        1       restriccion_1
+        1       restriccion_2
+
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 02/22/22 18:21:14 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE Lab1_Ejemplo01 Using LP From line 25
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           3     SINGLE EQUATIONS            3
+BLOCKS OF VARIABLES           4     SINGLE VARIABLES            4
+NON ZERO ELEMENTS            10
+
+
+GENERATION TIME      =        0.015 SECONDS      3 MB  38.1.0 a1a3b545 WEX-WEI
+GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 02/22/22 18:21:14 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE Lab1_Ejemplo01 Using LP From line 25
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   Lab1_Ejemplo01      OBJECTIVE  z
+     TYPE    LP                  DIRECTION  MINIMIZE
+     SOLVER  CPLEX               FROM LINE  25
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE                9.0000
+
+ RESOURCE USAGE, LIMIT          0.016 10000000000.000
+ ITERATION COUNT, LIMIT         0    2147483647
+--- *** This solver runs with a demo license. No commercial use.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 20.1.0.1 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.02sec (det. 0.00 ticks)
+
+
+Optimal solution found
+Objective:            9.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU beneficio           .              .              .             1.0000      
+---- EQU restricci~         5.0000         5.0000         5.0000         3.0000      
+---- EQU restricci~         6.0000         6.0000         6.0000        -1.0000      
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR z                 -INF            9.0000        +INF             .          
+---- VAR x1                -INF           -3.0000        +INF             .          
+---- VAR x2                  .             4.0000        +INF             .          
+---- VAR x3                  .              .            +INF            2.0000      
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.078 SECONDS      3 MB  38.1.0 a1a3b545 WEX-WEI
+
+
+USER: GAMS Demo license for Sebastian Ramiro EntrerriG220207|0002CO-GEN
+      Universidad Rey Juan Carlos, Spain                       DL059758
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebss\OneDrive\Escritorio\GAMS\CodigosEjemplosResueltos\LAB1_EjemploResuelto01.gms
+Output     C:\Users\sebss\OneDrive\Escritorio\GAMS\CodigosEjemplosResueltos\LAB1_EjemploResuelto01.lst
