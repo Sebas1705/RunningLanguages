@@ -1,6 +1,7 @@
 #include "./orderedArrayList.h"
 #include <assert.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 OrderedArrayList* constructorOrder()
 {
@@ -29,7 +30,7 @@ int searchPosition(OrderedArrayList *list,int value,int first,int nList)
 	assert(first>=0&&first<n);
 	assert(nListPos>=0&&nListPos<n);
 	assert(first<=nListPos);
-    int mid = (first+nList)/2;
+    int mid = (first+nListPos)/2;
     int valueMid = get(list->list,mid);
     if(valueMid==value)
     {
