@@ -44,7 +44,8 @@ public class Sand extends Entity {
         else if(downEntity instanceof Water){
             this.fallDown();
             downEntity.goUp();
-        }else if(context.getEntity(this.getX()+1,this.getY()+1)==null) this.fallRight();
+        }
+        else if(context.getEntity(this.getX()+1,this.getY()+1)==null) this.fallRight();
         else if(context.getEntity(this.getX()-1,this.getY()+1)==null) this.fallLeft();       
     }
 
