@@ -67,8 +67,8 @@ public class World {
         for(int j=0;j<=tamY;j++) line(0,CELL_HEIGHT*j,width,CELL_HEIGHT*j);
     }
     private void drawEntities(){
+        noStroke();
         for(Entity entity: entities){
-            noStroke();
             fill(entity.getBackgroundColor());
             rect(entity.getX()*CELL_WIDTH,entity.getY()*CELL_HEIGHT,CELL_WIDTH,CELL_HEIGHT);
         }
