@@ -1,6 +1,8 @@
 package com.sebss;
 
-import com.sebss.Algorithms.C_Greedies.MagneticTapSaveOptimize;
+import static com.sebss.Statics.*;
+
+import com.sebss.DataStructures.Lists.Linked_List.Nodes.DNode;
 
 /**
  * Hello world!
@@ -8,12 +10,15 @@ import com.sebss.Algorithms.C_Greedies.MagneticTapSaveOptimize;
  */
 public class App {
     public static void main( String[] args ){
-    
-        println(MagneticTapSaveOptimize.getRelativeTime(new int[]{5,10,3})+"");
-        
-    }
+        DNode<Integer> node = new DNode<Integer>(2,null,null);
+        DNode<Integer> node2 = node;
 
-    private static void println(String msg){
-        System.out.println(msg);
+        println(node.getElement());
+        println(node2.getElement());
+
+        node.setElement(10);
+
+        println(node.getElement());
+        println(node2.getElement());
     }
 }

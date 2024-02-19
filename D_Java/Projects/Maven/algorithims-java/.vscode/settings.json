@@ -26,5 +26,6 @@
         "Simular",
         "supercomputadores",
         "tarea"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
