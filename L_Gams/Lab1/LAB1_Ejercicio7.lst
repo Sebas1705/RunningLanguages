@@ -1,98 +1,84 @@
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:24:55 Page 1
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 01:35:52 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
-   1  ***** LAB 1
-   2  ***** Ejercicio 7
-   3  ***** Para entrega
+   1  VARIABLES z;
+   2   
+   3  POSITIVE VARIABLES x1, x2, x3;
    4   
-   5  Free Variables
-   6  z
-   7  ;
+   5  EQUATIONS obj, equ1, equ2;
+   6   
+   7  obj.. z =e= 6*x1 + 14*x2 + 3*x3;
    8   
-   9  Positive Variables
-  10  x1,x2,x3
-  11  ;
-  12   
-  13  Equations
-  14  beneficio
-  15  restriccion_1
-  16  restriccion_2
-  17  ;
-  18   
-  19  beneficio..      z =e= 6 * x1 + 14 * x2 + 3 * x3;
-  20  restriccion_1..  - x1 - 7 * x2 + x3 =e= -2;
-  21  restriccion_2..  2 * x1 + 2 * x2 + x3 =g= 1;
-  22  ;
-  23   
-  24  Model Lab1_Ejercicio7 /all/;
-  25   
-  26  Solve Lab1_Ejercicio7 using lp maximizing z;
-  27   
+   9  equ1.. -x1 -7*x2 + x3 =e= -2;
+  10  equ2.. 2*x1 + 2*x2 + x3 =g= 1;
+  11   
+  12  model Ejercicio7 /ALL/;
+  13  solve Ejercicio7 using lp maximizing z;
 
 
-COMPILATION TIME     =        0.000 SECONDS      2 MB  45.7.0 64fbf3ce WEX-WEI
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:24:55 Page 2
+COMPILATION TIME     =        0.015 SECONDS      2 MB  46.1.0 0f6c6ca6 WEX-WEI
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 01:35:52 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Equation Listing    SOLVE Lab1_Ejercicio7 Using LP From line 26
+Equation Listing    SOLVE Ejercicio7 Using LP From line 13
 
 
----- beneficio  =E=  
+---- obj  =E=  
 
-beneficio..  z - 6*x1 - 14*x2 - 3*x3 =E= 0 ; (LHS = 0)
+obj..  z - 6*x1 - 14*x2 - 3*x3 =E= 0 ; (LHS = 0)
      
 
----- restriccion_1  =E=  
+---- equ1  =E=  
 
-restriccion_1..  - x1 - 7*x2 + x3 =E= -2 ; (LHS = 0, INFES = 2 ****)
+equ1..  - x1 - 7*x2 + x3 =E= -2 ; (LHS = 0, INFES = 2 ****)
      
 
----- restriccion_2  =G=  
+---- equ2  =G=  
 
-restriccion_2..  2*x1 + 2*x2 + x3 =G= 1 ; (LHS = 0, INFES = 1 ****)
+equ2..  2*x1 + 2*x2 + x3 =G= 1 ; (LHS = 0, INFES = 1 ****)
      
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:24:55 Page 3
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 01:35:52 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Column Listing      SOLVE Lab1_Ejercicio7 Using LP From line 26
+Column Listing      SOLVE Ejercicio7 Using LP From line 13
 
 
 ---- z  
 
 z
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
-        1       beneficio
+        1       obj
 
 
 ---- x1  
 
 x1
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       -6       beneficio
-       -1       restriccion_1
-        2       restriccion_2
+       -6       obj
+       -1       equ1
+        2       equ2
 
 
 ---- x2  
 
 x2
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-      -14       beneficio
-       -7       restriccion_1
-        2       restriccion_2
+      -14       obj
+       -7       equ1
+        2       equ2
 
 
 ---- x3  
 
 x3
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       -3       beneficio
-        1       restriccion_1
-        1       restriccion_2
+       -3       obj
+        1       equ1
+        1       equ2
 
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:24:55 Page 4
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 01:35:52 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Range Statistics    SOLVE Lab1_Ejercicio7 Using LP From line 26
+Range Statistics    SOLVE Ejercicio7 Using LP From line 13
 
 
 RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
@@ -101,9 +87,9 @@ RHS       [min, max] : [ 1.000E+00, 2.000E+00] - Zero values observed as well
 Bound     [min, max] : [        NA,        NA] - Zero values observed as well
 Matrix    [min, max] : [ 1.000E+00, 1.400E+01]
 
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:24:55 Page 5
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 01:35:52 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Model Statistics    SOLVE Lab1_Ejercicio7 Using LP From line 26
+Model Statistics    SOLVE Ejercicio7 Using LP From line 13
 
 
 MODEL STATISTICS
@@ -113,17 +99,17 @@ BLOCKS OF VARIABLES           4     SINGLE VARIABLES            4
 NON ZERO ELEMENTS            10
 
 
-GENERATION TIME      =        0.000 SECONDS      3 MB  45.7.0 64fbf3ce WEX-WEI
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:24:55 Page 6
+GENERATION TIME      =        0.000 SECONDS      3 MB  46.1.0 0f6c6ca6 WEX-WEI
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 01:35:52 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Solution Report     SOLVE Lab1_Ejercicio7 Using LP From line 26
+Solution Report     SOLVE Ejercicio7 Using LP From line 13
 
 
                S O L V E      S U M M A R Y
 
-     MODEL   Lab1_Ejercicio7     OBJECTIVE  z
+     MODEL   Ejercicio7          OBJECTIVE  z
      TYPE    LP                  DIRECTION  MAXIMIZE
-     SOLVER  CPLEX               FROM LINE  26
+     SOLVER  CPLEX               FROM LINE  13
 
 **** SOLVER STATUS     1 Normal Completion
 **** MODEL STATUS      3 Unbounded
@@ -149,9 +135,9 @@ Model has an unbounded ray
 
                            LOWER          LEVEL          UPPER         MARGINAL
 
----- EQU beneficio           .              .              .             1.0000      
----- EQU restricci~        -2.0000        -2.0000        -2.0000         2.0000      
----- EQU restricci~         1.0000         4.0000        +INF             .          
+---- EQU obj                 .              .              .             1.0000      
+---- EQU equ1              -2.0000        -2.0000        -2.0000         2.0000      
+---- EQU equ2               1.0000         4.0000        +INF             .          
 
                            LOWER          LEVEL          UPPER         MARGINAL
 
@@ -166,14 +152,14 @@ Model has an unbounded ray
                              0  UNBOUNDED
 
 
-EXECUTION TIME       =        0.031 SECONDS      3 MB  45.7.0 64fbf3ce WEX-WEI
+EXECUTION TIME       =        0.032 SECONDS      3 MB  46.1.0 0f6c6ca6 WEX-WEI
 
 
-USER: GAMS Demo, for EULA and demo limitations see   G230930/0001CB-GEN
+USER: GAMS Demo, for EULA and demo limitations see   G240131/0001CB-GEN
       https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
 
 
 **** FILE SUMMARY
 
-Input      C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio7.gms
-Output     C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio7.lst
+Input      E:\Escritorio\Programacion\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio7.gms
+Output     E:\Escritorio\Programacion\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio7.lst

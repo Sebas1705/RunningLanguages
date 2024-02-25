@@ -5,7 +5,8 @@ public class F_Functions {
     public static void main(String[] args) {
         function();
         parameter(2,4.0);
-        System.out.println("Sum(2,4): "+sum(2,4));
+        int x = 2;
+        System.out.println("Sum(2,4): "+sum(x,4));
         System.out.println("Sum(2,3,4): "+sum(2,3,4));
         System.out.println("SumPointed(1,2,3,4,5,6,7,8,9): "+sumPointed(1,2,3,4,5,6,7,8,9));
 

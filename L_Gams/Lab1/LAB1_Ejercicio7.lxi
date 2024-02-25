@@ -1,20 +1,20 @@
 B 3 C o m p i l a t i o n
-B 38 Equation Listing    SOLVE Lab1_Ejercicio7 Using LP From line 26
-D 41 beneficio
-D 46 restriccion_1
-D 51 restriccion_2
-B 57 Column Listing      SOLVE Lab1_Ejercicio7 Using LP From line 26
-E 60 z
-E 67 x1
-E 76 x2
-E 85 x3
-B 95 Range Statistics    SOLVE Lab1_Ejercicio7 Using LP From line 26
-B 106 Model Statistics    SOLVE Lab1_Ejercicio7 Using LP From line 26
-B 119 Solution Report     SOLVE Lab1_Ejercicio7 Using LP From line 26
-F 152 beneficio
-F 153 restriccion_1
-F 154 restriccion_2
-G 158 z
-G 159 x1
-G 160 x2
-G 161 x3
+B 24 Equation Listing    SOLVE Ejercicio7 Using LP From line 13
+D 27 obj
+D 32 equ1
+D 37 equ2
+B 43 Column Listing      SOLVE Ejercicio7 Using LP From line 13
+E 46 z
+E 53 x1
+E 62 x2
+E 71 x3
+B 81 Range Statistics    SOLVE Ejercicio7 Using LP From line 13
+B 92 Model Statistics    SOLVE Ejercicio7 Using LP From line 13
+B 105 Solution Report     SOLVE Ejercicio7 Using LP From line 13
+F 138 obj
+F 139 equ1
+F 140 equ2
+G 144 z
+G 145 x1
+G 146 x2
+G 147 x3

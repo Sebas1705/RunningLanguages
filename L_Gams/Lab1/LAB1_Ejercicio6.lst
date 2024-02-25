@@ -1,10 +1,10 @@
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:14:25 Page 1
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/23/24 17:27:21 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
    1  ***** LAB 1
-   2  ***** Ejercicio 5
+   2  ***** Ejercicio 6
    3  ***** Para entrega
    4   
    5  Free Variables
@@ -38,8 +38,8 @@ C o m p i l a t i o n
   33   
 
 
-COMPILATION TIME     =        0.000 SECONDS      2 MB  45.7.0 64fbf3ce WEX-WEI
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:14:25 Page 2
+COMPILATION TIME     =        0.000 SECONDS      2 MB  46.1.0 0f6c6ca6 WEX-WEI
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/23/24 17:27:21 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE Lab1_Ejercicio6 Using LP From line 32
 
@@ -73,7 +73,7 @@ restriccion_4..  x4 + s3 - s4 =E= 15 ; (LHS = 0, INFES = 15 ****)
 
 restriccion_5..  s0 =E= 0 ; (LHS = 0)
      
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:14:25 Page 3
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/23/24 17:27:21 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE Lab1_Ejercicio6 Using LP From line 32
 
@@ -155,7 +155,7 @@ s4
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
        -1       restriccion_4
 
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:14:25 Page 4
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/23/24 17:27:21 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Range Statistics    SOLVE Lab1_Ejercicio6 Using LP From line 32
 
@@ -166,7 +166,7 @@ RHS       [min, max] : [ 1.100E+01, 6.400E+01] - Zero values observed as well
 Bound     [min, max] : [        NA,        NA] - Zero values observed as well
 Matrix    [min, max] : [ 1.000E+00, 1.300E+01]
 
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:14:25 Page 5
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/23/24 17:27:21 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE Lab1_Ejercicio6 Using LP From line 32
 
@@ -178,8 +178,8 @@ BLOCKS OF VARIABLES          10     SINGLE VARIABLES           10
 NON ZERO ELEMENTS            18
 
 
-GENERATION TIME      =        0.000 SECONDS      3 MB  45.7.0 64fbf3ce WEX-WEI
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:14:25 Page 6
+GENERATION TIME      =        0.094 SECONDS      3 MB  46.1.0 0f6c6ca6 WEX-WEI
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/23/24 17:27:21 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE Lab1_Ejercicio6 Using LP From line 32
 
@@ -194,7 +194,7 @@ Solution Report     SOLVE Lab1_Ejercicio6 Using LP From line 32
 **** MODEL STATUS      1 Optimal
 **** OBJECTIVE VALUE             1573.0000
 
- RESOURCE USAGE, LIMIT          0.000 10000000000.000
+ RESOURCE USAGE, LIMIT          0.016 10000000000.000
  ITERATION COUNT, LIMIT         0    2147483647
 *** This solver runs with a demo license. No commercial use.
 --- GMO setup time: 0.00s
@@ -205,7 +205,7 @@ Solution Report     SOLVE Lab1_Ejercicio6 Using LP From line 32
 
 
 --- LP status (1): optimal.
---- Cplex Time: 0.00sec (det. 0.01 ticks)
+--- Cplex Time: 0.02sec (det. 0.01 ticks)
 
 
 Optimal solution found
@@ -240,14 +240,14 @@ Objective:         1573.000000
                              0  UNBOUNDED
 
 
-EXECUTION TIME       =        0.063 SECONDS      3 MB  45.7.0 64fbf3ce WEX-WEI
+EXECUTION TIME       =        0.235 SECONDS      3 MB  46.1.0 0f6c6ca6 WEX-WEI
 
 
-USER: GAMS Demo, for EULA and demo limitations see   G230930/0001CB-GEN
+USER: GAMS Demo, for EULA and demo limitations see   G240131/0001CB-GEN
       https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
 
 
 **** FILE SUMMARY
 
-Input      C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio6.gms
-Output     C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio6.lst
+Input      E:\Escritorio\Programacion\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio6.gms
+Output     E:\Escritorio\Programacion\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio6.lst

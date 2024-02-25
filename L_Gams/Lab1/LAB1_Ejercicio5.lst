@@ -1,106 +1,97 @@
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:36:59 Page 1
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 00:57:05 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
-   1  ***** LAB 1
-   2  ***** Ejercicio 5
-   3  ***** Para entrega
-   4   
-   5  Free Variables
-   6  z
-   7  ;
-   8   
-   9  Positive Variables
-  10  x1,x2,x3
-  11  ;
+   1  VARIABLES z;
+   2  POSITIVE VARIABLES x1, x2, x3;
+   3  EQUATIONS obj, equ1, equ2, equ3, equ4;
+   4  obj.. z =e= 0.15*x1 + 0.12*x2 + 0.20*x3;
+   5  equ1.. x1 + x2 + x3 =e= 1;
+   6  equ2.. 10*x1 + 15*x2 + 5*x3 =l= 10;
+   7  equ3.. 40*x1 + 90*x2 + 30*x3 =g= 50;
+   8  equ4.. x1 =g= 0.4;
+   9  model Ejercicio5 /all/;
+  10  solve Ejercicio5 using lp minimizing z;
+  11   
   12   
-  13  Equations
-  14  beneficio
-  15  restriccion_1
-  16  restriccion_2
-  17  restriccion_3
-  18  ;
-  19   
-  20  beneficio..      z =e= 0.15 * x1 + 0.12 * x2 + 0.20 * x3;
-  21  restriccion_1..  10 * x1 + 15 * x2 + 5 * x3 =l= 10;
-  22  restriccion_2..  40 * x1 + 90 * x2 + 30 * x3 =g= 50;
-  23  restriccion_3..  x1 =g= 0.4;
-  24  ;
-  25   
-  26  Model Lab1_Ejercicio5 /all/;
-  27   
-  28  Solve Lab1_Ejercicio5 using lp minimizing z;
-  29   
 
 
-COMPILATION TIME     =        0.000 SECONDS      2 MB  45.7.0 64fbf3ce WEX-WEI
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:36:59 Page 2
+COMPILATION TIME     =        0.000 SECONDS      2 MB  46.1.0 0f6c6ca6 WEX-WEI
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 00:57:05 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Equation Listing    SOLVE Lab1_Ejercicio5 Using LP From line 28
+Equation Listing    SOLVE Ejercicio5 Using LP From line 10
 
 
----- beneficio  =E=  
+---- obj  =E=  
 
-beneficio..  z - 0.15*x1 - 0.12*x2 - 0.2*x3 =E= 0 ; (LHS = 0)
+obj..  z - 0.15*x1 - 0.12*x2 - 0.2*x3 =E= 0 ; (LHS = 0)
      
 
----- restriccion_1  =L=  
+---- equ1  =E=  
 
-restriccion_1..  10*x1 + 15*x2 + 5*x3 =L= 10 ; (LHS = 0)
+equ1..  x1 + x2 + x3 =E= 1 ; (LHS = 0, INFES = 1 ****)
      
 
----- restriccion_2  =G=  
+---- equ2  =L=  
 
-restriccion_2..  40*x1 + 90*x2 + 30*x3 =G= 50 ; (LHS = 0, INFES = 50 ****)
+equ2..  10*x1 + 15*x2 + 5*x3 =L= 10 ; (LHS = 0)
      
 
----- restriccion_3  =G=  
+---- equ3  =G=  
 
-restriccion_3..  x1 =G= 0.4 ; (LHS = 0, INFES = 0.4 ****)
+equ3..  40*x1 + 90*x2 + 30*x3 =G= 50 ; (LHS = 0, INFES = 50 ****)
      
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:36:59 Page 3
+
+---- equ4  =G=  
+
+equ4..  x1 =G= 0.4 ; (LHS = 0, INFES = 0.4 ****)
+     
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 00:57:05 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Column Listing      SOLVE Lab1_Ejercicio5 Using LP From line 28
+Column Listing      SOLVE Ejercicio5 Using LP From line 10
 
 
 ---- z  
 
 z
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
-        1       beneficio
+        1       obj
 
 
 ---- x1  
 
 x1
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       -0.15    beneficio
-       10       restriccion_1
-       40       restriccion_2
-        1       restriccion_3
+       -0.15    obj
+        1       equ1
+       10       equ2
+       40       equ3
+        1       equ4
 
 
 ---- x2  
 
 x2
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       -0.12    beneficio
-       15       restriccion_1
-       90       restriccion_2
+       -0.12    obj
+        1       equ1
+       15       equ2
+       90       equ3
 
 
 ---- x3  
 
 x3
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       -0.2     beneficio
-        5       restriccion_1
-       30       restriccion_2
+       -0.2     obj
+        1       equ1
+        5       equ2
+       30       equ3
 
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:36:59 Page 4
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 00:57:05 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Range Statistics    SOLVE Lab1_Ejercicio5 Using LP From line 28
+Range Statistics    SOLVE Ejercicio5 Using LP From line 10
 
 
 RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
@@ -109,36 +100,36 @@ RHS       [min, max] : [ 4.000E-01, 5.000E+01] - Zero values observed as well
 Bound     [min, max] : [        NA,        NA] - Zero values observed as well
 Matrix    [min, max] : [ 1.200E-01, 9.000E+01]
 
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:36:59 Page 5
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 00:57:05 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Model Statistics    SOLVE Lab1_Ejercicio5 Using LP From line 28
+Model Statistics    SOLVE Ejercicio5 Using LP From line 10
 
 
 MODEL STATISTICS
 
-BLOCKS OF EQUATIONS           4     SINGLE EQUATIONS            4
+BLOCKS OF EQUATIONS           5     SINGLE EQUATIONS            5
 BLOCKS OF VARIABLES           4     SINGLE VARIABLES            4
-NON ZERO ELEMENTS            11
+NON ZERO ELEMENTS            14
 
 
-GENERATION TIME      =        0.000 SECONDS      3 MB  45.7.0 64fbf3ce WEX-WEI
-GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 02/13/24 19:36:59 Page 6
+GENERATION TIME      =        0.000 SECONDS      3 MB  46.1.0 0f6c6ca6 WEX-WEI
+GAMS 46.1.0  0f6c6ca6 Feb 17, 2024          WEX-WEI x86 64bit/MS Windows - 02/22/24 00:57:05 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Solution Report     SOLVE Lab1_Ejercicio5 Using LP From line 28
+Solution Report     SOLVE Ejercicio5 Using LP From line 10
 
 
                S O L V E      S U M M A R Y
 
-     MODEL   Lab1_Ejercicio5     OBJECTIVE  z
+     MODEL   Ejercicio5          OBJECTIVE  z
      TYPE    LP                  DIRECTION  MINIMIZE
-     SOLVER  CPLEX               FROM LINE  28
+     SOLVER  CPLEX               FROM LINE  10
 
 **** SOLVER STATUS     1 Normal Completion
 **** MODEL STATUS      1 Optimal
-**** OBJECTIVE VALUE                0.1053
+**** OBJECTIVE VALUE                0.1550
 
  RESOURCE USAGE, LIMIT          0.000 10000000000.000
- ITERATION COUNT, LIMIT         1    2147483647
+ ITERATION COUNT, LIMIT         2    2147483647
 *** This solver runs with a demo license. No commercial use.
 --- GMO setup time: 0.00s
 --- GMO memory 0.50 Mb (peak 0.50 Mb)
@@ -152,22 +143,23 @@ Solution Report     SOLVE Lab1_Ejercicio5 Using LP From line 28
 
 
 Optimal solution found
-Objective:            0.105333
+Objective:            0.155000
 
 
                            LOWER          LEVEL          UPPER         MARGINAL
 
----- EQU beneficio           .              .              .             1.0000      
----- EQU restricci~        -INF            9.6667        10.0000          .          
----- EQU restricci~        50.0000        50.0000        +INF            0.0013      
----- EQU restricci~         0.4000         0.4000        +INF            0.0967      
+---- EQU obj                 .              .              .             1.0000      
+---- EQU equ1               1.0000         1.0000         1.0000         0.2400      
+---- EQU equ2              -INF           10.0000        10.0000        -0.0110      
+---- EQU equ3              50.0000        50.0000        +INF            0.0005      
+---- EQU equ4               0.4000         0.5000        +INF             .          
 
                            LOWER          LEVEL          UPPER         MARGINAL
 
----- VAR z                 -INF            0.1053        +INF             .          
----- VAR x1                  .             0.4000        +INF             .          
----- VAR x2                  .             0.3778        +INF             .          
----- VAR x3                  .              .            +INF            0.1600      
+---- VAR z                 -INF            0.1550        +INF             .          
+---- VAR x1                  .             0.5000        +INF             .          
+---- VAR x2                  .             0.2500        +INF             .          
+---- VAR x3                  .             0.2500        +INF             .          
 
 
 **** REPORT SUMMARY :        0     NONOPT
@@ -175,14 +167,14 @@ Objective:            0.105333
                              0  UNBOUNDED
 
 
-EXECUTION TIME       =        0.032 SECONDS      3 MB  45.7.0 64fbf3ce WEX-WEI
+EXECUTION TIME       =        0.046 SECONDS      3 MB  46.1.0 0f6c6ca6 WEX-WEI
 
 
-USER: GAMS Demo, for EULA and demo limitations see   G230930/0001CB-GEN
+USER: GAMS Demo, for EULA and demo limitations see   G240131/0001CB-GEN
       https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
 
 
 **** FILE SUMMARY
 
-Input      C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio5.gms
-Output     C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio5.lst
+Input      E:\Escritorio\Programacion\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio5.gms
+Output     E:\Escritorio\Programacion\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio5.lst
