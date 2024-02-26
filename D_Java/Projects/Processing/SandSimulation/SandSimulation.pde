@@ -3,8 +3,8 @@ import java.util.Iterator;
 
 final int WINDOW_WIDTH = 1600;
 final int WINDOW_HEIGHT = 1000;
-final int CELL_WIDTH = 10;
-final int CELL_HEIGHT = 10;
+final int CELL_WIDTH = 5;
+final int CELL_HEIGHT = 5;
 
 
 public class Cursor{

@@ -80,7 +80,7 @@ public class D_Types {
 
         //Compound:
 
-            System.out.println(a++);//Postincrement
+            System.out.println(a++);//Postincrement 
             System.out.println(++a);//Preincrement
             System.out.println(a--);//Postdecrement
             System.out.println(--a);//Predecrement
@@ -113,7 +113,8 @@ public class D_Types {
 
         //Arrays:
 
-            int[] array = {0,10,20,302,201,0};//Array declarator and initialize
+            int[] array; 
+            array = new int[]{0,10,20,302,201,0};//Array declarator and initialize
             array[1]=1;//Access to element i from array
 
             int[][] array2D={{1,2,3},{2,5,6}};

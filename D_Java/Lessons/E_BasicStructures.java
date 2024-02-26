@@ -54,7 +54,9 @@ public class E_BasicStructures {
         //Foreach:
         System.out.println("-------FOR-EACH-------\n");
         String[] strs={"hi","hello","mmm"};
-        for(String c : strs) System.out.println(c);    
+        for(String i : strs){
+            i+="hshsh";
+            System.out.println(i);
+        }    
     }
-
 }

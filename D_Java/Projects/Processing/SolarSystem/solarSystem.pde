@@ -1,45 +1,38 @@
+import peasy.*;
+
 float theta = 0;
+Bodie sun;
+PeasyCam cam;
+PImage sunI;
+PImage back;
+String[] childsImages;      
 
 void setup() {
-  size(480, 290);
+  size(1400,800,P3D);
+  childsImages = new String[]{
+    "./src/earthmap1k.jpg",
+    "./src/jupitermap.jpg",
+    "./src/mars_1k_color.jpg",
+    "./src/mercurymap.jpg",
+    "./src/neptunemap.jpg",
+    "./src/plutomap1k.jpg",
+    "./src/saturnmap.jpg",
+    "./src/uranusmap.jpg",
+    "./src/venusmap.jpg"
+  };   
+  cam = new PeasyCam(this,500);
+  sunI = loadImage("./src/sunmap.jpg");
+  back = loadImage("./src/back.jpg");
+  back.resize(1400,800);
+  sun = new Bodie(100,0,0,sunI);
+  sun.spawnChildren(9,1);
+  lights();
 }
 
 void draw() {
-  background(0);
-  stroke(0);
-
-  // Translate to center of window to draw the sun.
-  translate(width/2, height/2);
-  fill(255, 200, 50);
-  ellipse(0, 0, 64, 64);
-
-  // The earth rotates around the sun
-  pushMatrix();
-  rotate(theta);
-  translate(100, 0);
-  fill(50, 200, 255);
-  ellipse(0, 0, 32, 32);
-
-  // Moon #1 rotates around the earth
-  // pushMatrix() is called to save the transformation state before drawing moon #1. 
-  // This way we can pop and return to earth before drawing moon #2. 
-  // Both moons rotate around the earth (which itself is rotating around the sun).
-  pushMatrix(); 
-  rotate(-theta*4);
-  translate(36, 0);
-  fill(175);
-  ellipse(0, 0, 12, 12);
-  popMatrix();
-
-  // satelyte #2 also rotates around the earth
-  pushMatrix();
-  rotate(theta*2);
-  translate(24, 0);
-  fill(#D3D3D3);
-  ellipse(0, 0, 6, 6);
-  popMatrix();
-
-  popMatrix();
-
+  background(back);
+  
+  sun.show();
+  sun.orbit();
   theta += 0.01;
 }

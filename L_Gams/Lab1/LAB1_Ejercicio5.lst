@@ -3,17 +3,17 @@ G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
-   1  ***** LAB 1
-   2  ***** Ejercicio 5
-   3  ***** Para entrega
-   4   
-   5  Free Variables
-   6  z
-   7  ;
-   8   
-   9  Positive Variables
-  10  x1,x2,x3
-  11  ;
+   1  VARIABLES z;
+   2  POSITIVE VARIABLES x1, x2, x3;
+   3  EQUATIONS obj, equ1, equ2, equ3, equ4;
+   4  obj.. z =e= 0.15*x1 + 0.12*x2 + 0.20*x3;
+   5  equ1.. x1 + x2 + x3 =e= 1;
+   6  equ2.. 10*x1 + 15*x2 + 5*x3 =l= 10;
+   7  equ3.. 40*x1 + 90*x2 + 30*x3 =g= 50;
+   8  equ4.. x1 =g= 0.4;
+   9  model Ejercicio5 /all/;
+  10  solve Ejercicio5 using lp minimizing z;
+  11   
   12   
   13  Equations
   14  beneficio
@@ -42,9 +42,9 @@ G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE Lab1_Ejercicio5 Using LP From line 30
 
 
----- beneficio  =E=  
+---- obj  =E=  
 
-beneficio..  z - 0.15*x1 - 0.12*x2 - 0.2*x3 =E= 0 ; (LHS = 0)
+obj..  z - 0.15*x1 - 0.12*x2 - 0.2*x3 =E= 0 ; (LHS = 0)
      
 
 ---- restriccion_1  =E=  
@@ -57,7 +57,7 @@ restriccion_1..  x1 + x2 + x3 =E= 1 ; (LHS = 0, INFES = 1 ****)
 restriccion_2..  10*x1 + 15*x2 + 5*x3 =L= 10 ; (LHS = 0)
      
 
----- restriccion_3  =G=  
+---- equ3  =G=  
 
 restriccion_3..  40*x1 + 90*x2 + 30*x3 =G= 50 ; (LHS = 0, INFES = 50 ****)
      
@@ -75,7 +75,7 @@ Column Listing      SOLVE Lab1_Ejercicio5 Using LP From line 30
 
 z
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
-        1       beneficio
+        1       obj
 
 
 ---- x1  
@@ -139,7 +139,7 @@ Solution Report     SOLVE Lab1_Ejercicio5 Using LP From line 30
 
                S O L V E      S U M M A R Y
 
-     MODEL   Lab1_Ejercicio5     OBJECTIVE  z
+     MODEL   Ejercicio5          OBJECTIVE  z
      TYPE    LP                  DIRECTION  MINIMIZE
      SOLVER  CPLEX               FROM LINE  30
 
@@ -189,11 +189,11 @@ Objective:            0.155000
 EXECUTION TIME       =        0.062 SECONDS      3 MB  45.7.0 64fbf3ce WEX-WEI
 
 
-USER: GAMS Demo, for EULA and demo limitations see   G230930/0001CB-GEN
+USER: GAMS Demo, for EULA and demo limitations see   G240131/0001CB-GEN
       https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
 
 
 **** FILE SUMMARY
 
-Input      C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio5.gms
-Output     C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio5.lst
+Input      E:\Escritorio\Programacion\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio5.gms
+Output     E:\Escritorio\Programacion\RunningLanguages\L_Gams\Lab1\LAB1_Ejercicio5.lst
