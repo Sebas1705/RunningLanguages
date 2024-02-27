@@ -5,6 +5,7 @@
 TaskHandle_t taskHandle;
 
 void loopSecondCore(void *pvParameters);
+void printMsg(const char *msg);
 
 void setup() {
   Serial.begin(115200);
@@ -14,17 +15,25 @@ void setup() {
 
 void loop() {
   digitalWrite(LED,HIGH);
+  printMsg("Set high");
   delay(1000);
   digitalWrite(LED, LOW);
+  printMsg("Set low");
   delay(1000);
 }
 
 void loopSecondCore(void *pvParameters){
   while(true) {
-    Serial.print(xPortGetCoreID());
-    Serial.print(":");
-    Serial.println((digitalRead(LED)==HIGH)?"HIGH":"LOW");
-    delay(200);
+    printMsg((digitalRead(LED)==HIGH)?"HIGH":"LOW");
+    delay(400);
   }
   vTaskDelay(10);
+}
+
+void printMsg(const char *msg){
+  Serial.print(xPortGetCoreID());
+  Serial.print(".");
+  Serial.print(xPortGetTickRateHz());
+  Serial.print(":");
+  Serial.println(msg);
 }

@@ -1,6 +1,0 @@
-com.example.quizgame.test.app-core-1.5.0-0 C:\Users\sebss\.gradle\caches\transforms-3\2aaa46c9f5b7a07d40bd032b14191a22\transformed\core-1.5.0\res
-com.example.quizgame.test.app-annotation-experimental-1.3.0-1 C:\Users\sebss\.gradle\caches\transforms-3\ab2cae1b7341e66758a87da97ae6bbc4\transformed\annotation-experimental-1.3.0\res
-com.example.quizgame.test.app-androidTest-2 C:\Users\sebss\Desktop\LabsProject\app\build\generated\res\resValues\androidTest\debug
-com.example.quizgame.test.app-mergeDebugAndroidTestResources-3 C:\Users\sebss\Desktop\LabsProject\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.quizgame.test.app-mergeDebugAndroidTestResources-4 C:\Users\sebss\Desktop\LabsProject\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.quizgame.test.app-merged_res-5 C:\Users\sebss\Desktop\LabsProject\app\build\intermediates\merged_res\debugAndroidTest
