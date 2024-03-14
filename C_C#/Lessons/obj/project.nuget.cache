@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f5TzTFt03ULcyuSe9Uw5Ro2RGZht9ZM/7PToMhsSI/TVbhFiJCvTSri/8mWa6A143UDAM2DtYccW7dUC1h7O+g==",
+  "dgSpecHash": "sMcA4sZNezTb/9kSZZlV+W6NVV+Rd78ObWQqOTE9H53eU5xypo8BhPlrSUujPqD0638OhYobWypYG4Ex7VJeKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sebss\\Desktop\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\sebss\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\sebss\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\sebss\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\sebss\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
-  ],
+  "projectFilePath": "E:\\Escritorio\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sebss\\Desktop\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj": {}
+    "E:\\Escritorio\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sebss\\Desktop\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj": {
+    "E:\\Escritorio\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sebss\\Desktop\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
+        "projectUniqueName": "E:\\Escritorio\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
         "projectName": "Lessons",
-        "projectPath": "C:\\Users\\sebss\\Desktop\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
+        "projectPath": "E:\\Escritorio\\RunningLanguages\\C_C#\\Lessons\\Lessons.csproj",
         "packagesPath": "C:\\Users\\sebss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sebss\\Desktop\\RunningLanguages\\C_C#\\Lessons\\obj\\",
+        "outputPath": "E:\\Escritorio\\RunningLanguages\\C_C#\\Lessons\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sebss\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -48,30 +48,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.15, 7.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.15, 7.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.15, 7.0.15]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.15, 7.0.15]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
