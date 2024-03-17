@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "cassert": "cpp",
+        "sstream": "cpp",
+        "*.tcc": "cpp",
+        "limits": "cpp",
+        "type_traits": "cpp",
+        "iosfwd": "cpp"
+    }
+}

@@ -17,6 +17,10 @@ struct example{
     double serial;
 };
 
+template<typename T>
+class Example{
+
+};
 
 int main()
 {
