@@ -15,11 +15,11 @@ template<typename T> ArrayList<T>::~ArrayList(){
     free(this->array);
 }
 
-template<typename T> int ArrayList<T>::getN(){
+template<typename T> const int ArrayList<T>::getN(){
     return this->n;
 }
 
-template<typename T> int ArrayList<T>::getCapacity(){
+template<typename T> const int ArrayList<T>::getCapacity(){
     return this->capacity;
 }
 
@@ -34,7 +34,7 @@ template<typename T> void ArrayList<T>::amply(const int increment){
     this->capacity += increment;
 }
 
-template<typename T> T ArrayList<T>::get(const int index){
+template<typename T> const T ArrayList<T>::get(const int index){
     assert(index<this->n&&index>=0);
     return this->array[index];
 }
@@ -68,7 +68,7 @@ template<typename T> void ArrayList<T>::concat(const ArrayList *array){
     for(int i=0;i<array->n;i++) insertLast(this->array[i]);
 }
 
-template<typename T> int ArrayList<T>::search(const T value){
+template<typename T> const int ArrayList<T>::search(const T value){
     for(int i=0;i<this->n;i++)
         if(this->array[i].getElement()==value)
             return i;
@@ -76,18 +76,23 @@ template<typename T> int ArrayList<T>::search(const T value){
 }
 
 
-template<typename T> bool ArrayList<T>::isFull(){
+template<typename T> const bool ArrayList<T>::isFull(){
     return this->n==this->capacity;
 }
 
-template<typename T> bool ArrayList<T>::isEmpty(){
+template<typename T> const bool ArrayList<T>::isEmpty(){
     return this->n==0;
 }
 
-template<typename T> string ArrayList<T>::toString(){
+template<typename T> const string ArrayList<T>::toString(){
     ostringstream oss;
-    oss << "(";
+    oss << "ArrayList::(";
     for(int i=0;i<this->n;i++)
         oss << this->array[i].toString() << (i==this->n-1)?")":",";
     return oss.str();
 }
+
+template<typename T> ArrayList<T>::~ArrayList(){
+    free(this->array);
+}
+

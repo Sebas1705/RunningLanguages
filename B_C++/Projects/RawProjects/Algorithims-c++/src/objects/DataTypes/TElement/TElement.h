@@ -11,11 +11,11 @@ class TElement:AType{
 public:
 
     TElement(const T value);
-    T getElement();
+    const T getElement();
     void setElement(const T element);
 
-    string toString() override;
-    bool equalsTo(const void* other) override;
+    const string toString() override;
+    const bool equalsTo(const void* other) override;
 
 };
 

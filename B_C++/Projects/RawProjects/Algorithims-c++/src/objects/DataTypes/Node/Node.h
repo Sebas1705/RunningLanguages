@@ -14,16 +14,16 @@ public:
 
     Node(const T value);
 
-    T getElement();
-    Node<T>* getNext();
-    Node<T>* getPrev();
+    const T getElement();
+    const Node<T>* getNext();
+    const Node<T>* getPrev();
 
     void setElement(const T value);
     void setNext(const Node<T>* next);
     void setNext(const Node<T>* prev);
 
-    string toString() override;
-    bool equalsTo(const void* other) override;
+    const string toString() override;
+    const bool equalsTo(const void* other) override;
 };
 
 #endif

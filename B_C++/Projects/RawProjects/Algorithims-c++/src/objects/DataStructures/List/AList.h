@@ -4,9 +4,8 @@
 using namespace std;
 
 class AList{
-    virtual bool isFull()=0;
-    virtual bool isEmpty()=0;
-    virtual string toString()=0;
+    virtual const bool isEmpty()=0;
+    virtual const string toString()=0;
 };
 
 #endif

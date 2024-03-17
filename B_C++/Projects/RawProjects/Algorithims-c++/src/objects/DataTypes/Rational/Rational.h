@@ -15,20 +15,20 @@ public:
     
 
     //Getters and Setters
-    int getDen();
-    int getNum();
+    const int getDen();
+    const int getNum();
     void setDen(int den);
     void setNum(int num);
 
-    Rational* sum(const Rational* a);
-    Rational* minus(const Rational* a);
-    Rational* mult(const Rational* a);
-    Rational* div(const Rational* a);
+    const Rational* sum(const Rational* a);
+    const Rational* minus(const Rational* a);
+    const Rational* mult(const Rational* a);
+    const Rational* div(const Rational* a);
 
     void simplify();
 
-    string toString() override;
-    bool equalsTo(const void* other) override;
+    const string toString() override;
+    const bool equalsTo(const void* other) override;
 };
 
 #endif

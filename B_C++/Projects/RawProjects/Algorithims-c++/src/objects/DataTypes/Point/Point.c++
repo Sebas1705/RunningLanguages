@@ -14,12 +14,12 @@ Point::Point(const double* coords){
         this->coords[i]=coords[i];
 }
 
-double Point::getCoord(const int dim){
+const double Point::getCoord(const int dim){
     assert(dim>=0&&dim<dimension);
     return coords[dim];
 }
 
-int Point::getDimension(){
+const int Point::getDimension(){
     return dimension;
 }
 
@@ -33,19 +33,19 @@ void Point::setDimension(const int dimension){
     this->coords=(double*)realloc(this->coords,sizeof(double)*dimension);
 }
 
-double Point::distanceToOrigin(){
+const double Point::distanceToOrigin(){
     double coords[] = {0,0,0};
     return distanceToOther(&Point(coords));  
 }
 
-double Point::distanceToOther(const Point* p){
+const double Point::distanceToOther(const Point* p){
     double total = 0;
     for(int i=0;i<this->dimension;i++)
         total+=pow(coords[i]-p->coords[i],2);
     return sqrt(total);
 }
 
-string Point::toString(){
+const string Point::toString(){
     ostringstream oss;
     oss << "(";
     for(int i=0;i<this->dimension;i++) 
@@ -53,7 +53,7 @@ string Point::toString(){
     return oss.str();
 }
 
-bool Point::equalsTo(const void* other){
+const bool Point::equalsTo(const void* other){
     Point* r = (Point*)other;
     if(r->dimension!=dimension) 
         return false;

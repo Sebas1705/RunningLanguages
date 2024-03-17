@@ -14,16 +14,16 @@ public:
 
     Point(const double* coords);
 
-    double getCoord(const int dim);
-    int getDimension();
+    const double getCoord(const int dim);
+    const int getDimension();
     void setCoord(const double coord,const int dim);
     void setDimension(const int dimension);
 
-    double distanceToOrigin();
-    double distanceToOther(const Point* p);
+    const double distanceToOrigin();
+    const double distanceToOther(const Point* p);
 
-    string toString() override;
-    bool equalsTo(const void* other) override;
+    const string toString() override;
+    const bool equalsTo(const void* other) override;
 
     ~Point();
 };

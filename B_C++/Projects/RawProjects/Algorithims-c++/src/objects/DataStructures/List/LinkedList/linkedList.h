@@ -1,18 +1,18 @@
-#ifndef __DOUBLE_LINKED_LIST
-#define __DOUBLE_LINKED_LIST
-#include "../../DataTypes/DoubleNode/DoubleNode.h"
+#ifndef __LINKED_LIST
+#define __LINKED_LIST
+#include "../../DataTypes/Node/Node.h"
 
 template <typename T>
-class DoubleLinkedList:AList{
+class LinkedList:AList{
     
-    DoubleNode<T>* first;
+    Node<T>* first;
     int n;
     
-    const DoubleNode<T>* getNode(const int index);
+    const Node<T>* getNode(const int index);
 
 public:
 
-    DoubleLinkedList();
+    LinkedList();
 
     const int getN();
 
@@ -27,7 +27,8 @@ public:
     const bool isEmpty() override;
     const string toString() override;
 
-    ~DoubleLinkedList();
+    ~LinkedList();
 };
+
 
 #endif

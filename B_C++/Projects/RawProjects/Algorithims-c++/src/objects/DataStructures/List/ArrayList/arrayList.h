@@ -14,22 +14,22 @@ public:
 
     ArrayList();
 
-    int getN();
-    int getCapacity();
+    const int getN();
+    const int getCapacity();
 
     void set(const int index,const T value);
     void amply(const int increment);
-    T get(const int index);
+    const T get(const int index);
     void insert(const int index,const T value);
     void insertLast(const T value);
     void removeInList(const int index);
     void removeLast();
     void concat(const ArrayList<T> *array);
-    int search(const T value);
-
-    bool isFull() override;
-    bool isEmpty() override;
-    string toString() override;
+    const int search(const T value);
+    const bool isFull();
+    
+    const bool isEmpty() override;
+    const string toString() override;
 
     ~ArrayList();
 };

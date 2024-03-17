@@ -3,8 +3,8 @@
 #include "iostream"
 
 class AType{
-    virtual std::string toString()=0;
-    virtual bool equalsTo(const void* other)=0;
+    virtual const std::string toString()=0;
+    virtual const bool equalsTo(const void* other)=0;
 };
 
 #endif

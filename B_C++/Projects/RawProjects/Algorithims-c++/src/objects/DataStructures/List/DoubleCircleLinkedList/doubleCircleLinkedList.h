@@ -1,5 +1,5 @@
-#ifndef __CICLE_LINKED_LIST
-#define __CICLE_LINKED_LIST
+#ifndef __CIRCLE_LINKED_LIST
+#define __CIRCLE_LINKED_LIST
 #include "../AList.h"
 #include "../../DataTypes/DoubleNode/DoubleNode.h"
 
@@ -9,27 +9,26 @@ class DoubleCircleLinkedList:AList{
     DoubleNode<T>* first;
     int n;
     
-    DoubleNode<T>* getNode(const int index);
+    const DoubleNode<T>* getNode(const int index);
 
 public:
 
     DoubleCircleLinkedList();
 
-    int getN();
+    const int getN();
 
     void setValue(const int index,const T value);
-    T getValue(const int index);
+    const T getValue(const int index);
 
     void insert(const int index,const T value);
     void insertLast(const T value);
     void removeAtIndex(const int index);
     void removeLast();
+    
+    const bool isEmpty() override;
+    const string toString() override;
 
-    bool isFull() override;
-    bool isEmpty() override;
-    string toString() override;
-
-    ~DoubleCicleLinkedList();
+    ~DoubleCircleLinkedList();
 };
 
 #endif
