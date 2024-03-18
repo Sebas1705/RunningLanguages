@@ -1,63 +1,31 @@
 
---- Job pr�ctica2MOEG.gms Start 03/15/22 18:59:49 38.1.0 a1a3b545 WEX-WEI x86 64bit/MS Windows
+--- Job pr�ctica2MOEG.gms Start 03/12/24 19:36:52 45.7.0 64fbf3ce WEX-WEI x86 64bit/MS Windows
 --- Applying:
-    C:\GAMS\38\gmsprmNT.txt
+    C:\GAMS\45\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input C:\Users\sebss\OneDrive\Escritorio\GAMS\Lab2\pr�ctica2MOEG.gms
+    Input C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab2\pr�ctica2MOEG.gms
     PageSize 0
-    ScrDir C:\Users\sebss\OneDrive\Escritorio\GAMS\Lab2\225a\
-    SysDir C:\GAMS\38\
+    ScrDir C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab2\225a\
+    SysDir C:\GAMS\45\
     LogOption 3
     ErrMsg 1
     ErrorLog 99
     IDE 1
     LstTitleLeftAligned 1
-Licensee: GAMS Demo license for Sebastian Ramiro EntrerriG220207|0002CO-GEN
-          Universidad Rey Juan Carlos, Spain                       DL059758
-          C:\GAMS\38\gamslice.txt
-          sr.entrerrios.2020@alumnos.urjc.es, Sebastian Ramiro Entrerrios G
+*** License has expired 14 days ago
+Licensee: GAMS Demo, for EULA and demo limitations see   G230930/0001CB-GEN
+          https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
+          C:\GAMS\45\gamslice.txt
           Demo license for demonstration and instructional purposes only
-Processor information: 1 socket(s), 4 core(s), and 8 thread(s) available
-GAMS 38.1.0   Copyright (C) 1987-2022 GAMS Development. All rights reserved
+Processor information: 1 socket(s), 14 core(s), and 20 thread(s) available
+GAMS 45.7.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
---- pr�ctica2MOEG.gms(95) 3 Mb
---- Starting execution: elapsed 0:00:00.009
---- Generating LP model LAB2_MOEG
---- pr�ctica2MOEG.gms(94) 4 Mb
----   76 rows  40 columns  160 non-zeroes
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.111
-
-IBM ILOG CPLEX   38.1.0 a1a3b545 Jan 31, 2022          WEI x86 64bit/MS Window
-
---- *** This solver runs with a demo license. No commercial use.
---- GMO setup time: 0.02s
---- GMO memory 0.51 Mb (peak 0.51 Mb)
---- Dictionary memory 0.00 Mb
---- Cplex 20.1.0.1 link memory 0.00 Mb (peak 0.01 Mb)
---- Starting Cplex
-
-Version identifier: 20.1.0.1 | 2021-04-07 | 3a818710c
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_MIP_Pool_Capacity                       0
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-Tried aggregator 1 time.
-LP Presolve eliminated 47 rows and 16 columns.
-Aggregator did 3 substitutions.
-Reduced LP has 25 rows, 21 columns, and 63 nonzeros.
-Presolve time = 0.02 sec. (0.05 ticks)
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        443440.000000
-
---- LP status (1): optimal.
---- Cplex Time: 0.02sec (det. 0.11 ticks)
-
-
-Optimal solution found
-Objective:       347110.000000
-
---- Reading solution for model LAB2_MOEG
-*** Status: Normal completion
---- Job pr�ctica2MOEG.gms Stop 03/15/22 18:59:50 elapsed 0:00:00.374
+--- pr�ctica2MOEG.gms(92) 3 Mb 1 Error
+*** Error 125 in C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab2\pr�ctica2MOEG.gms
+    Set is under control already
+--- pr�ctica2MOEG.gms(96) 3 Mb 2 Errors
+*** Error 257 in C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab2\pr�ctica2MOEG.gms
+    Solve statement not checked because of previous errors
+--- pr�ctica2MOEG.gms(97) 3 Mb 2 Errors
+*** Status: Compilation error(s)
+--- Job pr�ctica2MOEG.gms Stop 03/12/24 19:36:52 elapsed 0:00:00.015

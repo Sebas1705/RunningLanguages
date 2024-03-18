@@ -1,4 +1,4 @@
-GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 18:59:49 Page 1
+GAMS 45.7.0  64fbf3ce Jan 18, 2024          WEX-WEI x86 64bit/MS Windows - 03/12/24 19:36:52 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -80,459 +80,44 @@ C o m p i l a t i o n
   75           rest3(i,t) control de stock
   76           rest4(i,t) venta menor que disponibilidad
   77           rest5(i,t) venta stock menor que el stock
-  78           restfinal(i) situacion al finalizar la ultima semana
-  79   
-  80  * �m�s restricciones?
-  81  ;
-  82   
-  83           beneficio..     z =e= sum(t, sum(i, p(i)*V(i,t) + Sf(i)*pS(i) - c(i)*S(i,t)));
-  84           lim_recursos(j,t)..  sum(i, mtecn(i,j)*V(i,t)) =l= re(j);
-  85           rest1(i,t)..    V(i,t) =g= 20;
-  86           rest2(i,t)..    V(i,t) =l= d(i,t);
-  87           rest3(i,t)..    S(i,t) =e= X(i,t) - V(i,t) + S(i,t-1);
-  88           rest4(i,t)..    V(i,t) =l= d(i,t);
-  89           rest5(i,t)..    V(i,t) =l= S(i,t);
-  90           restfinal(i)..  Sf(i) =l= 20;
-  91   
-  92  Model LAB2_MOEG /all/
+  78           rest6(i) restriccion de stock final
+  79           restfinal(i) situacion al finalizar la ultima semana
+  80   
+  81  * �m�s restricciones?
+  82  ;
+  83   
+  84           beneficio..     z =e= sum(i, sum(t, p(i)*V(i,t) - c(i)*S(i,t)) + Sf(i)*pS(i)) ;
+  85           lim_recursos(j,t)..  sum(i, mtecn(i,j)*V(i,t)) =l= re(j);
+  86           rest1(i,t)..    V(i,t) =g= 20;
+  87           rest2(i,t)..    V(i,t) =l= d(i,t);
+  88           rest3(i,t)..    S(i,t) =e= X(i,t) - V(i,t) + S(i,t-1);
+  89           rest4(i,t)..    V(i,t) =l= d(i,t);
+  90           rest5(i,t)..    V(i,t) =l= S(i,t);
+  91           rest6(i)..  Sf(i) =g= 20;
+  92           restfinal(i).. Sf(i) =e= sum(t, sum(i,S(i,t) - V(i,t))) ;
+****                                                $125
+**** 125  Set is under control already
   93   
-  94  Solve LAB2_MOEG using lp maximizing z;
-  95  * Solve LAB2_MOEG using mip maximizing z;
+  94  Model LAB2_MOEG /all/;
+  95   
+  96  Solve LAB2_MOEG using lp maximizing z;
+****                                       $257
+**** 257  Solve statement not checked because of previous errors
+  97  * Solve LAB2_MOEG using mip maximizing z;
 
+**** 2 ERROR(S)   0 WARNING(S)
 
-COMPILATION TIME     =        0.000 SECONDS      3 MB  38.1.0 a1a3b545 WEX-WEI
-GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 18:59:49 Page 2
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Equation Listing    SOLVE LAB2_MOEG Using LP From line 94
 
+COMPILATION TIME     =        0.000 SECONDS      3 MB  45.7.0 64fbf3ce WEX-WEI
 
----- beneficio  =E=  beneficio de venta de ordenadores
 
-beneficio..  z + 19*S(A,S1) + 19*S(A,S2) + 19*S(A,S3) + 19*S(A,S4) + 15*S(B,S1) + 15*S(B,S2) + 15*S(B,S3) + 15*S(B,S4) + 15*S(C,S1) + 15*S(C,S2) + 15*S(C,S3) + 15*S(C,S4) - 350*V(A,S1) - 350*V(A,S2) - 350*V(A,S3) - 350*V(A,S4) - 470*V(B,S1) - 470*V(B,S2) - 470*V(B,S3) - 470*V(B,S4) - 610*V(C,S1) - 610*V(C,S2) - 610*V(C,S3) - 610*V(C,S4) - 1200*Sf(A) - 1600*Sf(B) - 2000*Sf(C) =E= 0 ; (LHS = 0)
-     
-
----- lim_recursos  =L=  restricciones de recursos
-
-lim_recursos(CC1,S1)..  V(A,S1) + V(B,S1) =L= 120 ; (LHS = 0)
-     
-lim_recursos(CC1,S2)..  V(A,S2) + V(B,S2) =L= 120 ; (LHS = 0)
-     
-lim_recursos(CC1,S3)..  V(A,S3) + V(B,S3) =L= 120 ; (LHS = 0)
-     
-REMAINING 9 ENTRIES SKIPPED
-
-
----- rest1  =G=  minimo de ventas
-
-rest1(A,S1)..  V(A,S1) =G= 20 ; (LHS = 0, INFES = 20 ****)
-     
-rest1(A,S2)..  V(A,S2) =G= 20 ; (LHS = 0, INFES = 20 ****)
-     
-rest1(A,S3)..  V(A,S3) =G= 20 ; (LHS = 0, INFES = 20 ****)
-     
-REMAINING 9 ENTRIES SKIPPED
-
-
----- rest2  =L=  maximo de ventas
-
-rest2(A,S1)..  V(A,S1) =L= 80 ; (LHS = 0)
-     
-rest2(A,S2)..  V(A,S2) =L= 80 ; (LHS = 0)
-     
-rest2(A,S3)..  V(A,S3) =L= 120 ; (LHS = 0)
-     
-REMAINING 9 ENTRIES SKIPPED
-
-
----- rest3  =E=  control de stock
-
-rest3(A,S1)..  - X(A,S1) + S(A,S1) + V(A,S1) =E= 0 ; (LHS = 0)
-     
-rest3(A,S2)..  - X(A,S2) - S(A,S1) + S(A,S2) + V(A,S2) =E= 0 ; (LHS = 0)
-     
-rest3(A,S3)..  - X(A,S3) - S(A,S2) + S(A,S3) + V(A,S3) =E= 0 ; (LHS = 0)
-     
-REMAINING 9 ENTRIES SKIPPED
-
-
----- rest4  =L=  venta menor que disponibilidad
-
-rest4(A,S1)..  V(A,S1) =L= 80 ; (LHS = 0)
-     
-rest4(A,S2)..  V(A,S2) =L= 80 ; (LHS = 0)
-     
-rest4(A,S3)..  V(A,S3) =L= 120 ; (LHS = 0)
-     
-REMAINING 9 ENTRIES SKIPPED
-
-
----- rest5  =L=  venta stock menor que el stock
-
-rest5(A,S1)..  - S(A,S1) + V(A,S1) =L= 0 ; (LHS = 0)
-     
-rest5(A,S2)..  - S(A,S2) + V(A,S2) =L= 0 ; (LHS = 0)
-     
-rest5(A,S3)..  - S(A,S3) + V(A,S3) =L= 0 ; (LHS = 0)
-     
-REMAINING 9 ENTRIES SKIPPED
-
-
----- restfinal  =L=  situacion al finalizar la ultima semana
-
-restfinal(A)..  Sf(A) =L= 20 ; (LHS = 0)
-     
-restfinal(B)..  Sf(B) =L= 20 ; (LHS = 0)
-     
-restfinal(C)..  Sf(C) =L= 20 ; (LHS = 0)
-     
-GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 18:59:49 Page 3
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Column Listing      SOLVE LAB2_MOEG Using LP From line 94
-
-
----- z  beneficio venta ordenadores
-
-z
-                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
-        1       beneficio
-
-
----- X  nº ordenadores del tipo i fabricados en la semana t
-
-X(A,S1)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       -1       rest3(A,S1)
-
-X(A,S2)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       -1       rest3(A,S2)
-
-X(A,S3)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       -1       rest3(A,S3)
-
-REMAINING 9 ENTRIES SKIPPED
-
----- S  nº ordenadores del tipo i en stock en el fin de semana t
-
-S(A,S1)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       19       beneficio
-        1       rest3(A,S1)
-       -1       rest3(A,S2)
-       -1       rest5(A,S1)
-
-S(A,S2)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       19       beneficio
-        1       rest3(A,S2)
-       -1       rest3(A,S3)
-       -1       rest5(A,S2)
-
-S(A,S3)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-       19       beneficio
-        1       rest3(A,S3)
-       -1       rest3(A,S4)
-       -1       rest5(A,S3)
-
-REMAINING 9 ENTRIES SKIPPED
-
----- V  nº ordenadores del tipo i vendidos semana t
-
-V(A,S1)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-     -350       beneficio
-        1       lim_recursos(CC1,S1)
-       10       lim_recursos(MNT,S1)
-        1       rest1(A,S1)
-        1       rest2(A,S1)
-        1       rest3(A,S1)
-        1       rest4(A,S1)
-        1       rest5(A,S1)
-
-V(A,S2)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-     -350       beneficio
-        1       lim_recursos(CC1,S2)
-       10       lim_recursos(MNT,S2)
-        1       rest1(A,S2)
-        1       rest2(A,S2)
-        1       rest3(A,S2)
-        1       rest4(A,S2)
-        1       rest5(A,S2)
-
-V(A,S3)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-     -350       beneficio
-        1       lim_recursos(CC1,S3)
-       10       lim_recursos(MNT,S3)
-        1       rest1(A,S3)
-        1       rest2(A,S3)
-        1       rest3(A,S3)
-        1       rest4(A,S3)
-        1       rest5(A,S3)
-
-REMAINING 9 ENTRIES SKIPPED
-
----- Sf  nº ordenadores del tipo i en stock al final de las semanas
-
-Sf(A)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-    -1200       beneficio
-        1       restfinal(A)
-
-Sf(B)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-    -1600       beneficio
-        1       restfinal(B)
-
-Sf(C)
-                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
-    -2000       beneficio
-        1       restfinal(C)
-
-GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 18:59:49 Page 4
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Model Statistics    SOLVE LAB2_MOEG Using LP From line 94
-
-
-MODEL STATISTICS
-
-BLOCKS OF EQUATIONS           8     SINGLE EQUATIONS           76
-BLOCKS OF VARIABLES           5     SINGLE VARIABLES           40
-NON ZERO ELEMENTS           160
-
-
-GENERATION TIME      =        0.109 SECONDS      4 MB  38.1.0 a1a3b545 WEX-WEI
-GAMS 38.1.0  a1a3b545 Jan 31, 2022          WEX-WEI x86 64bit/MS Windows - 03/15/22 18:59:49 Page 5
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Solution Report     SOLVE LAB2_MOEG Using LP From line 94
-
-
-               S O L V E      S U M M A R Y
-
-     MODEL   LAB2_MOEG           OBJECTIVE  z
-     TYPE    LP                  DIRECTION  MAXIMIZE
-     SOLVER  CPLEX               FROM LINE  94
-
-**** SOLVER STATUS     1 Normal Completion
-**** MODEL STATUS      1 Optimal
-**** OBJECTIVE VALUE           347110.0000
-
- RESOURCE USAGE, LIMIT          0.109 10000000000.000
- ITERATION COUNT, LIMIT        18    2147483647
---- *** This solver runs with a demo license. No commercial use.
---- GMO setup time: 0.02s
---- GMO memory 0.51 Mb (peak 0.51 Mb)
---- Dictionary memory 0.00 Mb
---- Cplex 20.1.0.1 link memory 0.00 Mb (peak 0.01 Mb)
---- Starting Cplex
-
-
---- LP status (1): optimal.
---- Cplex Time: 0.02sec (det. 0.11 ticks)
-
-
-Optimal solution found
-Objective:       347110.000000
-
-
-                           LOWER          LEVEL          UPPER         MARGINAL
-
----- EQU beneficio           .              .              .             1.0000      
-
-  beneficio  beneficio de venta de ordenadores
-
----- EQU lim_recursos  restricciones de recursos
-
-              LOWER          LEVEL          UPPER         MARGINAL
-
-CC1.S1        -INF          120.0000       120.0000         8.7500      
-CC1.S2        -INF          120.0000       120.0000          .          
-CC1.S3        -INF          120.0000       120.0000        33.5000      
-CC1.S4        -INF          120.0000       120.0000        33.5000      
-CC2.S1        -INF           30.0000        48.0000          .          
-CC2.S2        -INF           30.0000        48.0000          .          
-CC2.S3        -INF           35.0000        48.0000          .          
-CC2.S4        -INF           35.0000        48.0000          .          
-MNT.S1        -INF         2000.0000      2000.0000        29.7500      
-MNT.S2        -INF         2000.0000      2000.0000        29.7500      
-MNT.S3        -INF         2000.0000      2000.0000        29.7500      
-MNT.S4        -INF         2000.0000      2000.0000        29.7500      
-
----- EQU rest1  minimo de ventas
-
-            LOWER          LEVEL          UPPER         MARGINAL
-
-A.S1        20.0000        80.0000        +INF             .          
-A.S2        20.0000        80.0000        +INF             .          
-A.S3        20.0000       100.0000        +INF             .          
-A.S4        20.0000       100.0000        +INF             .          
-B.S1        20.0000        40.0000        +INF             .          
-B.S2        20.0000        40.0000        +INF             .          
-B.S3        20.0000        20.0000        +INF           -7.2500      
-B.S4        20.0000        20.0000        +INF          -24.7500      
-C.S1        20.0000        30.0000        +INF             .          
-C.S2        20.0000        30.0000        +INF             .          
-C.S3        20.0000        35.0000        +INF             .          
-C.S4        20.0000        35.0000        +INF             .          
-
----- EQU rest2  maximo de ventas
-
-            LOWER          LEVEL          UPPER         MARGINAL
-
-A.S1        -INF           80.0000        80.0000        24.7500      
-A.S2        -INF           80.0000        80.0000        33.5000      
-A.S3        -INF          100.0000       120.0000          .          
-A.S4        -INF          100.0000       140.0000          .          
-B.S1        -INF           40.0000        60.0000          .          
-B.S2        -INF           40.0000        40.0000          .          
-B.S3        -INF           20.0000        60.0000          .          
-B.S4        -INF           20.0000        40.0000          .          
-C.S1        -INF           30.0000        80.0000          .          
-C.S2        -INF           30.0000        40.0000          .          
-C.S3        -INF           35.0000        80.0000          .          
-C.S4        -INF           35.0000        70.0000          .          
-
----- EQU rest3  control de stock
-
-            LOWER          LEVEL          UPPER         MARGINAL
-
-A.S1          .              .              .             EPS         
-A.S2          .              .              .             EPS         
-A.S3          .              .              .             EPS         
-A.S4          .              .              .             EPS         
-B.S1          .              .              .             EPS         
-B.S2          .              .              .             EPS         
-B.S3          .              .              .            -8.7500      
-B.S4          .              .              .             EPS         
-C.S1          .              .              .             EPS         
-C.S2          .              .              .             EPS         
-C.S3          .              .              .             EPS         
-C.S4          .              .              .             EPS         
-
----- EQU rest4  venta menor que disponibilidad
-
-            LOWER          LEVEL          UPPER         MARGINAL
-
-A.S1        -INF           80.0000        80.0000          .          
-A.S2        -INF           80.0000        80.0000          .          
-A.S3        -INF          100.0000       120.0000          .          
-A.S4        -INF          100.0000       140.0000          .          
-B.S1        -INF           40.0000        60.0000          .          
-B.S2        -INF           40.0000        40.0000          .          
-B.S3        -INF           20.0000        60.0000          .          
-B.S4        -INF           20.0000        40.0000          .          
-C.S1        -INF           30.0000        80.0000          .          
-C.S2        -INF           30.0000        40.0000          .          
-C.S3        -INF           35.0000        80.0000          .          
-C.S4        -INF           35.0000        70.0000          .          
-
----- EQU rest5  venta stock menor que el stock
-
-            LOWER          LEVEL          UPPER         MARGINAL
-
-A.S1        -INF             .              .            19.0000      
-A.S2        -INF             .              .            19.0000      
-A.S3        -INF             .              .            19.0000      
-A.S4        -INF             .              .            19.0000      
-B.S1        -INF             .              .            15.0000      
-B.S2        -INF             .              .            23.7500      
-B.S3        -INF             .              .             6.2500      
-B.S4        -INF             .              .            15.0000      
-C.S1        -INF             .              .            15.0000      
-C.S2        -INF             .              .            15.0000      
-C.S3        -INF             .              .            15.0000      
-C.S4        -INF             .              .            15.0000      
-
----- EQU restfinal  situacion al finalizar la ultima semana
-
-         LOWER          LEVEL          UPPER         MARGINAL
-
-A        -INF           20.0000        20.0000      1200.0000      
-B        -INF           20.0000        20.0000      1600.0000      
-C        -INF           20.0000        20.0000      2000.0000      
-
-                           LOWER          LEVEL          UPPER         MARGINAL
-
----- VAR z                 -INF       347110.0000        +INF             .          
-
-  z  beneficio venta ordenadores
-
----- VAR X  nº ordenadores del tipo i fabricados en la semana t
-
-            LOWER          LEVEL          UPPER         MARGINAL
-
-A.S1          .           160.0000        +INF             .          
-A.S2          .            80.0000        +INF             .          
-A.S3          .           120.0000        +INF             .          
-A.S4          .           100.0000        +INF             .          
-B.S1          .            80.0000        +INF             .          
-B.S2          .            40.0000        +INF             .          
-B.S3          .              .            +INF           -8.7500      
-B.S4          .            20.0000        +INF             .          
-C.S1          .            60.0000        +INF             .          
-C.S2          .            30.0000        +INF             .          
-C.S3          .            40.0000        +INF             .          
-C.S4          .            35.0000        +INF             .          
-
----- VAR S  nº ordenadores del tipo i en stock en el fin de semana t
-
-            LOWER          LEVEL          UPPER         MARGINAL
-
-A.S1          .            80.0000        +INF             .          
-A.S2          .            80.0000        +INF             .          
-A.S3          .           100.0000        +INF             .          
-A.S4          .           100.0000        +INF             .          
-B.S1          .            40.0000        +INF             .          
-B.S2          .            40.0000        +INF             .          
-B.S3          .            20.0000        +INF             .          
-B.S4          .            20.0000        +INF             .          
-C.S1          .            30.0000        +INF             .          
-C.S2          .            30.0000        +INF             .          
-C.S3          .            35.0000        +INF             .          
-C.S4          .            35.0000        +INF             .          
-
----- VAR V  nº ordenadores del tipo i vendidos semana t
-
-            LOWER          LEVEL          UPPER         MARGINAL
-
-A.S1          .            80.0000        +INF             .          
-A.S2          .            80.0000        +INF             .          
-A.S3          .           100.0000        +INF             .          
-A.S4          .           100.0000        +INF             .          
-B.S1          .            40.0000        +INF             .          
-B.S2          .            40.0000        +INF             .          
-B.S3          .            20.0000        +INF             .          
-B.S4          .            20.0000        +INF             .          
-C.S1          .            30.0000        +INF             .          
-C.S2          .            30.0000        +INF             .          
-C.S3          .            35.0000        +INF             .          
-C.S4          .            35.0000        +INF             .          
-
----- VAR Sf  nº ordenadores del tipo i en stock al final de las semanas
-
-         LOWER          LEVEL          UPPER         MARGINAL
-
-A          .            20.0000        +INF             .          
-B          .            20.0000        +INF             .          
-C          .            20.0000        +INF             .          
-
-
-**** REPORT SUMMARY :        0     NONOPT
-                             0 INFEASIBLE
-                             0  UNBOUNDED
-
-
-EXECUTION TIME       =        0.359 SECONDS      4 MB  38.1.0 a1a3b545 WEX-WEI
-
-
-USER: GAMS Demo license for Sebastian Ramiro EntrerriG220207|0002CO-GEN
-      Universidad Rey Juan Carlos, Spain                       DL059758
+USER: GAMS Demo, for EULA and demo limitations see   G230930/0001CB-GEN
+      https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
 
 
 **** FILE SUMMARY
 
-Input      C:\Users\sebss\OneDrive\Escritorio\GAMS\Lab2\pr�ctica2MOEG.gms
-Output     C:\Users\sebss\OneDrive\Escritorio\GAMS\Lab2\pr�ctica2MOEG.lst
+Input      C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab2\pr�ctica2MOEG.gms
+Output     C:\Users\sebss\Desktop\RunningLanguages\L_Gams\Lab2\pr�ctica2MOEG.lst
+
+**** USER ERROR(S) ENCOUNTERED
