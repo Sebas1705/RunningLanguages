@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Lessons
-build_property.ProjectDir = C:\Users\sebss\Desktop\RunningLanguages\C_C#\Lessons\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = E:\Escritorio\RunningLanguages\C_C#\Lessons\

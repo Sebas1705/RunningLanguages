@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BluetoothExample</string>
+    <string name="search">search</string>
+    <string name="connect">CONNECT</string>
+    <string name="led_1_on">LED_1_ON</string>
+    <string name="led_1_off">LED_1_OFF</string>
+    <string name="led_2_on">LED_2_ON</string>
+    <string name="led_2_off">LED_2_OFF</string>
+    <string name="led_control">LED CONTROL:</string>
+    <string name="disconnect">DISCONNECT</string>
+    <string name="bluetoothtest">BluetoothTest</string>
+    <string name="camera_reader">CAMERA READER</string>
+</resources>
