@@ -1,15 +1,16 @@
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class H_Classes {
 
-    public static void main(String[] args) {
+    // public static void main(String[] args) {
 
-        Person p=new Worker("Pedro","Mendoza",LocalDateTime.of(2000,12,12,10,53),"Construction",TypeWorker.SUBCONTRACT);
-        p.doYourLife();
+    //     Person p=new Worker("Pedro","Mendoza",LocalDateTime.of(2000,12,12,10,53),"Construction",TypeWorker.SUBCONTRACT);
+    //     p.doYourLife();
     
-    }
+    // }
     
     //abstract class (normal class but not completely implemented)
     static abstract class Person{
@@ -122,12 +123,24 @@ public class H_Classes {
     }
 
     //Generic class:
-    @SuppressWarnings("unchecked")
+    
     static class Array <T extends Number> {
         
         public T[] array;
 
         public Array(T...elements){this.array=elements;}
-        public Array(List<? extends T> elements){this.array=(T[])elements.toArray();}
+        public Array(List<T> elements){this.array=(T[])elements.toArray();}
+    }
+
+    static class NumberInt extends Integer{}
+
+    public static void main(String[] args) {
+        Array<Integer> array = new Array<Integer>(1,3,2);
+
+        
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        a.add(62);
+
+        Array<Integer> array2 = new Array<Integer>(a);
     }
 }
